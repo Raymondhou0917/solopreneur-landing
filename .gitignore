@@ -1,0 +1,6 @@
+node_modules/
+public/index.html
+.env
+data/content.backup.json
+public/index.html.bak
+public/index.tmp.html

@@ -1,0 +1,289 @@
+{
+  "talks": [
+    {
+      "id": "talk-1",
+      "image": "https://raymondhouch.com/wp-content/uploads/2025/10/solopreneur-waki.jpg",
+      "alt": "超級個體訪談：瓦基——離開台積電百萬年薪，建立閱讀創作者的個人品牌事業",
+      "link": "https://raymondhouch.com/lifehacker/guide/waki-solo-business/",
+      "title": "瓦基是誰？從台積電到知識型超級個體，不追求爆紅，選擇能走 10 年的路"
+    },
+    {
+      "id": "talk-2",
+      "image": "https://raymondhouch.com/wp-content/uploads/2025/12/solo-chiukaun.webp",
+      "alt": "超級個體訪談：周加恩——失業兩年到打造一門 AI 寫作百萬課程",
+      "link": "https://raymondhouch.com/lifehacker/guide/chiukaun-ai-writing/",
+      "title": "周加恩是誰？從喜劇演員到 AI 寫作，堅持「遵從本心」，用真實體驗對抗 AI 平庸內容"
+    },
+    {
+      "id": "talk-3",
+      "image": "https://raymondhouch.com/wp-content/uploads/2026/02/solo-eleanor-interview.webp",
+      "alt": "超級個體訪談：藍諾——從接案到解散公司，一人公司微退休的超級個體生活",
+      "link": "https://raymondhouch.com/lifehacker/guide/eleanor-interview/",
+      "title": "藍諾是誰？從攝影接案到紐西蘭旅居，解散 10 人公司後「微退休」的身分轉型故事"
+    }
+  ],
+  "internationalCases": [],
+  "media": [
+    {
+      "id": "media-1",
+      "type": "video",
+      "source": "YouTube · 超真實商談",
+      "title": "AI 時代，超級個體會跑贏公司嗎？ft. 侯智昇（雷蒙）",
+      "image": "https://img.youtube.com/vi/g4r_NmU3fN8/hqdefault.jpg",
+      "link": "https://www.youtube.com/watch?v=g4r_NmU3fN8"
+    },
+    {
+      "id": "media-4",
+      "type": "article",
+      "source": "雷蒙訪談精華",
+      "title": "超級個體是什麼？與電左 Jacky 暢聊三十歲後的工作和人生哲學",
+      "image": "https://raymondhouch.com/wp-content/uploads/2025/07/podcast-cover-2.webp",
+      "link": "https://raymondhouch.com/lifehacker/solopreneur-path/"
+    },
+    {
+      "id": "media-2",
+      "type": "video",
+      "source": "YouTube · Podcast",
+      "title": "一人公司達到千萬業績的過程與模式｜雷蒙三十",
+      "image": "https://img.youtube.com/vi/uweGatM9FWc/hqdefault.jpg",
+      "link": "https://www.youtube.com/watch?v=uweGatM9FWc"
+    },
+    {
+      "id": "media-3",
+      "type": "article",
+      "source": "孤獨小酒館 Podcast",
+      "title": "侯智薰的創業之路：從大學講座到一人公司",
+      "image": "https://raymondhouch.com/wp-content/uploads/2025/07/jack-podcast-raymond-2025.compressed.jpg",
+      "link": "https://raymondhouch.com/life/raymond-creator-story/"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-1",
+      "permalink": "https://www.threads.net/@xiaoyuhinata/post/DOBYwAgD9H1"
+    },
+    {
+      "id": "thread-2",
+      "permalink": "https://www.threads.net/@learnchiang/post/DOLkbJTkymb"
+    },
+    {
+      "id": "thread-3",
+      "permalink": "https://www.threads.net/@nujambo/post/DN7zkq0k9HP"
+    },
+    {
+      "id": "thread-4",
+      "permalink": "https://www.threads.net/@deeppositivecl/post/DOtXKzUkkq8"
+    },
+    {
+      "id": "thread-5",
+      "permalink": "https://www.threads.net/@lee_vent0414/post/DN8SFFcCUTP"
+    },
+    {
+      "id": "thread-6",
+      "permalink": "https://www.threads.net/@newbie.course/post/DOw7OiQj6r0"
+    },
+    {
+      "id": "thread-7",
+      "permalink": "https://www.threads.net/@solvebysmile/post/DPVv1lkEn3P"
+    },
+    {
+      "id": "thread-8",
+      "permalink": "https://www.threads.net/@anton_0503/post/DOYefX7kwhU"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "testimonial-1",
+      "quote": "我與雷蒙曾經多次合作直播、訪談，每次討論結束，最讓我驚豔的地方，是「雷蒙如何完成更有效率訪談合作」的工作流程。不是看他說了什麼，而是學他怎麼做，這一點在雷蒙身上得到印證。",
+      "author": "Esor",
+      "role": "電腦玩物站長"
+    },
+    {
+      "id": "testimonial-2",
+      "quote": "一人公司是必然趨勢，超級個體是種社會運動，坊間夠資格開課的人不多，雷蒙是我心目中最好人選。我相信他能像五年前對我說的：未來有這個影響力和資源，能幫助到這個社會。",
+      "author": "于為暢",
+      "role": "個人品牌教練"
+    },
+    {
+      "id": "testimonial-3",
+      "quote": "雷蒙一直在實踐一種不靠年資，不靠傳統途徑也能活得很好的工作模式。我最佩服的是他不只是個懂得寫作的人，還是個很扎實的實踐者，每個觀念都是他反覆練習成為習慣後才分享。",
+      "author": "游舒帆 Gipi",
+      "role": "商業思維學院院長"
+    },
+    {
+      "id": "testimonial-4",
+      "quote": "雷蒙的課程，我是安心的。每一個知識點，都是雷蒙用他創業的實戰經驗重新詮釋。若說這門課是他五年來一身武功集大成，我覺得並不為過！",
+      "author": "周加恩",
+      "role": "文字創作者"
+    },
+    {
+      "id": "testimonial-5",
+      "quote": "這堂課，絕對是我看過最有誠意、最紮實的工作課程。課程裡不講理論，直接給工具。超過 26 種工作生產力模型，還有 20+ 種數位工具，雷蒙把他親自實驗的結果都告訴你！",
+      "author": "陳修平",
+      "role": "師父創辦人"
+    },
+    {
+      "id": "testimonial-6",
+      "quote": "為何我創業這幾年，從他身上學到最多的是侯智薰！？他總是能透過不斷的反思和迭代，找到一套系統化的工作術，讓自己在環境快速變化時，依然可以聰明工作、好好生活。",
+      "author": "羊正鈺",
+      "role": "學習家創辦人"
+    }
+  ],
+  "miniQuotes": [
+    {
+      "id": "miniquote-1",
+      "avatarInitial": "M",
+      "quote": "雷蒙擅長的是透過不同的服務，整合出自己的一套工作管理流程，再用淺顯易懂的方式與我們分享。",
+      "author": "Muki",
+      "role": "網站前端工程師",
+      "avatar": "images/meetup/1773934572614-muki__1_.webp"
+    },
+    {
+      "id": "miniquote-3",
+      "avatarInitial": "思",
+      "quote": "我曾經在 QA 回答我最喜歡的課程是什麼？不是我的職能治療專業，而是雷蒙的課。",
+      "author": "思誼",
+      "role": "職能治療師",
+      "avatar": "images/meetup/1773934562688-shihi__1_.webp"
+    },
+    {
+      "id": "miniquote-2",
+      "avatarInitial": "T",
+      "quote": "這堂課是把文稿直接放在 Notion 裡，邊學邊搜尋、隨時交流，對懶人超友善！",
+      "author": "Tobie 偷偷",
+      "role": "文字創作者",
+      "avatar": "images/meetup/1773934182624-tobie__1_.webp"
+    }
+  ],
+  "studentArticles": [
+    {
+      "id": "article-1",
+      "link": "https://katisplaying.substack.com/p/solopreneur-1",
+      "image": "https://substack-post-media.s3.amazonaws.com/public/images/7fb9386d-5764-483c-a1d9-d2cf2dcc8dfc_2068x1044.png",
+      "tag": "學員心得",
+      "title": "站在樹上的鳥兒不害怕樹枝斷裂，牠相信的是自己的翅膀",
+      "excerpt": "《超級個體工作術》上課筆記 #1",
+      "meta": "katisplaying · 2025"
+    },
+    {
+      "id": "article-2",
+      "link": "https://katisplaying.substack.com/p/solopreneur-2",
+      "image": "https://substack-post-media.s3.amazonaws.com/public/images/75436f25-0134-469b-8b81-74c766b803ba_2068x1042.png",
+      "tag": "學員心得",
+      "title": "轉換你對職場價值、生產力、數位工具的預設視角",
+      "excerpt": "《超級個體工作術》上課筆記 #2",
+      "meta": "katisplaying · 2025"
+    },
+    {
+      "id": "article-3",
+      "link": "#",
+      "image": "",
+      "tag": "學員心得",
+      "title": "替換為學員見證文章標題 3",
+      "excerpt": "替換為文章摘要⋯⋯展示學員運用課程方法後，在工作和生活上產生的具體變化。",
+      "meta": "學員姓名 · 2025"
+    }
+  ],
+  "meetupPhotos": [
+    {
+      "id": "meetup1",
+      "label": "第一次小聚",
+      "photos": [
+        "images/meetup/IMG_2220.webp",
+        "images/meetup/IMG_2223.webp",
+        "images/meetup/IMG_2224.webp",
+        "images/meetup/IMG_2229.webp",
+        "images/meetup/IMG_2231.webp",
+        "images/meetup/IMG_2239.webp",
+        "images/meetup/IMG_2243.webp",
+        "images/meetup/IMG_2251.webp",
+        "images/meetup/IMG_2255.webp"
+      ]
+    }
+  ],
+  "coursePreview": [
+    {
+      "id": "preview-1",
+      "displayType": "card",
+      "unit": "單元 01",
+      "title": "怎麼跳脫普通人賽道，成為掌控生活的現代人？",
+      "videoUrl": "https://shifu.tw/learning/solopreneur/ed9c0306-5f3b-4048-94c2-efc538c05dbd",
+      "thumbnail": "https://img.youtube.com/vi/placeholder01/hqdefault.jpg"
+    },
+    {
+      "id": "preview-2",
+      "displayType": "list",
+      "unit": "單元 11",
+      "title": "超級個體，並不是叫你離職創業？",
+      "videoUrl": "https://shifu.tw/learning/solopreneur/7ec2337a-ae8c-419b-a27f-1d7784f4e97a",
+      "thumbnail": "https://img.youtube.com/vi/placeholder11/hqdefault.jpg"
+    },
+    {
+      "id": "preview-3",
+      "displayType": "card",
+      "unit": "單元 13",
+      "title": "三階段閱讀法：如何有效閱讀？",
+      "videoUrl": "https://shifu.tw/learning/solopreneur/cbfd6af2-0287-45ff-825b-d482a7a47024",
+      "thumbnail": "https://img.youtube.com/vi/placeholder13/hqdefault.jpg"
+    },
+    {
+      "id": "preview-4",
+      "displayType": "list",
+      "unit": "單元 17",
+      "title": "我的年度數位工具地圖（每年更新）",
+      "videoUrl": "https://shifu.tw/learning/solopreneur/ef40cca0-943b-474a-8a79-9dd3e1ffdb2f"
+    },
+    {
+      "id": "preview-5",
+      "displayType": "list",
+      "unit": "單元 24",
+      "title": "為什麼寫作是平凡人最好的投資？",
+      "videoUrl": "https://shifu.tw/learning/solopreneur/d6dbc123-f110-4c31-8521-e11119311fd3"
+    },
+    {
+      "id": "preview-6",
+      "displayType": "list",
+      "unit": "單元 27",
+      "title": "怎麼寫出有用的個人使用說明書？",
+      "videoUrl": "https://shifu.tw/learning/solopreneur/de935296-852d-4fbc-9b16-cf23cbc3b443"
+    },
+    {
+      "id": "preview-7",
+      "displayType": "list",
+      "unit": "單元 31",
+      "title": "怎麼減少會議，還能推動專案？非同步溝通",
+      "videoUrl": "https://shifu.tw/learning/solopreneur/d8e42439-5db8-4e4a-a8a0-d5e831e32063"
+    },
+    {
+      "id": "preview-8",
+      "displayType": "list",
+      "unit": "單元 38",
+      "title": "怎麼正確使用行事曆和待辦清單？",
+      "videoUrl": "https://shifu.tw/learning/solopreneur/404abf23-5fe0-4086-978e-e56d37fe4016"
+    },
+    {
+      "id": "preview-9",
+      "displayType": "list",
+      "unit": "單元 42",
+      "title": "超級個體，是當今普通人最有效的賺錢方式嗎？",
+      "videoUrl": "https://shifu.tw/learning/solopreneur/5f14c40e-6af0-4e2c-9f41-d4a45593e935"
+    },
+    {
+      "id": "preview-10",
+      "displayType": "list",
+      "unit": "單元 52",
+      "title": "別被「擅長」困住：找到熱愛才是長期勝出的關鍵",
+      "videoUrl": "https://shifu.tw/learning/solopreneur/8f022500-8425-47b6-8565-4cfdf54be8a5"
+    }
+  ],
+  "ctaLinks": {
+    "talkSignup": {
+      "label": "報名最新職人對談",
+      "url": "#"
+    },
+    "joinCourse": {
+      "label": "立即加入課程",
+      "url": "#"
+    }
+  }
+}

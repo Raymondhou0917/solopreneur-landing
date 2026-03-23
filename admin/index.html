@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        border: 'hsl(214.3 31.8% 91.4%)',
+        input: 'hsl(214.3 31.8% 91.4%)',
+        ring: 'hsl(222.2 84% 4.9%)',
+        background: 'hsl(0 0% 100%)',
+        foreground: 'hsl(222.2 84% 4.9%)',
+        primary: { DEFAULT: '#21a4b1', foreground: 'hsl(210 40% 98%)' },
+        secondary: { DEFAULT: 'hsl(210 40% 96.1%)', foreground: 'hsl(222.2 47.4% 11.2%)' },
+        destructive: { DEFAULT: 'hsl(0 84.2% 60.2%)', foreground: 'hsl(210 40% 98%)' },
+        muted: { DEFAULT: 'hsl(210 40% 96.1%)', foreground: 'hsl(215.4 16.3% 46.9%)' },
+        accent: { DEFAULT: 'hsl(210 40% 96.1%)', foreground: 'hsl(222.2 47.4% 11.2%)' },
+        card: { DEFAULT: 'hsl(0 0% 100%)', foreground: 'hsl(222.2 84% 4.9%)' },
+        sidebar: { DEFAULT: '#1a8a95', foreground: 'hsl(0 0% 98%)' },
+      },
+      borderRadius: { lg: '0.5rem', md: 'calc(0.5rem - 2px)', sm: 'calc(0.5rem - 4px)' },
+    }
+  }
+}
+</script>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  [data-saving] { pointer-events: none; opacity: 0.6; }
+  @media (max-width: 768px) {
+    #sidebar { transform: translateX(-100%); transition: transform 0.2s; z-index: 50; }
+    #sidebar.open { transform: translateX(0); }
+    #sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 40; }
+    #sidebar-overlay.open { display: block; }
+    #app > main { margin-left: 0 !important; }
+    #hamburger { display: flex !important; }
+  }
+</style>
+</head>
+<body class="bg-muted text-foreground">
+
+<!-- Login -->
+<div id="login-screen" class="flex items-center justify-center h-screen" style="background:#21a4b1">
+  <div class="bg-card rounded-lg shadow-lg p-8 w-[360px]">
+    <h2 class="text-lg font-semibold mb-1">管理後台</h2>
+    <p class="text-sm text-muted-foreground mb-5">輸入密碼以登入</p>
+    <form id="login-form">
+      <input type="password" id="password-input" placeholder="密碼" autocomplete="current-password"
+        class="w-full h-9 px-3 border border-input rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-ring mb-3">
+      <button type="submit"
+        class="w-full h-9 bg-primary text-primary-foreground rounded-md text-sm font-medium hover:bg-primary/90 transition-colors">
+        登入
+      </button>
+    </form>
+    <div id="login-error" class="text-destructive text-sm mt-3 hidden"></div>
+  </div>
+</div>
+
+<!-- App -->
+<div id="app" class="hidden h-screen">
+  <!-- Sidebar overlay (mobile) -->
+  <div id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="fixed left-0 top-0 w-56 h-screen bg-sidebar text-sidebar-foreground flex flex-col">
+    <div class="px-4 py-4 border-b border-white/10">
+      <span class="text-sm font-semibold tracking-tight">超級個體工作術</span>
+    </div>
+    <nav class="flex-1 overflow-y-auto py-2" id="nav"></nav>
+  </aside>
+
+  <!-- Main -->
+  <main class="h-screen flex flex-col" style="margin-left:14rem;width:calc(100% - 14rem)">
+    <header class="sticky top-0 z-10 border-b border-border px-4 md:px-6 h-14 flex items-center justify-between shrink-0 gap-3">
+      <div class="flex items-center gap-3 min-w-0">
+        <button id="hamburger" class="hidden items-center justify-center w-9 h-9 rounded-md hover:bg-accent shrink-0" onclick="toggleSidebar()">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <h2 id="section-title" class="text-lg font-semibold truncate"></h2>
+      </div>
+      <div class="flex items-center gap-3">
+        <div id="save-status" class="text-xs text-muted-foreground"></div>
+        <a href="/" target="_blank" class="inline-flex items-center h-8 px-3 border border-input rounded-md text-xs font-medium hover:bg-accent transition-colors gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          網站前台
+        </a>
+      </div>
+    </header>
+    <div class="flex-1 overflow-y-auto overflow-x-hidden p-4 md:p-6" id="content"></div>
+  </main>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="fixed top-4 right-4 z-50 flex flex-col gap-2"></div>
+
+<script>
+const SECTIONS = [
+  { key: 'talks', label: '直播對談', icon: '<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z"/></svg>', fields: [
+    { name: 'image', label: '圖片 URL', type: 'text' },
+    { name: 'alt', label: 'Alt 文字', type: 'text' },
+    { name: 'link', label: '連結 URL', type: 'text' },
+    { name: 'title', label: '標題', type: 'text' }
+  ], display: i => i.title || i.id },
+  { key: 'internationalCases', label: '國外案例', icon: '<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"/></svg>', fields: [
+    { name: 'image', label: '圖片 URL', type: 'text' },
+    { name: 'alt', label: 'Alt 文字', type: 'text' },
+    { name: 'link', label: '連結 URL', type: 'text' },
+    { name: 'title', label: '標題', type: 'text' }
+  ], display: i => i.title || i.id },
+  { key: 'media', label: '媒體訪談', icon: '<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zm12.553 1.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/></svg>', fields: [
+    { name: 'type', label: '類型', type: 'select', options: ['video', 'article'] },
+    { name: 'source', label: '來源', type: 'text' },
+    { name: 'title', label: '標題', type: 'text' },
+    { name: 'image', label: '圖片 URL', type: 'text' },
+    { name: 'link', label: '連結 URL', type: 'text' }
+  ], display: i => i.title || i.id },
+  { key: 'threads', label: 'Threads', icon: '<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>', fields: [
+    { name: 'permalink', label: 'Permalink URL', type: 'text' }
+  ], display: i => i.permalink ? i.permalink.substring(0, 50) + '...' : i.id },
+  { key: 'testimonials', label: '學員心得', icon: '<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/></svg>', fields: [
+    { name: 'avatar', label: '頭像', type: 'image' },
+    { name: 'quote', label: '引言', type: 'textarea' },
+    { name: 'author', label: '作者', type: 'text' },
+    { name: 'role', label: '角色', type: 'text' }
+  ], display: i => i.author ? `${i.author} — ${i.role || ''}` : i.id },
+  { key: 'miniQuotes', label: '學員短評', icon: '<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>', fields: [
+    { name: 'avatar', label: '頭像', type: 'image' },
+    { name: 'avatarInitial', label: '頭像字（無照片時）', type: 'text' },
+    { name: 'quote', label: '引言', type: 'textarea' },
+    { name: 'author', label: '作者', type: 'text' },
+    { name: 'role', label: '角色', type: 'text' }
+  ], display: i => i.author ? `${i.author} — ${i.role || ''}` : i.id },
+  { key: 'studentArticles', label: '學員文章', icon: '<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg>', fields: [
+    { name: 'link', label: '連結 URL', type: 'text' },
+    { name: 'image', label: '圖片 URL', type: 'text' },
+    { name: 'tag', label: '標籤', type: 'text' },
+    { name: 'title', label: '標題', type: 'text' },
+    { name: 'excerpt', label: '摘要', type: 'textarea' },
+    { name: 'meta', label: 'Meta', type: 'text' }
+  ], display: i => i.title || i.id },
+  { key: 'coursePreview', label: '課程試看', icon: '<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>', fields: [
+    { name: 'displayType', label: '顯示類型', type: 'select', options: ['card', 'list'] },
+    { name: 'unit', label: '單元', type: 'text' },
+    { name: 'title', label: '標題', type: 'text' },
+    { name: 'videoUrl', label: '影片 URL', type: 'text' },
+    { name: 'thumbnail', label: '縮圖 URL', type: 'text' }
+  ], display: i => i.unit ? `${i.unit} — ${i.title || ''}` : i.id },
+  { key: 'ctaLinks', label: 'CTA 按鈕', icon: '<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"/></svg>', custom: 'cta' }
+];
+
+let data = {};
+let activeSection = 0;
+let expandedItems = {};
+let saveTimeout = null;
+
+function toast(msg, type) {
+  const el = document.createElement('div');
+  el.className = `px-4 py-3 rounded-lg text-sm font-medium shadow-lg animate-[fadeIn_0.2s] ${type === 'success' ? 'bg-primary text-primary-foreground' : 'bg-destructive text-destructive-foreground'}`;
+  el.textContent = msg;
+  document.getElementById('toast').appendChild(el);
+  setTimeout(() => { el.style.opacity = '0'; el.style.transition = 'opacity 0.3s'; setTimeout(() => el.remove(), 300); }, 2500);
+}
+
+async function api(method, url, body) {
+  const opts = { method, headers: {}, credentials: 'same-origin' };
+  if (body instanceof FormData) { opts.body = body; }
+  else if (body) { opts.headers['Content-Type'] = 'application/json'; opts.body = JSON.stringify(body); }
+  const res = await fetch(url, opts);
+  const json = await res.json();
+  if (!res.ok) throw new Error(json.error || 'Request failed');
+  return json;
+}
+
+// Auto-save + publish
+function scheduleAutoSave() {
+  if (saveTimeout) clearTimeout(saveTimeout);
+  document.getElementById('save-status').textContent = '有未儲存的變更...';
+  saveTimeout = setTimeout(autoSave, 1500);
+}
+
+async function autoSave() {
+  const status = document.getElementById('save-status');
+  status.textContent = '儲存中...';
+  try {
+    await api('PUT', '/api/content', data);
+    await api('POST', '/api/publish');
+    status.textContent = '已儲存';
+    setTimeout(() => { if (status.textContent === '已儲存') status.textContent = ''; }, 2000);
+  } catch (err) {
+    status.textContent = '';
+    toast('儲存失敗: ' + err.message, 'error');
+  }
+}
+
+// Login
+document.getElementById('login-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const pw = document.getElementById('password-input').value;
+  const errEl = document.getElementById('login-error');
+  try {
+    await api('POST', '/api/login', { password: pw });
+    await loadApp();
+  } catch (err) {
+    errEl.textContent = err.message;
+    errEl.classList.remove('hidden');
+  }
+});
+
+async function init() {
+  try {
+    const status = await api('GET', '/api/status');
+    if (status.authenticated) await loadApp();
+  } catch (e) {}
+}
+
+async function loadApp() {
+  data = await api('GET', '/api/content');
+  document.getElementById('login-screen').classList.add('hidden');
+  document.getElementById('app').classList.remove('hidden');
+  document.getElementById('app').classList.add('flex');
+  buildNav();
+  showSection(0);
+}
+
+function buildNav() {
+  const nav = document.getElementById('nav');
+  nav.innerHTML = '';
+  SECTIONS.forEach((s, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'w-full flex items-center gap-2.5 px-4 py-2 text-sm text-left hover:bg-white/10 transition-colors';
+    btn.innerHTML = `<span class="shrink-0 opacity-60">${s.icon || ''}</span><span>${s.label}</span>`;
+    btn.onclick = () => { showSection(i); document.getElementById('sidebar').classList.remove('open'); document.getElementById('sidebar-overlay').classList.remove('open'); };
+    nav.appendChild(btn);
+  });
+}
+
+function showSection(idx) {
+  activeSection = idx;
+  expandedItems = {};
+  const s = SECTIONS[idx];
+  document.getElementById('section-title').textContent = s.label;
+  document.querySelectorAll('#nav button').forEach((b, i) => {
+    b.classList.toggle('bg-white/10', i === idx);
+  });
+  if (s.custom === 'cta') renderCtaLinks();
+  else if (s.custom) renderMeetupPhotos();
+  else renderGenericSection(s);
+}
+
+// Input classes (Shadcn style)
+const inputCls = 'w-full h-9 px-3 border border-input rounded-md text-sm bg-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-1';
+const textareaCls = 'w-full px-3 py-2 border border-input rounded-md text-sm bg-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-1 resize-y min-h-[70px]';
+const selectCls = 'w-full h-9 px-3 border border-input rounded-md text-sm bg-background focus:outline-none focus:ring-2 focus:ring-ring';
+const btnIcon = 'inline-flex items-center justify-center w-8 h-8 rounded-md border border-input text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors text-xs';
+
+function renderGenericSection(section) {
+  const items = data[section.key] || [];
+  const el = document.getElementById('content');
+  let html = '<div class="w-full space-y-2">';
+
+  items.forEach((item, i) => {
+    const isOpen = expandedItems[item.id];
+    html += `<div class="bg-card border border-border rounded-lg overflow-hidden shadow-sm">
+      <div class="flex items-center px-4 h-11 cursor-pointer hover:bg-muted/50 transition-colors gap-2" onclick="toggleItem('${item.id}')">
+        <svg class="w-3.5 h-3.5 text-muted-foreground shrink-0 transition-transform ${isOpen ? 'rotate-90' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <span class="flex-1 text-sm truncate">${esc(section.display(item))}</span>
+        <div class="flex gap-1 shrink-0">
+          <button class="${btnIcon}" onclick="event.stopPropagation();moveItem('${section.key}',${i},-1)" title="上移">↑</button>
+          <button class="${btnIcon}" onclick="event.stopPropagation();moveItem('${section.key}',${i},1)" title="下移">↓</button>
+          <button class="${btnIcon} hover:!bg-destructive/10 hover:!text-destructive hover:!border-destructive/30" onclick="event.stopPropagation();deleteItem('${section.key}',${i})" title="刪除">✕</button>
+        </div>
+      </div>
+      <div class="${isOpen ? '' : 'hidden'}" id="form-${item.id}">
+        <div class="px-4 py-3 border-t border-border space-y-3 bg-muted/30">`;
+
+    section.fields.forEach(f => {
+      html += `<div><label class="block text-xs font-medium text-muted-foreground mb-1.5">${f.label}</label>`;
+      if (f.type === 'textarea') {
+        html += `<textarea class="${textareaCls}" onchange="updateField('${section.key}',${i},'${f.name}',this.value)">${esc(item[f.name] || '')}</textarea>`;
+      } else if (f.type === 'select') {
+        html += `<select class="${selectCls}" onchange="updateField('${section.key}',${i},'${f.name}',this.value)">`;
+        f.options.forEach(o => { html += `<option value="${o}"${item[f.name] === o ? ' selected' : ''}>${o}</option>`; });
+        html += '</select>';
+      } else if (f.type === 'image') {
+        const val = item[f.name] || '';
+        html += `<div class="flex items-center gap-2">`;
+        if (val) html += `<img src="${val.startsWith('http') ? '' : '/'}${esc(val)}" class="w-9 h-9 rounded-full object-cover border border-input shrink-0">`;
+        else html += `<div class="w-9 h-9 rounded-full bg-muted border border-input shrink-0 flex items-center justify-center text-xs text-muted-foreground">?</div>`;
+        html += `<input class="${inputCls} flex-1" value="${esc(val)}" onchange="updateField('${section.key}',${i},'${f.name}',this.value)" placeholder="URL 或上傳">`;
+        html += `<label class="inline-flex items-center h-9 px-3 border border-input rounded-md text-xs font-medium cursor-pointer hover:bg-accent transition-colors shrink-0">上傳<input type="file" accept=".webp,.jpg,.jpeg,.png" class="hidden" onchange="uploadAvatar('${section.key}',${i},'${f.name}',this)"></label>`;
+        html += `</div>`;
+      } else {
+        html += `<input class="${inputCls}" value="${esc(item[f.name] || '')}" onchange="updateField('${section.key}',${i},'${f.name}',this.value)">`;
+      }
+      html += '</div>';
+    });
+
+    html += '</div></div></div>';
+  });
+
+  html += `<button class="w-full h-10 border-2 border-dashed border-border rounded-lg text-sm text-muted-foreground hover:border-primary/30 hover:text-foreground transition-colors" onclick="addItem('${section.key}')">+ 新增</button>`;
+  html += `<div class="pt-2"><button class="h-9 px-4 bg-primary text-primary-foreground rounded-md text-sm font-medium hover:bg-primary/90 transition-colors" onclick="manualSave()">儲存變更</button></div>`;
+  html += '</div>';
+  el.innerHTML = html;
+}
+
+function toggleItem(id) {
+  expandedItems[id] = !expandedItems[id];
+  const form = document.getElementById('form-' + id);
+  if (form) form.classList.toggle('hidden');
+  const arrow = form?.previousElementSibling?.querySelector('svg');
+  if (arrow) arrow.classList.toggle('rotate-90');
+}
+
+function updateField(key, idx, field, value) {
+  data[key][idx][field] = value;
+  scheduleAutoSave();
+}
+
+function moveItem(key, idx, dir) {
+  const arr = data[key];
+  const newIdx = idx + dir;
+  if (newIdx < 0 || newIdx >= arr.length) return;
+  [arr[idx], arr[newIdx]] = [arr[newIdx], arr[idx]];
+  showSection(activeSection);
+  scheduleAutoSave();
+}
+
+function deleteItem(key, idx) {
+  if (!confirm('確定刪除？')) return;
+  data[key].splice(idx, 1);
+  showSection(activeSection);
+  scheduleAutoSave();
+}
+
+function addItem(key) {
+  const section = SECTIONS.find(s => s.key === key);
+  const item = { id: key + '-' + Date.now() };
+  section.fields.forEach(f => { item[f.name] = f.type === 'select' ? f.options[0] : ''; });
+  if (!data[key]) data[key] = [];
+  data[key].push(item);
+  expandedItems[item.id] = true;
+  showSection(activeSection);
+}
+
+async function manualSave() {
+  if (saveTimeout) clearTimeout(saveTimeout);
+  await autoSave();
+  toast('已儲存並發布', 'success');
+}
+
+// Meetup photos
+function renderMeetupPhotos() {
+  const groups = data.meetupPhotos || [];
+  const el = document.getElementById('content');
+  let html = '<div class="w-full space-y-2">';
+
+  groups.forEach((group, gi) => {
+    const isOpen = expandedItems[group.id];
+    html += `<div class="bg-card border border-border rounded-lg overflow-hidden shadow-sm">
+      <div class="flex items-center px-4 h-11 cursor-pointer hover:bg-muted/50 transition-colors gap-2" onclick="toggleItem('${group.id}')">
+        <svg class="w-3.5 h-3.5 text-muted-foreground shrink-0 transition-transform ${isOpen ? 'rotate-90' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <span class="flex-1 text-sm font-medium">${esc(group.label)} <span class="text-muted-foreground font-normal">(${(group.photos||[]).length} 張)</span></span>
+        <div class="flex gap-1 shrink-0">
+          <button class="${btnIcon}" onclick="event.stopPropagation();moveItem('meetupPhotos',${gi},-1)">↑</button>
+          <button class="${btnIcon}" onclick="event.stopPropagation();moveItem('meetupPhotos',${gi},1)">↓</button>
+          <button class="${btnIcon} hover:!bg-destructive/10 hover:!text-destructive" onclick="event.stopPropagation();deleteGroup(${gi})">✕</button>
+        </div>
+      </div>
+      <div class="${isOpen ? '' : 'hidden'}" id="form-${group.id}">
+        <div class="px-4 py-3 border-t border-border bg-muted/30 space-y-3">
+          <div class="flex gap-2 items-center">
+            <label class="text-xs font-medium text-muted-foreground shrink-0">群組名稱</label>
+            <input class="${inputCls} flex-1" value="${esc(group.label)}" onchange="data.meetupPhotos[${gi}].label=this.value;scheduleAutoSave();">
+          </div>
+          <div class="grid grid-cols-[repeat(auto-fill,minmax(80px,1fr))] gap-2">`;
+    (group.photos || []).forEach((photo, pi) => {
+      html += `<div class="relative aspect-square rounded-md overflow-hidden border border-input bg-muted group">
+        <img src="/${esc(photo)}" class="w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center gap-1 opacity-0 group-hover:opacity-100">
+          <button class="w-6 h-6 rounded bg-black/60 text-white text-xs" onclick="movePhoto(${gi},${pi},-1)">←</button>
+          <button class="w-6 h-6 rounded bg-black/60 text-white text-xs" onclick="movePhoto(${gi},${pi},1)">→</button>
+          <button class="w-6 h-6 rounded bg-destructive text-white text-xs" onclick="deletePhoto(${gi},${pi})">✕</button>
+        </div>
+      </div>`;
+    });
+    html += `</div>
+          <label class="inline-flex items-center h-9 px-3 border border-input rounded-md text-xs font-medium cursor-pointer hover:bg-accent transition-colors">
+            上傳照片
+            <input type="file" accept=".webp,.jpg,.jpeg,.png" multiple class="hidden" onchange="uploadPhotos(${gi},this)">
+          </label>
+        </div>
+      </div>
+    </div>`;
+  });
+
+  html += `<button class="w-full h-10 border-2 border-dashed border-border rounded-lg text-sm text-muted-foreground hover:border-primary/30 hover:text-foreground transition-colors" onclick="addGroup()">+ 新增群組</button>`;
+  html += `<div class="pt-2"><button class="h-9 px-4 bg-primary text-primary-foreground rounded-md text-sm font-medium hover:bg-primary/90 transition-colors" onclick="manualSave()">儲存變更</button></div>`;
+  html += '</div>';
+  el.innerHTML = html;
+}
+
+function addGroup() {
+  if (!data.meetupPhotos) data.meetupPhotos = [];
+  const g = { id: 'meetup-' + Date.now(), label: '新群組', photos: [] };
+  data.meetupPhotos.push(g);
+  expandedItems[g.id] = true;
+  renderMeetupPhotos();
+}
+
+function deleteGroup(gi) {
+  if (!confirm('確定刪除此群組？')) return;
+  data.meetupPhotos.splice(gi, 1);
+  renderMeetupPhotos();
+  scheduleAutoSave();
+}
+
+function movePhoto(gi, pi, dir) {
+  const photos = data.meetupPhotos[gi].photos;
+  const newPi = pi + dir;
+  if (newPi < 0 || newPi >= photos.length) return;
+  [photos[pi], photos[newPi]] = [photos[newPi], photos[pi]];
+  renderMeetupPhotos();
+  scheduleAutoSave();
+}
+
+function deletePhoto(gi, pi) {
+  data.meetupPhotos[gi].photos.splice(pi, 1);
+  renderMeetupPhotos();
+  scheduleAutoSave();
+}
+
+async function uploadPhotos(gi, input) {
+  for (const file of input.files) {
+    const fd = new FormData();
+    fd.append('image', file);
+    try {
+      const res = await api('POST', '/api/upload', fd);
+      data.meetupPhotos[gi].photos.push(res.path);
+    } catch (err) { toast('上傳失敗: ' + err.message, 'error'); }
+  }
+  renderMeetupPhotos();
+  scheduleAutoSave();
+  toast('上傳完成', 'success');
+}
+
+async function uploadAvatar(key, idx, field, input) {
+  const file = input.files[0];
+  if (!file) return;
+  const fd = new FormData();
+  fd.append('image', file);
+  try {
+    const res = await api('POST', '/api/upload', fd);
+    data[key][idx][field] = res.path;
+    showSection(activeSection);
+    scheduleAutoSave();
+  } catch (err) { toast('上傳失敗: ' + err.message, 'error'); }
+}
+
+function renderCtaLinks() {
+  const links = data.ctaLinks || {};
+  const el = document.getElementById('content');
+  const keys = Object.keys(links);
+  let html = '<div class="w-full space-y-4">';
+  keys.forEach(key => {
+    const item = links[key];
+    html += `<div class="bg-card border border-border rounded-lg p-4 shadow-sm space-y-3">
+      <div><label class="block text-xs font-medium text-muted-foreground mb-1.5">按鈕名稱</label>
+        <input class="${inputCls}" value="${esc(item.label || '')}" onchange="data.ctaLinks['${key}'].label=this.value;scheduleAutoSave();">
+      </div>
+      <div><label class="block text-xs font-medium text-muted-foreground mb-1.5">連結 URL</label>
+        <input class="${inputCls}" value="${esc(item.url || '')}" onchange="data.ctaLinks['${key}'].url=this.value;scheduleAutoSave();">
+      </div>
+    </div>`;
+  });
+  html += '<div class="pt-2"><button class="h-9 px-4 bg-primary text-primary-foreground rounded-md text-sm font-medium hover:bg-primary/90 transition-colors" onclick="manualSave()">儲存變更</button></div>';
+  html += '</div>';
+  el.innerHTML = html;
+}
+
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('sidebar-overlay').classList.toggle('open');
+}
+
+function esc(str) {
+  const d = document.createElement('div');
+  d.textContent = str || '';
+  return d.innerHTML;
+}
+
+init();
+</script>
+</body>
+</html>
