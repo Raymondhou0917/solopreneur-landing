@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>超級個體工作術 — 雷蒙三十年度大課</title>
   <meta name="description" content="用這一套系統，在 AI 時代讓自己更值錢。整合 7 年實踐精華的 55 個策略，從時間管理、知識萃取到個人品牌變現，幫你建立一個人就能運轉的工作系統。">
+  <link rel="canonical" href="https://solopreneur.lifehacker.tw/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="超級個體工作術 — 雷蒙三十年度大課">
+  <meta property="og:description" content="用這一套系統，在 AI 時代讓自己更值錢。整合 7 年實踐精華的 55 個策略，幫你建立一個人就能運轉的工作系統。">
+  <meta property="og:url" content="https://solopreneur.lifehacker.tw/">
+  <meta property="og:image" content="https://image.lifehacker.tw/solopreneur/og-cover.webp">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="788">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="雷蒙三十">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="超級個體工作術 — 雷蒙三十年度大課">
+  <meta name="twitter:description" content="用這一套系統，在 AI 時代讓自己更值錢。整合 7 年實踐精華的 55 個策略，幫你建立一個人就能運轉的工作系統。">
+  <meta name="twitter:image" content="https://image.lifehacker.tw/solopreneur/og-cover.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&family=Noto+Sans+TC:wght@400;500;600;700;800;900&family=Noto+Serif+TC:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -2237,6 +2254,33 @@
       .media-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "超級個體工作術",
+    "description": "用這一套系統，在 AI 時代讓自己更值錢。整合 7 年實踐精華的 55 個策略，從時間管理、知識萃取到個人品牌變現，幫你建立一個人就能運轉的工作系統。",
+    "provider": {
+      "@type": "Organization",
+      "name": "雷蒙三十",
+      "url": "https://raymondhouch.com"
+    },
+    "instructor": {
+      "@type": "Person",
+      "name": "侯智薰（雷蒙）",
+      "url": "https://raymondhouch.com/about/"
+    },
+    "url": "https://solopreneur.lifehacker.tw/",
+    "image": "https://image.lifehacker.tw/solopreneur/og-cover.webp",
+    "inLanguage": "zh-TW",
+    "numberOfCredits": 55,
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "courseWorkload": "PT18H"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -2273,7 +2317,7 @@
     <div class="hero-sub-label">Solopreneur</div>
 
     <div class="hero-text" style="margin-top:1rem;">
-      <h2>用這一套系統，在 AI 時代讓自己更值錢<br><strong>從普通人升級為超級個體的 55 個策略</strong></h2>
+      <h1>用這一套系統，在 AI 時代讓自己更值錢<br><strong>從普通人升級為超級個體的 55 個策略</strong></h1>
       <p class="hero-desc">
         這個時代，最好的出路叫做「超級個體」<br><br>
         你不是不夠努力，是還沒找到那套系統<br><br>
@@ -2288,7 +2332,7 @@
       <div style="display:flex;justify-content:center;gap:1.5rem;margin-bottom:2.5rem;">
         <% miniQuotes.forEach(function(q) { %>
         <div style="display:flex;align-items:flex-start;gap:0.6rem;flex:1;">
-          <div style="width:32px;height:32px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0;overflow:hidden;margin-top:2px;"><% if (q.avatar) { %><img src="<%= q.avatar %>" alt="" style="width:100%;height:100%;object-fit:cover;"><% } else { %><%= q.avatarInitial %><% } %></div>
+          <div style="width:32px;height:32px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0;overflow:hidden;margin-top:2px;"><% if (q.avatar) { %><img src="<%= q.avatar %>" alt="<%= q.author %>" style="width:100%;height:100%;object-fit:cover;"><% } else { %><%= q.avatarInitial %><% } %></div>
           <div>
             <div style="font-size:13px;color:rgba(0,0,0,0.55);line-height:1.5;">「<%= q.quote %>」</div>
             <div style="font-size:12px;color:rgba(0,0,0,0.3);margin-top:3px;"><%= q.author %> · <%= q.role %></div>
@@ -2830,7 +2874,7 @@
       <% studentArticles.forEach(function(a) { %>
       <a href="<%= a.link %>" target="_blank" class="article-card">
         <% if (a.image) { %>
-        <img class="article-card-img" src="<%= a.image %>" alt="">
+        <img class="article-card-img" src="<%= a.image %>" alt="<%= a.title %>">
         <% } else { %>
         <div class="article-card-img-placeholder">文章封面圖</div>
         <% } %>
@@ -2907,7 +2951,7 @@
       <% media.forEach(function(m) { %>
       <a href="<%= m.link %>" target="_blank" class="media-card">
         <div class="media-card-thumb">
-          <img src="<%= m.image %>" alt="">
+          <img src="<%= m.image %>" alt="<%= m.title %>">
           <% if (m.type === 'video') { %><div class="media-card-play"></div><% } %>
         </div>
         <div class="media-card-body">
