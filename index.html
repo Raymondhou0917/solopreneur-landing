@@ -4,21 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>超級個體工作術 — 雷蒙三十年度大課</title>
-  <meta name="description" content="一堂能改變你工作、職場困境的課。沒有空泛的理論，只有一套可操作的個體升級路徑。">
+  <meta name="description" content="用這一套系統，在 AI 時代讓自己更值錢。整合 7 年實踐精華的 55 個策略，從時間管理、知識萃取到個人品牌變現，幫你建立一個人就能運轉的工作系統。">
+  <link rel="canonical" href="https://solopreneur.lifehacker.tw/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="超級個體工作術 — 雷蒙三十年度大課">
+  <meta property="og:description" content="用這一套系統，在 AI 時代讓自己更值錢。整合 7 年實踐精華的 55 個策略，幫你建立一個人就能運轉的工作系統。">
+  <meta property="og:url" content="https://solopreneur.lifehacker.tw/">
+  <meta property="og:image" content="https://image.lifehacker.tw/solopreneur/og-cover.webp">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="788">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="雷蒙三十">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="超級個體工作術 — 雷蒙三十年度大課">
+  <meta name="twitter:description" content="用這一套系統，在 AI 時代讓自己更值錢。整合 7 年實踐精華的 55 個策略，幫你建立一個人就能運轉的工作系統。">
+  <meta name="twitter:image" content="https://image.lifehacker.tw/solopreneur/og-cover.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@800;900&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&family=Noto+Sans+TC:wght@400;500;600;700;800;900&family=Noto+Serif+TC:wght@400;600;700;900&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream: #fafaf8;
+      --cream: #ffffff;
       --orange: #E77E47;
       --dark: #1a1a2e;
       --dark-deep: #141425;
-      --gray-light: #f4f6f7;
+      --yellow: #f4f6f7;
       --black: #374151;
-      --white: #fefefe;
+      --white: #FFFFFF;
       --teal: #21A4B1;
       --light-bg: #f9fafb;
       --font-display: 'Montserrat', sans-serif;
@@ -58,24 +75,14 @@
     }
     .divider { height: 1px; background: rgba(0,0,0,0.15); margin: 1.5rem 0; }
     .divider-light { height: 1px; background: rgba(255,255,255,0.1); margin: 1.5rem 0; }
-    .body-text { font-size: 16px; color: rgba(0,0,0,0.75); line-height: 1.75; }
+    .body-text { font-size: 16px; color: rgba(0,0,0,0.65); line-height: 1.75; }
     .body-text-light { font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.75; }
 
     /* Backgrounds */
     .bg-cream { background-color: var(--cream); }
     .bg-dark { background-color: var(--dark); }
     .bg-dark-deep { background-color: var(--dark-deep); }
-    .bg-gray-light { background-color: var(--gray-light); }
-
-    /* Focus */
-    :focus-visible {
-      outline: 2px solid var(--orange);
-      outline-offset: 2px;
-    }
-    .bg-dark :focus-visible,
-    .bg-dark-deep :focus-visible {
-      outline-color: var(--orange);
-    }
+    .bg-yellow { background-color: var(--yellow); }
 
     /* Scroll Animation */
     .fade-up {
@@ -247,12 +254,9 @@
     /* ===================== */
     .hero {
       background: var(--cream);
-      padding: 6rem 1.5rem 4rem;
+      padding: 8rem 1.5rem 4rem;
       text-align: center;
-    }
-    .hero-logo {
-      height: 40px;
-      margin-bottom: 2rem;
+      overflow: hidden;
     }
     .hero h1 {
       font-family: var(--font-display);
@@ -262,7 +266,6 @@
       letter-spacing: -0.02em;
       text-transform: uppercase;
       margin-bottom: 0.5rem;
-      white-space: nowrap;
     }
     .hero-sub-label {
       font-family: var(--font-sans);
@@ -273,63 +276,133 @@
       color: var(--teal);
       margin-bottom: 1.5rem;
     }
-    .hero-content {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
+    .hero-text {
       max-width: var(--max-width);
       margin: 0 auto;
-      text-align: left;
     }
+    .hero-text h1,
     .hero-text h2 {
       font-family: var(--font-serif);
-      font-size: clamp(22px, 2.8vw, 30px);
+      font-size: clamp(28px, 4.5vw, 56px);
       font-weight: 700;
       line-height: 1.3;
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
     }
+    .hero-text h1 strong,
     .hero-text h2 strong { color: var(--orange); }
     .hero-text .hero-desc {
-      font-size: 16px;
-      color: rgba(0,0,0,0.75);
+      font-size: 18px;
+      color: rgba(0,0,0,0.65);
       line-height: 1.75;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
     }
-    .hero-text .hero-detail {
-      font-size: 14px;
-      color: rgba(0,0,0,0.6);
-      margin-bottom: 2rem;
-    }
-    .hero-photo {
+    .hero-cta-row {
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
     }
-    .hero-photo img {
+    /* Hero Mockup */
+    .hero-mockup-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      perspective: 1200px;
+    }
+    .hero-mockup {
+      will-change: transform;
+      transform: rotateX(12deg) scale(0.95);
+      opacity: 0.9;
+      transition: transform 0.1s linear, opacity 0.1s linear;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15), 0 8px 20px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .hero-tabs {
+      display: inline-flex;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 1rem;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 999px;
+      padding: 6px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04);
+    }
+    .hero-tab {
+      padding: 0.5rem 1.25rem;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(0,0,0,0.5);
+      background: transparent;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+    }
+    .hero-tab.active {
+      background: #21a4b1;
+      color: #fff;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(33,164,177,0.3);
+    }
+    .hero-tab:hover:not(.active) { color: var(--black); background: rgba(0,0,0,0.04); }
+    .hero-screen {
+      display: none;
       width: 100%;
-      max-width: 360px;
-      max-height: 480px;
-      border-radius: 8px;
+      background: #f0f0f0;
+    }
+    .hero-screen.active { display: block; }
+    .hero-screen img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      object-position: top;
     }
-    .hero-photo-placeholder {
+    .hero-stat-card {
+      flex: 1;
+      min-width: 140px;
+      background: linear-gradient(135deg, #E77E47 0%, #d4a574 100%);
+      border-radius: 12px;
+      padding: 1.25rem 1rem;
+      text-align: center;
+    }
+    .hero-stat-icon {
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: center;
+    }
+    .hero-stat-icon svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 1.5; }
+    .hero-stat-label {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 0.35rem;
+    }
+    .hero-stat-num {
+      font-family: var(--font-sans);
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+    }
+    .hero-screen-placeholder {
       width: 100%;
-      max-width: 360px;
-      aspect-ratio: 3/4;
-      background: rgba(0,0,0,0.08);
-      border-radius: 8px;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 14px;
-      color: rgba(0,0,0,0.3);
-    }
-
-    @media (min-width: 768px) {
-      .hero-content {
-        grid-template-columns: 3fr 2fr;
-        gap: 2.5rem;
-      }
+      color: rgba(0,0,0,0.25);
+      background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
     }
 
     /* ===================== */
@@ -337,134 +410,380 @@
     /* ===================== */
     .stats-section {
       background: var(--cream);
-      padding: 0 1.5rem 4rem;
+      padding: 4rem 1.5rem;
     }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1px;
-      background: rgba(0,0,0,0.1);
-      border-radius: 8px;
-      overflow: hidden;
+    .stats-bar {
       max-width: var(--max-width);
       margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.04);
+      padding: 2rem 1rem;
+      border: 1px solid rgba(0,0,0,0.06);
     }
-    .stat-card {
-      background: var(--cream);
-      padding: 1.5rem;
+    .stat-item {
+      flex: 1;
       text-align: center;
+      padding: 0 1rem;
+      border-right: 1px solid rgba(0,0,0,0.08);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-icon {
+      font-size: 20px;
+      margin-bottom: 0.5rem;
     }
     .stat-num {
       font-family: var(--font-display);
-      font-size: clamp(36px, 4vw, 48px);
-      font-weight: 700;
-      color: var(--teal);
+      font-size: clamp(28px, 3vw, 36px);
+      font-weight: 800;
+      color: var(--black);
       line-height: 1;
     }
     .stat-label {
       font-family: var(--font-sans);
       font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin: 0.5rem 0 0.25rem;
+      font-weight: 500;
+      color: rgba(0,0,0,0.5);
+      margin-top: 0.35rem;
     }
-    .stat-desc {
-      font-size: 14px;
-      color: rgba(0,0,0,0.6);
-      line-height: 1.5;
-    }
-
-    @media (min-width: 768px) {
-      .stats-grid { grid-template-columns: repeat(4, 1fr); }
+    @media (max-width: 768px) {
+      .stats-bar { flex-wrap: wrap; gap: 1.5rem 0; }
+      .stat-item { flex: 0 0 50%; border-right: none; }
     }
 
     /* ===================== */
     /* SECTION 3: FOR YOU    */
     /* ===================== */
-    .for-you { padding: 5rem 1.5rem; }
-    .for-you-grid {
+    .for-you {
+      padding: 5rem 1.5rem;
+      background: var(--cream);
+    }
+    .for-you-list {
       max-width: var(--max-width);
-      margin: 2rem auto 0;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
-    }
-    .for-you-card {
-      perspective: 800px;
-      height: 180px;
-    }
-    .for-you-card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
-    }
-    /* 有滑鼠的裝置：hover 翻牌 */
-    @media (hover: hover) {
-      .for-you-card:hover .for-you-card-inner {
-        transform: rotateY(180deg);
-      }
-    }
-    /* 觸控裝置：點擊翻牌 */
-    .for-you-card.flipped .for-you-card-inner {
-      transform: rotateY(180deg);
-    }
-    .for-you-front,
-    .for-you-back {
-      position: absolute;
-      inset: 0;
-      border-radius: 12px;
-      padding: 2rem;
-      backface-visibility: hidden;
+      margin: 3rem auto 0;
       display: flex;
       flex-direction: column;
+      gap: 4rem;
+    }
+    .for-you-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .for-you-row:nth-child(odd) {
+      background: #f8f8f8;
+      padding: 31px;
+      border-radius: 24px;
+    }
+    .for-you-row-visual {
+      background: #f8f9fb;
+      border-radius: 16px;
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
       justify-content: center;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.06);
+      max-width: 400px;
     }
-    .for-you-front {
-      background: rgba(255,255,255,0.05);
+    .for-you-row-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-    .for-you-front-hint {
+    .for-you-row-visual-placeholder {
       font-size: 14px;
-      color: rgba(255,255,255,0.3);
-      margin-top: auto;
+      color: rgba(0,0,0,0.2);
     }
-    .for-you-back {
-      background: var(--orange);
-      transform: rotateY(180deg);
+    .for-you-row-content {}
+    .for-you-row-label {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--orange);
+      margin-bottom: 0.5rem;
     }
     .for-you-q {
       font-family: var(--font-serif);
-      font-size: clamp(17px, 2vw, 20px);
+      font-size: clamp(20px, 2.5vw, 26px);
       font-weight: 700;
-      color: var(--cream);
-      line-height: 1.4;
+      color: var(--black);
+      line-height: 1.35;
+      margin-bottom: 0.75rem;
     }
     .for-you-q em {
       font-style: normal;
       color: var(--orange);
     }
-    .for-you-back .for-you-q em {
-      color: #fff;
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 3px;
-    }
     .for-you-a {
-      font-size: 15px;
-      color: rgba(255,255,255,0.9);
-      line-height: 1.7;
+      font-size: 16px;
+      color: rgba(0,0,0,0.55);
+      line-height: 1.75;
     }
+    .for-you-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--orange);
+      margin-top: 1rem;
+      text-decoration: none;
+    }
+    .for-you-link:hover { text-decoration: underline; }
     @media (min-width: 768px) {
-      .for-you-grid { grid-template-columns: repeat(2, 1fr); }
-      .for-you-card { height: 200px; }
+      .for-you-row { grid-template-columns: 1fr 1fr; }
+      .for-you-row:nth-child(even) .for-you-row-visual { order: 2; }
+      .for-you-row:nth-child(even) .for-you-row-content { order: 1; }
     }
 
     /* ======================= */
     /* SECTION 4: CURRICULUM   */
     /* ======================= */
     .curriculum { padding: 5rem 1.5rem; }
+
+    /* Journey Cards (for book section) */
+    .journey-cards {
+      max-width: var(--max-width);
+      margin: 3rem auto 1rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .journey-card {
+      background: rgba(0,0,0,0.03);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
+    .journey-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(231,126,71,0.25);
+      box-shadow: 0 8px 30px rgba(231,126,71,0.08);
+    }
+    .journey-card-phase {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--orange);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    .journey-card-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: rgba(231,126,71,0.08);
+      color: var(--orange);
+    }
+    .journey-card-icon svg { width: 28px; height: 28px; }
+    .journey-card-title {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 0.5rem;
+    }
+    .journey-card-keyword {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--orange);
+      margin-bottom: 0.4rem;
+    }
+    .journey-card-desc {
+      font-size: 14px;
+      color: rgba(0,0,0,0.4);
+      line-height: 1.5;
+    }
+    @media (max-width: 768px) {
+      .journey-cards { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* Journey Flow Diagram */
+    .journey-flow {
+      max-width: var(--max-width);
+      margin: 3rem auto;
+      position: relative;
+    }
+    .journey-flow-track {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+    }
+    .journey-flow-line {
+      position: absolute;
+      top: 28px;
+      left: 60px;
+      right: 60px;
+      height: 2px;
+      background: linear-gradient(to right, var(--black), var(--orange));
+      z-index: 0;
+    }
+    .journey-flow-node {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .journey-flow-dot {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--cream);
+      border: 2px solid rgba(0,0,0,0.1);
+      color: var(--black);
+      transition: all 0.3s;
+    }
+    .journey-flow-dot svg { width: 24px; height: 24px; }
+    .journey-flow-node:first-child .journey-flow-dot {
+      background: var(--black);
+      border-color: var(--black);
+      color: #fff;
+    }
+    .journey-flow-node:last-child .journey-flow-dot {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: #fff;
+      animation: breathe 3s ease-in-out infinite, dotGlow 4s ease infinite;
+    }
+    @keyframes breathe {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    @keyframes dotGlow {
+      0% { background: var(--orange); border-color: var(--orange); box-shadow: 0 0 12px rgba(231,126,71,0.3); }
+      33% { background: var(--teal); border-color: var(--teal); box-shadow: 0 0 16px rgba(33,164,177,0.3); }
+      66% { background: #8B5CBA; border-color: #8B5CBA; box-shadow: 0 0 16px rgba(139,92,186,0.3); }
+      100% { background: var(--orange); border-color: var(--orange); box-shadow: 0 0 12px rgba(231,126,71,0.3); }
+    }
+    .journey-flow-node:not(:first-child):not(:last-child) .journey-flow-dot {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+    .journey-flow-node:hover .journey-flow-dot {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(231,126,71,0.2);
+    }
+    .journey-flow-title {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--black);
+      margin-top: 0.75rem;
+    }
+    .journey-flow-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      margin-top: 0.5rem;
+    }
+    .journey-flow-arrow {
+      width: 14px;
+      height: 14px;
+      position: relative;
+      animation: arrowPulse 2s ease-in-out infinite;
+    }
+    .journey-flow-arrow svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: rgba(0,0,0,0.15);
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      animation: arrowPulseStroke 2s ease-in-out infinite;
+    }
+    @keyframes arrowPulseStroke {
+      0%, 100% { stroke: rgba(0,0,0,0.15); }
+      50% { stroke: var(--orange); }
+    }
+    .journey-flow-node:nth-child(3) .journey-flow-arrow svg { animation-delay: 0.3s; }
+    .journey-flow-node:nth-child(4) .journey-flow-arrow svg { animation-delay: 0.6s; }
+    .journey-flow-node:nth-child(5) .journey-flow-arrow svg { animation-delay: 0.9s; }
+    .journey-flow-sub {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--orange);
+    }
+    .journey-flow-desc {
+      font-size: 14px;
+      color: rgba(0,0,0,0.4);
+    }
+    @media (max-width: 768px) {
+      .journey-flow-track { flex-direction: column; gap: 0.5rem; align-items: stretch; }
+      .journey-flow-line { display: none; }
+      .journey-flow-node { display: flex; align-items: center; gap: 1rem; text-align: left; }
+      .journey-flow-dot { margin: 0; flex-shrink: 0; width: 44px; height: 44px; }
+      .journey-flow-dot svg { width: 20px; height: 20px; }
+      .journey-flow-col { flex-direction: row; gap: 0.5rem; margin-top: 0; }
+      .journey-flow-arrow { display: none; }
+    }
+
+    /* Journey Detail Cards */
+    .journey-details {
+      max-width: var(--max-width);
+      margin: 2rem auto 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .journey-detail-card {
+      background: #f9fafb;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      display: grid;
+      grid-template-columns: 60px 1px 1fr;
+      gap: 1.25rem;
+      align-items: center;
+    }
+    .journey-detail-step {
+      text-align: center;
+    }
+    .journey-detail-num {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--orange);
+    }
+    .journey-detail-title {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--black);
+      line-height: 1;
+    }
+    .journey-detail-divider {
+      width: 1px;
+      align-self: stretch;
+      background: rgba(0,0,0,0.1);
+    }
+    .journey-detail-body {}
+    .journey-detail-desc {
+      font-size: 15px;
+      color: var(--black);
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+    .journey-detail-action {
+      font-size: 14px;
+      color: rgba(0,0,0,0.4);
+    }
 
     /* Venn Diagram — SVG-based */
     .venn-wrap {
@@ -495,12 +814,6 @@
       font-family: var(--font-serif);
       font-size: 22px;
       font-weight: 900;
-    }
-    @media (max-width: 480px) {
-      .venn-wrap .v-title { font-size: 20px; }
-      .venn-wrap .v-sub { font-size: 12px; }
-      .venn-wrap .v-label { font-size: 13px; }
-      .venn-wrap .v-center { font-size: 18px; }
     }
 
     /* Curriculum detail cards (below Venn) */
@@ -539,7 +852,7 @@
     }
     .curriculum-desc {
       font-size: 16px;
-      color: rgba(0,0,0,0.7);
+      color: rgba(0,0,0,0.6);
       line-height: 1.7;
     }
 
@@ -561,10 +874,18 @@
       line-height: 1.2;
       margin-bottom: 1rem;
     }
-    .mid-cta-heading .highlight { color: var(--orange); }
+    .typewriter-wrap {
+      color: var(--orange);
+    }
+    .typewriter-cursor {
+      font-weight: 300;
+      color: var(--orange);
+      animation: blink 0.8s infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
     .mid-cta-sub {
       font-size: 16px;
-      color: rgba(0,0,0,0.6);
+      color: rgba(0,0,0,0.5);
       margin-bottom: 2rem;
     }
 
@@ -749,15 +1070,31 @@
       gap: 0;
     }
     .learning-mode {
-      padding: 1rem 1.25rem;
+      padding: 1rem 1.25rem 1rem 1.25rem;
+      padding-right: 2.5rem;
       border-left: 3px solid rgba(255,255,255,0.1);
       cursor: pointer;
       transition: all 0.3s;
+      position: relative;
     }
     .learning-mode:hover,
     .learning-mode.active {
       border-left-color: var(--orange);
       background: rgba(255,255,255,0.05);
+    }
+    .learning-mode::after {
+      content: '▶';
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      color: var(--orange);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .learning-mode:hover::after {
+      opacity: 1;
     }
     .learning-mode-num {
       font-family: var(--font-display);
@@ -777,17 +1114,14 @@
       font-size: 14px;
       color: rgba(255,255,255,0.5);
       line-height: 1.6;
-      display: grid;
-      grid-template-rows: 0fr;
-      transition: grid-template-rows 0.3s, opacity 0.3s;
-      opacity: 0;
-    }
-    .learning-mode-desc > span {
+      max-height: 0;
       overflow: hidden;
+      transition: max-height 0.3s, opacity 0.3s;
+      opacity: 0;
     }
     .learning-mode:hover .learning-mode-desc,
     .learning-mode.active .learning-mode-desc {
-      grid-template-rows: 1fr;
+      max-height: 100px;
       opacity: 1;
     }
     .learning-preview {
@@ -841,12 +1175,33 @@
       grid-template-columns: 1fr;
       gap: 2.5rem;
     }
-    .instructor-inner > div:first-child img {
+    .instructor-photos {}
+    .instructor-photos .main-photo {
       width: 100%;
-      max-width: 320px;
-      max-height: 420px;
+      border-radius: 16px;
+      object-fit: cover;
+    }
+    .instructor-sub-photos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+    .instructor-sub-photos img {
+      width: 100%;
+      aspect-ratio: 4/3;
       border-radius: 12px;
       object-fit: cover;
+    }
+    .instructor-sub-photos .sub-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: rgba(0,0,0,0.2);
     }
     .instructor-name {
       font-family: var(--font-display);
@@ -864,7 +1219,7 @@
     }
     .instructor-bio {
       font-size: 16px;
-      color: rgba(0,0,0,0.75);
+      color: rgba(0,0,0,0.65);
       line-height: 1.8;
       margin-bottom: 0.75rem;
     }
@@ -876,27 +1231,270 @@
       margin-top: 1rem;
     }
     .instructor-stats {
-      display: flex;
-      gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
       margin-top: 1.5rem;
-      flex-wrap: wrap;
     }
     .instructor-stat {
-      text-align: center;
+      background: #f9fafb;
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 12px;
+      padding: 1.25rem;
     }
-    .instructor-stat-num {
-      font-family: var(--font-display);
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--teal);
+    .instructor-stat:first-child {
+      background: linear-gradient(135deg, var(--orange), #c4632e);
+      border: none;
     }
+    .instructor-stat:first-child .instructor-stat-label,
+    .instructor-stat:first-child .instructor-stat-num { color: #fff; }
     .instructor-stat-label {
       font-size: 14px;
-      color: rgba(0,0,0,0.6);
+      font-weight: 500;
+      color: rgba(0,0,0,0.5);
+      margin-bottom: 0.5rem;
+    }
+    .instructor-stat-num {
+      font-family: var(--font-sans);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--black);
+      line-height: 1;
     }
 
     @media (min-width: 768px) {
       .instructor-inner { grid-template-columns: 320px 1fr; }
+    }
+
+    /* ======================== */
+    /* BOOK SECTION             */
+    /* ======================== */
+    .book-section { padding: 0 1.5rem 5rem; background: var(--cream); }
+    .book-layout {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+      background:
+        radial-gradient(ellipse at 30% 20%, rgba(231,126,71,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(33,164,177,0.06) 0%, transparent 50%),
+        linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px),
+        #f9fafb;
+      background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px, 100% 100%;
+      border-radius: 20px;
+      padding: 3rem;
+    }
+    @media (min-width: 768px) {
+      .book-layout { grid-template-columns: auto 1fr; }
+    }
+    .book-mockup {
+      perspective: 800px;
+      display: flex;
+      justify-content: center;
+    }
+    .book-3d {
+      position: relative;
+      width: 180px;
+      transform-style: preserve-3d;
+    }
+    .book-cover {
+      width: 100%;
+      border-radius: 4px 8px 8px 4px;
+      overflow: hidden;
+      background: linear-gradient(145deg, #21a4b1 0%, #1a8a95 60%, #167a85 100%);
+      aspect-ratio: 2.8/4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow:
+        10px 10px 30px rgba(0,0,0,0.2),
+        3px 3px 8px rgba(0,0,0,0.1);
+    }
+    /* Spine left */
+    .book-cover::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 8px;
+      background: linear-gradient(to right, #1a8a95, #21a4b1);
+      border-radius: 4px 0 0 4px;
+      box-shadow: inset -1px 0 3px rgba(0,0,0,0.1);
+    }
+    /* Page edges right */
+    .book-cover::after {
+      content: '';
+      position: absolute;
+      right: -6px;
+      top: 4px;
+      bottom: 4px;
+      width: 6px;
+      background: linear-gradient(to right,
+        #e8eeef, #f0f5f5, #e8eeef
+      );
+      border-radius: 0 2px 2px 0;
+      box-shadow: 1px 0 2px rgba(0,0,0,0.05);
+    }
+    /* Bottom pages */
+    .book-bottom-pages {
+      position: absolute;
+      bottom: -8px;
+      left: 4px;
+      right: 4px;
+      height: 8px;
+      background: linear-gradient(to bottom,
+        #ebe6e0, #f0ece6 2px, #e8e3dc 3px, #f0ece6 4px, #e8e3dc 5px, #ebe6e0
+      );
+      border-radius: 0 0 3px 3px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+    .book-question {
+      font-size: 120px;
+      font-weight: 800;
+      color: var(--orange);
+      opacity: 0.15;
+      font-family: var(--font-display);
+      line-height: 1;
+      position: relative;
+      z-index: 1;
+    }
+    .book-info-title {
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700;
+      color: var(--black);
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+    .book-info-desc {
+      font-size: 16px;
+      color: rgba(0,0,0,0.55);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+    .book-previews {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    .book-preview-img {
+      flex: 1;
+      aspect-ratio: 1/1;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.08);
+      background: rgba(0,0,0,0.03);
+    }
+    .book-preview-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .book-preview-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: rgba(0,0,0,0.2);
+    }
+    .book-form {
+      padding: 0;
+    }
+    .book-form-label {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 0.75rem;
+    }
+    .book-form-note {
+      font-size: 14px;
+      color: rgba(0,0,0,0.3);
+      margin-top: 0.5rem;
+    }
+    /* Kit form overrides */
+    .book-form .formkit-form { max-width: 100% !important; }
+    .book-form .formkit-form [data-style="clean"] { padding: 0 !important; }
+    .book-form .formkit-form[data-uid] .formkit-fields,
+    .book-form .formkit-fields {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      gap: 0.5rem !important;
+      align-items: center !important;
+    }
+    .book-form .formkit-form[data-uid] .formkit-field,
+    .book-form .formkit-field {
+      margin: 0 !important;
+    }
+    .book-form .formkit-form[data-uid] .formkit-submit,
+    .book-form .formkit-submit {
+      flex: 0 0 auto !important;
+    }
+    .book-form .formkit-input {
+      height: 48px !important;
+      padding: 0 1.25rem !important;
+      border: 1px solid rgba(0,0,0,0.08) !important;
+      border-radius: 10px !important;
+      background: var(--white) !important;
+      color: var(--black) !important;
+      font-size: 15px !important;
+      font-family: var(--font-sans) !important;
+      line-height: 48px !important;
+      margin: 0 !important;
+      box-shadow: none !important;
+    }
+    .book-form .formkit-input:focus {
+      border-color: var(--orange) !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+    .book-form .formkit-submit,
+    .book-form .formkit-submit[data-element="submit"] {
+      margin: 0 !important;
+      flex-shrink: 0 !important;
+      background: rgb(246,184,90) !important;
+      border: none !important;
+      border-radius: 10px !important;
+      overflow: hidden !important;
+      cursor: pointer !important;
+      box-shadow: none !important;
+      height: 48px !important;
+    }
+    .book-form .formkit-submit > span {
+      padding: 0 24px !important;
+      height: 48px !important;
+      line-height: 48px !important;
+      background: rgb(246,184,90) !important;
+      color: var(--black) !important;
+      border-radius: 10px !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      font-family: var(--font-sans) !important;
+    }
+    .book-form .formkit-submit:hover,
+    .book-form .formkit-submit:hover > span {
+      background: rgb(236,170,70) !important;
+    }
+    .book-form .formkit-alert-success {
+      background: #d3fbeb !important;
+      border-color: #10bf7a !important;
+      color: #0c905c !important;
+      border-radius: 10px !important;
+    }
+    @media (max-width: 640px) {
+      .book-form .formkit-fields {
+        flex-wrap: wrap !important;
+      }
+      .book-form .formkit-field,
+      .book-form .formkit-submit {
+        flex: 1 0 100% !important;
+      }
     }
 
     /* ======================== */
@@ -931,6 +1529,12 @@
       border-radius: 50%;
       background: rgba(0,0,0,0.1);
       flex-shrink: 0;
+      overflow: hidden;
+    }
+    .testimonial-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .testimonial-author-name {
       font-weight: 700;
@@ -938,11 +1542,11 @@
     }
     .testimonial-author-role {
       font-size: 14px;
-      color: rgba(0,0,0,0.6);
+      color: rgba(0,0,0,0.5);
     }
 
     @media (min-width: 768px) {
-      .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonial-grid { grid-template-columns: repeat(2, 1fr); gap: 2.5rem 3rem; }
     }
 
     /* ======================== */
@@ -955,7 +1559,7 @@
     }
     .meetup-desc {
       font-size: 16px;
-      color: rgba(0,0,0,0.75);
+      color: rgba(0,0,0,0.65);
       line-height: 1.75;
       margin-bottom: 1.5rem;
     }
@@ -1186,17 +1790,27 @@
     /* THREADS EMBEDS (inside student)  */
     /* ================================ */
     .threads-grid {
-      max-width: var(--max-width);
       margin: 3rem auto 0;
-      columns: 1;
-      column-gap: 1rem;
+      columns: 4;
+      column-gap: 8px;
+      padding: 0 1.5rem;
+      max-width: 1600px;
     }
     .threads-grid .text-post-media {
-      margin: 0 0 1.5rem 0 !important;
+      margin: 0 0 8px 0 !important;
       min-width: 0 !important;
       break-inside: avoid;
       display: inline-block;
-      width: 100%;
+      width: 100% !important;
+      border-radius: 12px !important;
+      overflow: hidden !important;
+      max-height: 480px;
+    }
+    .threads-grid .text-post-media iframe,
+    .threads-grid .text-post-media > div {
+      border-radius: 12px !important;
+      max-width: 100% !important;
+      width: 100% !important;
     }
     .threads-hidden { display: none !important; }
     .threads-load-more {
@@ -1247,11 +1861,11 @@
       margin-bottom: 0.5rem;
     }
     .mini-quote-author {
-      font-size: 13px;
+      font-size: 14px;
       color: rgba(255,255,255,0.35);
     }
     @media (min-width: 768px) {
-      .threads-grid { columns: 2; }
+      .threads-grid { columns: 4; column-gap: 8px; }
     }
 
     /* ======================== */
@@ -1281,32 +1895,9 @@
       color: rgba(0,0,0,0.4);
       text-decoration: line-through;
     }
-    .pricing-total {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.75rem 0;
-      font-size: 16px;
-      font-weight: 700;
-      border-top: 2px solid var(--black);
-      margin-top: 0.5rem;
-    }
-    .pricing-your-price {
+    .pricing-cta-wrap {
       text-align: center;
       margin-top: 2rem;
-    }
-    .pricing-your-price-label {
-      font-size: 14px;
-      font-weight: 700;
-      color: rgba(0,0,0,0.4);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-    .pricing-amount {
-      font-family: var(--font-serif);
-      font-size: clamp(48px, 8vw, 72px);
-      font-weight: 700;
-      line-height: 1;
-      margin: 0.5rem 0 1.5rem;
     }
 
 
@@ -1349,28 +1940,18 @@
     }
     .faq-item.open .faq-toggle { transform: rotate(45deg); }
     .faq-answer {
-      display: grid;
-      grid-template-rows: 0fr;
-      transition: grid-template-rows 0.4s ease;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
     }
     .faq-item.open .faq-answer {
-      grid-template-rows: 1fr;
+      max-height: 500px;
     }
     .faq-answer-inner {
-      overflow: hidden;
       padding-bottom: 1.25rem;
       font-size: 16px;
-      color: rgba(255,255,255,0.6);
+      color: rgba(255,255,255,0.55);
       line-height: 1.75;
-    }
-
-    /* 減少動態偏好 */
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-      }
-      html { scroll-behavior: auto; }
     }
 
     /* Footer */
@@ -1579,7 +2160,7 @@
       font-size: 16px;
       color: rgba(255,255,255,0.6);
       line-height: 1.8;
-      max-width: 640px;
+      max-width: none;
       margin-bottom: 2.5rem;
     }
     .media-grid {
@@ -1675,6 +2256,33 @@
       .media-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "超級個體工作術",
+    "description": "用這一套系統，在 AI 時代讓自己更值錢。整合 7 年實踐精華的 55 個策略，從時間管理、知識萃取到個人品牌變現，幫你建立一個人就能運轉的工作系統。",
+    "provider": {
+      "@type": "Organization",
+      "name": "雷蒙三十",
+      "url": "https://raymondhouch.com"
+    },
+    "instructor": {
+      "@type": "Person",
+      "name": "侯智薰（雷蒙）",
+      "url": "https://raymondhouch.com/about/"
+    },
+    "url": "https://solopreneur.lifehacker.tw/",
+    "image": "https://image.lifehacker.tw/solopreneur/og-cover.webp",
+    "inLanguage": "zh-TW",
+    "numberOfCredits": 55,
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "courseWorkload": "PT18H"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -1689,47 +2297,116 @@
         <a href="#talks" class="navbar-link">職人策略課</a>
         <a href="#media" class="navbar-link">超級個體案例</a>
       </div>
-      <a href="#pricing" class="navbar-cta">前往課程</a>
-      <button class="navbar-hamburger" aria-label="開啟選單" aria-expanded="false" aria-controls="navbar-mobile" onclick="var o=this.classList.toggle('open');this.setAttribute('aria-expanded',o);this.setAttribute('aria-label',o?'關閉選單':'開啟選單');document.getElementById('navbar-mobile').classList.toggle('open')">
+      <a href="https://shifu.tw/Course/Details/db9a9cae-2bdf-43a8-b47b-f0b0ba20834e" target="_blank" class="navbar-cta">前往課程</a>
+      <button class="navbar-hamburger" onclick="this.classList.toggle('open');document.getElementById('navbar-mobile').classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
-  <div class="navbar-mobile" id="navbar-mobile" role="navigation" aria-label="行動版選單">
+  <div class="navbar-mobile" id="navbar-mobile">
     <a href="#stats" onclick="document.getElementById('navbar-mobile').classList.remove('open');document.querySelector('.navbar-hamburger').classList.remove('open')">課程簡介</a>
     <a href="#student-articles" onclick="document.getElementById('navbar-mobile').classList.remove('open');document.querySelector('.navbar-hamburger').classList.remove('open')">學員心得</a>
     <a href="#curriculum" onclick="document.getElementById('navbar-mobile').classList.remove('open');document.querySelector('.navbar-hamburger').classList.remove('open')">課程內容（試看）</a>
     <a href="#talks" onclick="document.getElementById('navbar-mobile').classList.remove('open');document.querySelector('.navbar-hamburger').classList.remove('open')">職人策略課</a>
     <a href="#media" onclick="document.getElementById('navbar-mobile').classList.remove('open');document.querySelector('.navbar-hamburger').classList.remove('open')">超級個體案例</a>
-    <a href="#pricing" class="navbar-mobile-cta" onclick="document.getElementById('navbar-mobile').classList.remove('open');document.querySelector('.navbar-hamburger').classList.remove('open')">前往課程</a>
+    <a href="https://shifu.tw/Course/Details/db9a9cae-2bdf-43a8-b47b-f0b0ba20834e" target="_blank" class="navbar-mobile-cta" onclick="document.getElementById('navbar-mobile').classList.remove('open');document.querySelector('.navbar-hamburger').classList.remove('open')">前往課程</a>
   </div>
 
-  <main>
   <!-- ======================== -->
   <!-- SECTION 1: HERO          -->
   <!-- ======================== -->
   <section class="hero">
     <div class="hero-sub-label">Solopreneur</div>
-    <!-- 替換為雷蒙三十 logo -->
-    <h1>超級個體工作術</h1>
-    <div class="divider" style="max-width:200px;margin:1.5rem auto;"></div>
 
-    <div class="hero-content">
-      <div class="hero-text">
-        <h2>一堂能改變你工作、職場困境的課<br><strong>讓你更值錢、持續升級的 55 堂課</strong></h2>
-        <p class="hero-desc">
-          沒有空泛的理論，只有一套可操作的個體升級路徑。<br>
-          從職場副業、斜槓接案、一人公司，幫助你跳脫普通人的賽道——<br>
-          從職場螺絲釘，成為聰明工作、掌控自己人生的現代人。
-        </p>
-        <p class="hero-detail">
-          18+ 小時實戰內容 · 55+ 課程單元 · 6 場加贈直播
-        </p>
-        <a href="#pricing" class="cta-black">瞭解課程內容</a>
-        <a href="#instructor" class="cta-black" style="background:transparent;border:2px solid var(--black);margin-left:0.75rem;">講師介紹</a>
+    <div class="hero-text" style="margin-top:1rem;">
+      <h1>用一套系統，在 AI 時代讓自己更值錢<br><strong>從普通人升級為超級個體的 55 個策略</strong></h1>
+      <p class="hero-desc">
+        這個時代，最好的出路叫做「超級個體」<br>
+        你不是不夠努力，是還沒找到那套系統<br><br>
+        整合 7 年的實踐精華，帶你上手 AI 時代，可操作的個體升級路徑。<br>從時間管理、知識萃取，到個人品牌變現設計，幫你建立一個人就能運轉的工作系統。
+      </p>
+      <div class="hero-cta-row">
+        <a href="https://shifu.tw/Course/Details/db9a9cae-2bdf-43a8-b47b-f0b0ba20834e" target="_blank" class="cta-black">瞭解課程內容</a>
+        <a href="#instructor" class="cta-black" style="background:transparent;border:2px solid var(--black);color:var(--black);">講師介紹</a>
       </div>
-      <div class="hero-photo">
-        <img src="https://raymondhouch.com/wp-content/uploads/2025/09/137-vertical-1472x2048.webp" alt="雷蒙——超級個體工作術講師">
+
+      <!-- Mini quotes in hero -->
+      <div style="display:flex;justify-content:center;gap:1.5rem;margin-bottom:2.5rem;">
+        
+        <div style="display:flex;align-items:flex-start;gap:0.6rem;flex:1;">
+          <div style="width:32px;height:32px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0;overflow:hidden;margin-top:2px;"><img src="images/avatars/muki.webp" alt="Muki" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <div style="font-size:13px;color:rgba(0,0,0,0.55);line-height:1.5;">「雷蒙擅長的是透過不同的服務，整合出自己的一套工作管理流程，再用淺顯易懂的方式與我們分享。」</div>
+            <div style="font-size:12px;color:rgba(0,0,0,0.3);margin-top:3px;">Muki · 網站前端工程師</div>
+          </div>
+        </div>
+        
+        <div style="display:flex;align-items:flex-start;gap:0.6rem;flex:1;">
+          <div style="width:32px;height:32px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0;overflow:hidden;margin-top:2px;"><img src="images/avatars/shihi.webp" alt="思誼" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <div style="font-size:13px;color:rgba(0,0,0,0.55);line-height:1.5;">「我曾經在 QA 回答我最喜歡的課程是什麼？不是我的職能治療專業，而是雷蒙的課。」</div>
+            <div style="font-size:12px;color:rgba(0,0,0,0.3);margin-top:3px;">思誼 · 職能治療師</div>
+          </div>
+        </div>
+        
+        <div style="display:flex;align-items:flex-start;gap:0.6rem;flex:1;">
+          <div style="width:32px;height:32px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0;overflow:hidden;margin-top:2px;"><img src="images/avatars/tobie.webp" alt="Tobie 偷偷" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <div style="font-size:13px;color:rgba(0,0,0,0.55);line-height:1.5;">「這堂課是把文稿直接放在 Notion 裡，邊學邊搜尋、隨時交流，對懶人超友善！」</div>
+            <div style="font-size:12px;color:rgba(0,0,0,0.3);margin-top:3px;">Tobie 偷偷 · 文字創作者</div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Tabs floating OUTSIDE mockup (no transform) -->
+    <div class="hero-mockup-wrap">
+      <div style="text-align:center;position:relative;z-index:3;margin-bottom:-22px;">
+        <div class="hero-tabs">
+          <button class="hero-tab active" onclick="switchHeroTab(0)"><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>影片課程</button>
+          <button class="hero-tab" onclick="switchHeroTab(1)"><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/></svg>Notion 講義</button>
+          <button class="hero-tab" onclick="switchHeroTab(2)"><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/></svg>學員社群</button>
+          <button class="hero-tab" onclick="switchHeroTab(3)"><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>課後作業</button>
+        </div>
+      </div>
+      <div class="hero-mockup" id="hero-mockup">
+        <div class="hero-screen active" data-screen="0">
+          <video src="images/solo-video-1.mp4" autoplay muted loop playsinline style="width:100%;display:block;"></video>
+        </div>
+        <div class="hero-screen" data-screen="1">
+          <video src="images/solo-video-2.mp4" autoplay muted loop playsinline style="width:100%;display:block;"></video>
+        </div>
+        <div class="hero-screen" data-screen="2">
+          <img src="images/solo-video-3.webp" alt="學員社群" style="width:100%;display:block;">
+        </div>
+        <div class="hero-screen" data-screen="3">
+          <img src="images/solo-video-4.webp" alt="課後作業" style="width:100%;display:block;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats bar below mockup -->
+    <div style="max-width:900px;margin:3rem auto 0;display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;">
+      <div class="hero-stat-card">
+        <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"/></svg></div>
+        <div class="hero-stat-label">小時實戰內容</div>
+        <div class="hero-stat-num">18+</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg></div>
+        <div class="hero-stat-label">課程單元</div>
+        <div class="hero-stat-num">55+</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182M21.015 4.356v4.992"/></svg></div>
+        <div class="hero-stat-label">無限回看</div>
+        <div class="hero-stat-num">∞</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"/></svg></div>
+        <div class="hero-stat-label">加贈直播</div>
+        <div class="hero-stat-num">6</div>
       </div>
     </div>
   </section>
@@ -1737,91 +2414,66 @@
   <!-- ======================== -->
   <!-- SECTION 2: STATS         -->
   <!-- ======================== -->
-  <section class="stats-section fade-up" id="stats">
-    <div style="max-width:var(--max-width);margin:0 auto;">
-      <div class="section-label">課程概覽</div>
-      <h2 class="section-heading">超級個體工作術是什麼？</h2>
-      <div class="divider"></div>
-      <p class="body-text" style="max-width:640px;">
-        這套課程，整理了雷蒙從 0 到 1 的真實經驗，帶你正確地看懂時代的趨勢和局勢，打造一套經營自己或槓桿時間與資源的方法。從普通人，成為能聰明工作的「生活黑客」，再成為能打造理想生活的「超級個體」。
-      </p>
-    </div>
-    <div class="stats-grid" style="margin-top:2rem;">
-      <div class="stat-card">
-        <div class="stat-num">18+</div>
-        <div class="stat-label">小時實戰內容</div>
-        <div class="stat-desc">高質感雙機位影片課<br>含完整文稿與講義</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">55+</div>
-        <div class="stat-label">課程單元</div>
-        <div class="stat-desc">從生產力到一人公司<br>完整個體升級路徑</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">∞</div>
-        <div class="stat-label">無限回看</div>
-        <div class="stat-desc">買斷制，所有內容<br>永久觀看不限次數</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">6</div>
-        <div class="stat-label">加贈直播</div>
-        <div class="stat-desc">超級個體直播對談<br>拆解高手實戰經驗</div>
-      </div>
-    </div>
-  </section>
+  <!-- Stats section removed, data cards are in hero -->
 
   <!-- ======================== -->
   <!-- SECTION 3: FOR YOU       -->
   <!-- ======================== -->
-  <section class="for-you bg-dark fade-up">
-    <div style="max-width:var(--max-width);margin:0 auto;">
-      <h2 class="section-heading" style="color:var(--cream);">這門課適合你嗎？</h2>
+  <section class="for-you fade-up">
+    <div style="max-width:var(--max-width);margin:0 auto;text-align:center;">
+      <div class="section-label" style="text-align:center;">這門課適合你嗎？</div>
+      <h2 class="section-heading" style="text-align:center;">如果你有這些困擾，這門課就是為你設計的</h2>
     </div>
-    <div class="for-you-grid">
-      <div class="for-you-card">
-        <div class="for-you-card-inner">
-          <div class="for-you-front">
-            <div class="for-you-q">你是不是覺得每天都在忙，卻不知道自己在<em>為什麼而忙</em>？</div>
-            <div class="for-you-front-hint">這堂課怎麼幫助你？</div>
-          </div>
-          <div class="for-you-back">
-            <div class="for-you-a">每天趕打卡、做專案、加班追 KPI，努力沒錯，但方向感全無。時間總是不夠，工作常常卡關，連生活都快失控？這不是因為不夠努力，是缺了一套「看得懂目標、能善用工具」的系統，這門課會帶你建立那套系統。</div>
-          </div>
+    <div class="for-you-list">
+
+      <div class="for-you-row">
+        <div class="for-you-row-visual">
+          <img src="images/solo-q-1.webp" alt="生產力系統">
+        </div>
+        <div class="for-you-row-content">
+          <div class="for-you-row-label">生產力系統</div>
+          <div class="for-you-q">每天都在忙，卻不知道自己在<em>為什麼而忙</em>？</div>
+          <div class="for-you-a">每天趕打卡、做專案、加班追 KPI，努力沒錯，但方向感全無。時間總是不夠，工作常常卡關，連生活都快失控？這不是因為不夠努力，是缺了一套「看得懂目標、能善用工具」的系統，這門課會帶你建立那套系統。</div>
+          <a href="#curriculum" class="for-you-link">了解課程內容 →</a>
         </div>
       </div>
-      <div class="for-you-card">
-        <div class="for-you-card-inner">
-          <div class="for-you-front">
-            <div class="for-you-q">你是不是很想<em>開始副業或接案</em>，但一直只停在「想」？</div>
-            <div class="for-you-front-hint">這堂課怎麼幫助你？</div>
-          </div>
-          <div class="for-you-back">
-            <div class="for-you-a">你知道該開始經營自己，也看了很多文章和影片，但就是踏不出第一步。這門課整理了雷蒙從零開始的真實路徑——不是叫你辭職創業，而是教你怎麼在現有工作中，開始打造屬於自己的一人事業基礎。</div>
-          </div>
+
+      <div class="for-you-row">
+        <div class="for-you-row-visual">
+          <img src="images/solo-q-2.webp" alt="一人事業">
+        </div>
+        <div class="for-you-row-content">
+          <div class="for-you-row-label">一人事業</div>
+          <div class="for-you-q">很想<em>開始副業或接案</em>，但一直只停在「想」？</div>
+          <div class="for-you-a">你知道該開始經營自己，也看了很多文章和影片，但就是踏不出第一步。這門課整理了雷蒙從零開始的真實路徑——不是叫你辭職創業，而是教你怎麼在現有工作中，開始打造屬於自己的一人事業基礎。</div>
+          <a href="#curriculum" class="for-you-link">了解課程內容 →</a>
         </div>
       </div>
-      <div class="for-you-card">
-        <div class="for-you-card-inner">
-          <div class="for-you-front">
-            <div class="for-you-q">你已經在<em>經營自媒體或個人品牌</em>，但不知道怎麼變現？</div>
-            <div class="for-you-front-hint">這堂課怎麼幫助你？</div>
-          </div>
-          <div class="for-you-back">
-            <div class="for-you-a">有在寫文章、拍影片、做 Podcast，粉絲也有一些，但收入模式還沒跑通。課程第三階段「影響力系統」會帶你建立商業閉環——從定位、產品化到銷售，不再只是「有影響力但不賺錢」。</div>
-          </div>
+
+      <div class="for-you-row">
+        <div class="for-you-row-visual">
+          <img src="images/solo-q-3.webp" alt="影響力系統">
+        </div>
+        <div class="for-you-row-content">
+          <div class="for-you-row-label">影響力系統</div>
+          <div class="for-you-q">已經在<em>經營自媒體或個人品牌</em>，但不知道怎麼變現？</div>
+          <div class="for-you-a">有在寫文章、拍影片、做 Podcast，粉絲也有一些，但收入模式還沒跑通。課程第三階段「影響力系統」會帶你建立商業閉環——從定位、產品化到銷售，不再只是「有影響力但不賺錢」。</div>
+          <a href="#curriculum" class="for-you-link">了解課程內容 →</a>
         </div>
       </div>
-      <div class="for-you-card">
-        <div class="for-you-card-inner">
-          <div class="for-you-front">
-            <div class="for-you-q">你渴望<em>數位遊牧、一人公司</em>的生活方式？</div>
-            <div class="for-you-front-hint">這堂課怎麼幫助你？</div>
-          </div>
-          <div class="for-you-back">
-            <div class="for-you-a">你渴望自行安排工作時間，不需朝九晚五打卡上班。但很多人以為只靠自律跟想像，就能支撐自己一路走下去。這門課告訴你：這類新型態的工作本質，是把自己當作一間微型公司來經營。雷蒙會教你怎麼經營。</div>
-          </div>
+
+      <div class="for-you-row">
+        <div class="for-you-row-visual">
+          <img src="images/solo-q-4.webp" alt="一人公司">
+        </div>
+        <div class="for-you-row-content">
+          <div class="for-you-row-label">一人公司</div>
+          <div class="for-you-q">渴望<em>數位遊牧、一人公司</em>的生活方式？</div>
+          <div class="for-you-a">你渴望自行安排工作時間，不需朝九晚五打卡上班。但很多人以為只靠自律跟想像，就能支撐自己一路走下去。這門課告訴你：這類新型態的工作本質，是把自己當作一間微型公司來經營。雷蒙會教你怎麼經營。</div>
+          <a href="#curriculum" class="for-you-link">了解課程內容 →</a>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -1833,6 +2485,83 @@
       <div class="section-label">三大系統</div>
       <h2 class="section-heading">超級個體・人生系統</h2>
       <div class="divider" style="max-width:120px;margin:1rem auto;"></div>
+      <p class="body-text" style="text-align:center;margin-top:1rem;">
+        這套課程，整理了雷蒙從 0 到 1 的真實經驗，帶你正確地看懂時代的趨勢和局勢，打造一套經營自己或槓桿時間與資源的方法。從普通人，成為能聰明工作的「生活黑客」，再成為能打造理想生活的「超級個體」。
+      </p>
+    </div>
+
+    <!-- Journey Flow Diagram -->
+    <div class="journey-flow">
+      <div class="journey-flow-track">
+        <div class="journey-flow-line"></div>
+
+        <div class="journey-flow-node">
+          <div class="journey-flow-dot">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0"/></svg>
+          </div>
+          <div class="journey-flow-title">普通人</div>
+        </div>
+
+        <div class="journey-flow-node">
+          <div class="journey-flow-dot">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div class="journey-flow-title">超越評價</div>
+          <div class="journey-flow-col">
+            <div class="journey-flow-arrow"><svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
+            <div class="journey-flow-sub">除魅</div>
+            <div class="journey-flow-arrow"><svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
+            <div class="journey-flow-desc">打破舊的</div>
+          </div>
+        </div>
+
+        <div class="journey-flow-node">
+          <div class="journey-flow-dot">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div class="journey-flow-title">建立系統</div>
+          <div class="journey-flow-col">
+            <div class="journey-flow-arrow"><svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
+            <div class="journey-flow-sub">賦能</div>
+            <div class="journey-flow-arrow"><svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
+            <div class="journey-flow-desc">建立新的</div>
+          </div>
+        </div>
+
+        <div class="journey-flow-node">
+          <div class="journey-flow-dot">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg>
+          </div>
+          <div class="journey-flow-title">產品化生存</div>
+          <div class="journey-flow-col">
+            <div class="journey-flow-arrow"><svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
+            <div class="journey-flow-sub">變現</div>
+            <div class="journey-flow-arrow"><svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
+            <div class="journey-flow-desc">創造價值</div>
+          </div>
+        </div>
+
+        <div class="journey-flow-node">
+          <div class="journey-flow-dot">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/></svg>
+          </div>
+          <div class="journey-flow-title">主動設計</div>
+          <div class="journey-flow-col">
+            <div class="journey-flow-arrow"><svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
+            <div class="journey-flow-sub">整合</div>
+            <div class="journey-flow-arrow"><svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
+            <div class="journey-flow-desc">熱愛生活</div>
+          </div>
+        </div>
+
+        <div class="journey-flow-node">
+          <div class="journey-flow-dot">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
+          </div>
+          <div class="journey-flow-title">超級個體</div>
+        </div>
+
+      </div>
     </div>
 
     <!-- Venn Diagram (SVG) -->
@@ -1906,144 +2635,125 @@
     <div class="mid-cta fade-up">
       <div style="width:160px;height:1px;background:rgba(0,0,0,0.15);margin:0 auto 2rem;"></div>
       <div class="mid-cta-heading">
-        不只是線上課程，<br>而是一套<span class="highlight">人生升級系統</span>
+        不只是線上課程，<br>而是一套<span class="typewriter-wrap"><span class="typewriter-text" id="typewriter-text"></span><span class="typewriter-cursor">|</span></span>
       </div>
       <p class="mid-cta-sub">從普通人，成為生活黑客，再成為超級個體。</p>
-      <a href="#pricing" class="cta-black">立即加入課程</a>
+      <a href="https://shifu.tw/Course/Details/db9a9cae-2bdf-43a8-b47b-f0b0ba20834e" class="cta-black">立即加入課程</a>
     </div>
   </section>
 
   <!-- ======================== -->
-  <!-- SECTION 5: LEARNING      -->
+  <!-- ======================== -->
+  <!-- COURSE PREVIEW (Learning layout style) -->
   <!-- ======================== -->
   <section class="learning bg-dark fade-up">
     <div style="max-width:var(--max-width);margin:0 auto;">
-      <div class="section-label">6 種學習模式</div>
-      <h2 class="section-heading" style="color:var(--cream);">打破傳統線上課的學習方式</h2>
+      <div class="section-label">免費試看</div>
+      <h2 class="section-heading" style="color:var(--cream);">課程內容試看</h2>
       <div class="divider-light"></div>
-      <p class="body-text-light" style="max-width:640px;">
-        為了讓每個人的學習成效更好，在《超級個體工作術》這堂課裡，準備了 6 種不同的學習模式，讓你可以依照自己的步調、學習偏好情境，自由切換、有效吸收。
-      </p>
     </div>
     <div class="learning-layout">
       <div class="learning-modes">
-        <div class="learning-mode active" data-mode="1" tabindex="0" role="tab" aria-selected="true" onmouseenter="setLearningMode(1)" onfocus="setLearningMode(1)">
-          <div class="learning-mode-num">Mode 01</div>
-          <div class="learning-mode-title">完整文稿 ＆ 互動式講義</div>
-          <div class="learning-mode-desc"><span>每堂課加贈雷蒙精編的 Notion 講義，可線上互動註記，獲得更多補充資源；幫助你高效學習、反覆複習。</span></div>
+        <!-- 思維升級 -->
+        <div style="padding:0.5rem 1.25rem;margin-bottom:0.25rem;">
+          <div style="font-size:13px;font-weight:600;color:var(--orange);letter-spacing:0.05em;">思維升級 — 為什麼做</div>
         </div>
-        <div class="learning-mode" data-mode="2" tabindex="0" role="tab" aria-selected="false" onmouseenter="setLearningMode(2)" onfocus="setLearningMode(2)">
-          <div class="learning-mode-num">Mode 02</div>
-          <div class="learning-mode-title">雙機位高質感影片課</div>
-          <div class="learning-mode-desc"><span>採用雙機位拍攝＋精緻剪輯，畫面流暢有層次，就像你熟悉的專業精品課。</span></div>
+        
+        <a class="learning-mode active" data-mode="m0" href="https://www.youtube.com/watch?v=bQ1he3d-3V8" target="_blank" style="text-decoration:none;color:inherit;" onclick="event.preventDefault();setLearningMode('m0')">
+          <div class="learning-mode-title">怎麼跳脫普通人賽道，成為掌控生活的現代人？</div>
+        </a>
+        
+        <a class="learning-mode" data-mode="m1" href="https://www.youtube.com/watch?v=yN65kKcrsa0" target="_blank" style="text-decoration:none;color:inherit;" onclick="event.preventDefault();setLearningMode('m1')">
+          <div class="learning-mode-title">超級個體，並不是叫你離職創業？</div>
+        </a>
+        
+        <a class="learning-mode" data-mode="m2" href="https://www.youtube.com/watch?v=7RBCTMKn7UQ" target="_blank" style="text-decoration:none;color:inherit;" onclick="event.preventDefault();setLearningMode('m2')">
+          <div class="learning-mode-title">超級個體，是當今普通人最有效的賺錢方式嗎？</div>
+        </a>
+        
+        <a class="learning-mode" data-mode="m3" href="https://www.youtube.com/watch?v=lklbTTVU3tA" target="_blank" style="text-decoration:none;color:inherit;" onclick="event.preventDefault();setLearningMode('m3')">
+          <div class="learning-mode-title">別被「擅長」困住：找到熱愛才是長期勝出的關鍵</div>
+        </a>
+        
+
+        <!-- 實戰技能 -->
+        <div style="padding:0.75rem 1.25rem 0.25rem;margin-top:0.5rem;">
+          <div style="font-size:13px;font-weight:600;color:var(--orange);letter-spacing:0.05em;">實戰技能 — 怎麼做</div>
         </div>
-        <div class="learning-mode" data-mode="3" tabindex="0" role="tab" aria-selected="false" onmouseenter="setLearningMode(3)" onfocus="setLearningMode(3)">
-          <div class="learning-mode-num">Mode 03</div>
-          <div class="learning-mode-title">全程實作教學</div>
-          <div class="learning-mode-desc"><span>教學工具類操作，全程螢幕錄影，清楚呈現每個步驟，就像我在你身旁帶著你一起。</span></div>
-        </div>
-        <div class="learning-mode" data-mode="4" tabindex="0" role="tab" aria-selected="false" onmouseenter="setLearningMode(4)" onfocus="setLearningMode(4)">
-          <div class="learning-mode-num">Mode 04</div>
-          <div class="learning-mode-title">高效音頻課</div>
-          <div class="learning-mode-desc"><span>釋放你的雙手和設備，通勤或運動時也能輕鬆學習，善用碎片時間。</span></div>
-        </div>
-        <div class="learning-mode" data-mode="5" tabindex="0" role="tab" aria-selected="false" onmouseenter="setLearningMode(5)" onfocus="setLearningMode(5)">
-          <div class="learning-mode-num">Mode 05</div>
-          <div class="learning-mode-title">視覺化知識圖卡</div>
-          <div class="learning-mode-desc"><span>複雜觀念一圖搞懂，幫助記憶與內化。</span></div>
-        </div>
-        <div class="learning-mode" data-mode="6" tabindex="0" role="tab" aria-selected="false" onmouseenter="setLearningMode(6)" onfocus="setLearningMode(6)">
-          <div class="learning-mode-num">Mode 06</div>
-          <div class="learning-mode-title">課後作業 ＋ 學員社群</div>
-          <div class="learning-mode-desc"><span>每堂課設有作業練習、網狀學習的設計；不只寫自己的筆記，還能參考其他同學的觀點。</span></div>
-        </div>
+        
+        <a class="learning-mode" data-mode="s0" href="https://www.youtube.com/watch?v=Moeb83udM2s" target="_blank" style="text-decoration:none;color:inherit;" onclick="event.preventDefault();setLearningMode('s0')">
+          <div class="learning-mode-title">三階段閱讀法：如何有效閱讀？</div>
+        </a>
+        
+        <a class="learning-mode" data-mode="s1" href="https://www.youtube.com/watch?v=jU06MiNSa4s" target="_blank" style="text-decoration:none;color:inherit;" onclick="event.preventDefault();setLearningMode('s1')">
+          <div class="learning-mode-title">我的年度數位工具地圖（每年更新）</div>
+        </a>
+        
+        <a class="learning-mode" data-mode="s2" href="https://www.youtube.com/watch?v=QNYG65rqlp8" target="_blank" style="text-decoration:none;color:inherit;" onclick="event.preventDefault();setLearningMode('s2')">
+          <div class="learning-mode-title">為什麼寫作是平凡人最好的投資？</div>
+        </a>
+        
+        <a class="learning-mode" data-mode="s3" href="https://www.youtube.com/watch?v=nFJbuoB_Dz8" target="_blank" style="text-decoration:none;color:inherit;" onclick="event.preventDefault();setLearningMode('s3')">
+          <div class="learning-mode-title">怎麼寫出有用的個人使用說明書？</div>
+        </a>
+        
+        <a class="learning-mode" data-mode="s4" href="https://www.youtube.com/watch?v=eaaiGJy6kSc" target="_blank" style="text-decoration:none;color:inherit;" onclick="event.preventDefault();setLearningMode('s4')">
+          <div class="learning-mode-title">怎麼減少會議，還能推動專案？非同步溝通</div>
+        </a>
+        
+        <a class="learning-mode" data-mode="s5" href="https://www.youtube.com/watch?v=bJKKlZhJFVg" target="_blank" style="text-decoration:none;color:inherit;" onclick="event.preventDefault();setLearningMode('s5')">
+          <div class="learning-mode-title">怎麼正確使用行事曆和待辦清單？</div>
+        </a>
+        
       </div>
       <div class="learning-preview">
-        <div class="learning-preview-placeholder active" data-preview="1">Notion 互動式講義示意圖</div>
-        <div class="learning-preview-placeholder" data-preview="2">雙機位影片課示意圖</div>
-        <div class="learning-preview-placeholder" data-preview="3">螢幕錄影實作示意圖</div>
-        <div class="learning-preview-placeholder" data-preview="4">音頻課示意圖</div>
-        <div class="learning-preview-placeholder" data-preview="5">知識圖卡示意圖</div>
-        <div class="learning-preview-placeholder" data-preview="6">課後作業社群示意圖</div>
+        
+        <div class="learning-preview-placeholder active" data-preview="m0" style="padding:0;overflow:hidden;border-radius:12px;">
+          <iframe src="https://www.youtube.com/embed/bQ1he3d-3V8?enablejsapi=1" style="width:100%;height:100%;border:none;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        
+        <div class="learning-preview-placeholder" data-preview="m1" style="padding:0;overflow:hidden;border-radius:12px;">
+          <iframe src="https://www.youtube.com/embed/yN65kKcrsa0?enablejsapi=1" style="width:100%;height:100%;border:none;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        
+        <div class="learning-preview-placeholder" data-preview="m2" style="padding:0;overflow:hidden;border-radius:12px;">
+          <iframe src="https://www.youtube.com/embed/7RBCTMKn7UQ?enablejsapi=1" style="width:100%;height:100%;border:none;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        
+        <div class="learning-preview-placeholder" data-preview="m3" style="padding:0;overflow:hidden;border-radius:12px;">
+          <iframe src="https://www.youtube.com/embed/lklbTTVU3tA?enablejsapi=1" style="width:100%;height:100%;border:none;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        
+        
+        <div class="learning-preview-placeholder" data-preview="s0" style="padding:0;overflow:hidden;border-radius:12px;">
+          <iframe src="https://www.youtube.com/embed/Moeb83udM2s?enablejsapi=1" style="width:100%;height:100%;border:none;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        
+        <div class="learning-preview-placeholder" data-preview="s1" style="padding:0;overflow:hidden;border-radius:12px;">
+          <iframe src="https://www.youtube.com/embed/jU06MiNSa4s?enablejsapi=1" style="width:100%;height:100%;border:none;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        
+        <div class="learning-preview-placeholder" data-preview="s2" style="padding:0;overflow:hidden;border-radius:12px;">
+          <iframe src="https://www.youtube.com/embed/QNYG65rqlp8?enablejsapi=1" style="width:100%;height:100%;border:none;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        
+        <div class="learning-preview-placeholder" data-preview="s3" style="padding:0;overflow:hidden;border-radius:12px;">
+          <iframe src="https://www.youtube.com/embed/nFJbuoB_Dz8?enablejsapi=1" style="width:100%;height:100%;border:none;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        
+        <div class="learning-preview-placeholder" data-preview="s4" style="padding:0;overflow:hidden;border-radius:12px;">
+          <iframe src="https://www.youtube.com/embed/eaaiGJy6kSc?enablejsapi=1" style="width:100%;height:100%;border:none;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        
+        <div class="learning-preview-placeholder" data-preview="s5" style="padding:0;overflow:hidden;border-radius:12px;">
+          <iframe src="https://www.youtube.com/embed/bJKKlZhJFVg?enablejsapi=1" style="width:100%;height:100%;border:none;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        
       </div>
     </div>
 
     <div style="text-align:center;margin-top:3rem;">
-      <a href="#pricing" class="cta-orange">立即加入課程</a>
-    </div>
-  </section>
-
-  <!-- ======================== -->
-  <!-- FEATURES + COURSE PREVIEW -->
-  <!-- ======================== -->
-  <section class="bg-dark fade-up" style="padding:3rem 1.5rem 4rem;">
-    <div class="course-preview">
-      <div style="max-width:var(--max-width);margin:0 auto 1.5rem;">
-        <div class="section-label">免費試看</div>
-        <h2 class="section-heading" style="color:var(--cream);">課程內容試看</h2>
-      </div>
-      <div class="course-preview-grid">
-        <a class="course-preview-card" href="#">
-          <div class="course-preview-thumb">
-            <img src="https://img.youtube.com/vi/placeholder01/hqdefault.jpg" alt="單元 01：怎麼跳脫普通人賽道，成為掌控生活的現代人？">
-            <div class="course-preview-play"><div class="course-preview-play-btn"></div></div>
-          </div>
-          <div class="course-preview-info">
-            <div class="course-preview-num">單元 01</div>
-            <div class="course-preview-title">怎麼跳脫普通人賽道，成為掌控生活的現代人？</div>
-          </div>
-        </a>
-        <a class="course-preview-card" href="#">
-          <div class="course-preview-thumb">
-            <img src="https://img.youtube.com/vi/placeholder11/hqdefault.jpg" alt="單元 11：超級個體，並不是叫你離職創業？">
-            <div class="course-preview-play"><div class="course-preview-play-btn"></div></div>
-          </div>
-          <div class="course-preview-info">
-            <div class="course-preview-num">單元 11</div>
-            <div class="course-preview-title">超級個體，並不是叫你離職創業？</div>
-          </div>
-        </a>
-        <a class="course-preview-card" href="#">
-          <div class="course-preview-thumb">
-            <img src="https://img.youtube.com/vi/placeholder13/hqdefault.jpg" alt="單元 13：三階段閱讀法：如何有效閱讀？">
-            <div class="course-preview-play"><div class="course-preview-play-btn"></div></div>
-          </div>
-          <div class="course-preview-info">
-            <div class="course-preview-num">單元 13</div>
-            <div class="course-preview-title">三階段閱讀法：如何有效閱讀？</div>
-          </div>
-        </a>
-      </div>
-      <div class="course-preview-list">
-        <a class="course-preview-list-item" href="#">
-          <span class="course-preview-list-num">單元 17</span>
-          <span class="course-preview-list-title">我的年度數位工具地圖（每年更新）</span>
-        </a>
-        <a class="course-preview-list-item" href="#">
-          <span class="course-preview-list-num">單元 24</span>
-          <span class="course-preview-list-title">為什麼寫作是平凡人最好的投資？</span>
-        </a>
-        <a class="course-preview-list-item" href="#">
-          <span class="course-preview-list-num">單元 27</span>
-          <span class="course-preview-list-title">怎麼寫出有用的個人使用說明書？</span>
-        </a>
-        <a class="course-preview-list-item" href="#">
-          <span class="course-preview-list-num">單元 31</span>
-          <span class="course-preview-list-title">怎麼減少會議，還能推動專案？非同步溝通</span>
-        </a>
-        <a class="course-preview-list-item" href="#">
-          <span class="course-preview-list-num">單元 38</span>
-          <span class="course-preview-list-title">怎麼正確使用行事曆和待辦清單？</span>
-        </a>
-        <a class="course-preview-list-item" href="#">
-          <span class="course-preview-list-num">單元 42</span>
-          <span class="course-preview-list-title">超級個體，是當今普通人最有效的賺錢方式嗎？</span>
-        </a>
-        <a class="course-preview-list-item" href="#">
-          <span class="course-preview-list-num">單元 52</span>
-          <span class="course-preview-list-title">別被「擅長」困住：找到熱愛才是長期勝出的關鍵</span>
-        </a>
-      </div>
+      <a href="https://shifu.tw/Course/Details/db9a9cae-2bdf-43a8-b47b-f0b0ba20834e" class="cta-orange">立即加入課程</a>
     </div>
   </section>
 
@@ -2057,34 +2767,110 @@
       <div class="divider"></div>
     </div>
     <div class="instructor-inner">
-      <div>
-        <img src="https://raymondhouch.com/wp-content/uploads/2025/09/137-vertical-1472x2048.webp" alt="雷蒙——超級個體工作術講師">
+      <div class="instructor-photos">
+        <img class="main-photo" src="https://raymondhouch.com/wp-content/uploads/2025/09/137-vertical-1472x2048.webp" alt="雷蒙——超級個體工作術講師">
       </div>
       <div>
         <div class="instructor-name">侯智薰（雷蒙）</div>
-        <div class="instructor-title-text">「雷蒙三十」創辦人 · 一人公司實踐者</div>
-        <p class="instructor-bio">幫助忙碌的現代人聰明工作、好好生活。開創線上學習 3.0 模式的「Notion 線上訓練營」；為台灣線上課程「首例」—— 募資期過後 2 年內，長銷破萬人的課程產品。</p>
+        <div class="instructor-title-text"><a href="https://raymondhouch.com/" target="_blank" style="color:inherit;text-decoration:underline;text-decoration-color:var(--orange);text-underline-offset:3px;">「雷蒙三十」創辦人</a> · 一人公司實踐者</div>
+        <p class="instructor-bio">幫助忙碌的現代人聰明工作、好好生活。開創線上學習 3.0 模式的「<a href="https://raymondhouch.com/notionhacker/" target="_blank" style="color:var(--orange);text-decoration:underline;text-decoration-color:rgba(231,126,71,0.3);text-underline-offset:3px;">Notion 線上訓練營</a>」；為台灣線上課程「首例」—— 募資期過後 2 年內，<a href="https://hahow.in/cr/notion-hahow" target="_blank" style="color:var(--orange);text-decoration:underline;text-decoration-color:rgba(231,126,71,0.3);text-underline-offset:3px;">長銷破萬人的課程產品</a>。</p>
         <p class="instructor-bio">
           2017 年｜在外商 SaaS 全遠距、接案工作<br>
-          2019-2021 年｜職場闘蕩期，拿下全部門第一績效<br>
+          2019-2021 年｜職場闖蕩期，拿下全部門第一績效<br>
           2021 年｜白手起家＆借貸 100 萬創業<br>
           2024 年｜年營收破 1,000 萬
         </p>
-        <p class="instructor-bio">除了經營線上教學產品，寫電子報，也協助許多企業做數位轉型，導入 Notion 專案和工作管理系統。累積超過 500 場的演講，包含受邀至 TEDx 舞台，或到得到 APP 知識春晚面對萬人演講。</p>
-        <p class="instructor-tagline">「把自己從職場新人到一人公司的驗證路徑，整理成你能直接用的方法。」</p>
+        <p class="instructor-bio">除了經營<a href="http://academy.lifehacker.tw/" target="_blank" style="color:var(--orange);text-decoration:underline;text-decoration-color:rgba(231,126,71,0.3);text-underline-offset:3px;">線上教學產品</a>，<a href="https://raymondhouch.com/newsletter/" target="_blank" style="color:var(--orange);text-decoration:underline;text-decoration-color:rgba(231,126,71,0.3);text-underline-offset:3px;">寫電子報</a>，也協助許多企業做數位轉型，導入 Notion 專案和工作管理系統。累積超過 500 場的演講，包含受邀至 <a href="https://raymondhouch.com/life/the-power-of-sharing/" target="_blank" style="color:var(--orange);text-decoration:underline;text-decoration-color:rgba(231,126,71,0.3);text-underline-offset:3px;">TEDx 舞台</a>，或到得到 APP 知識春晚面對萬人演講。</p>
 
         <div class="instructor-stats">
           <div class="instructor-stat">
-            <div class="instructor-stat-num">1,000萬+</div>
             <div class="instructor-stat-label">年營收 (2024)</div>
+            <div class="instructor-stat-num"><span data-count="1000">0</span>萬+</div>
           </div>
           <div class="instructor-stat">
-            <div class="instructor-stat-num">10,000+</div>
             <div class="instructor-stat-label">課程學員</div>
+            <div class="instructor-stat-num"><span data-count="10000">0</span>+</div>
           </div>
           <div class="instructor-stat">
-            <div class="instructor-stat-num">500+</div>
             <div class="instructor-stat-label">場演講</div>
+            <div class="instructor-stat-num"><span data-count="500">0</span>+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== -->
+  <!-- BOOK SECTION             -->
+  <!-- ======================== -->
+  <section class="book-section fade-up">
+    <div class="book-layout">
+      <div class="book-mockup">
+        <div class="book-3d">
+          <div class="book-cover"><span style="font-family:var(--font-sans);font-size:80px;font-weight:200;color:rgba(255,255,255,0.2);line-height:1;">?</span></div>
+        </div>
+      </div>
+      <div>
+        <span style="display:inline-block;padding:0.4rem 1rem;background:var(--orange);color:#fff;font-family:var(--font-sans);font-size:15px;font-weight:600;border-radius:999px;letter-spacing:0.05em;margin-bottom:1rem;">即將出版</span>
+        <div class="book-info-desc">
+          我們正在將課程中最核心的方法論，濃縮成一本可以隨時翻閱的實體書。書中會收錄課程未公開的案例分析、工具模板，以及更多雷蒙親身實踐的心得。
+        </div>
+
+        <div class="book-form">
+          <div class="book-form-label">新書上市時第一時間通知你</div>
+          <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+          <form action="https://app.kit.com/forms/9273912/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9273912" data-uid="787381f033" data-format="inline" data-version="5" data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"訂閱成功！有任何新書的訊息，會第一時間通知你 ✌️","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://partners.convertkit.com/zqgjwotc7j4m?utm_campaign=poweredby&utm_content=form"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}'>
+            <div data-style="clean">
+              <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+              <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+                <div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email" placeholder="輸入你的 Email" required="" type="email"></div>
+                <button data-element="submit" class="formkit-submit formkit-submit"><div class="formkit-spinner"><div></div><div></div><div></div></div><span>免費訂閱</span></button>
+              </div>
+            </div>
+          </form>
+          <div class="book-form-note">我們不會發送垃圾郵件，僅在新書上市時通知你。</div>
+        </div>
+      </div>
+
+      <!-- Book chapters -->
+      <div style="grid-column:1/-1;margin-top:1rem;">
+        <div class="journey-cards" style="max-width:none;margin:0;">
+          <div class="journey-card">
+            <div class="journey-card-phase"></div>
+            <div class="journey-card-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div class="journey-card-title">超越評價</div>
+            <div class="journey-card-keyword">除魅</div>
+            <div class="journey-card-desc">打破舊的職場濾鏡<br>回到個人定位</div>
+          </div>
+          <div class="journey-card">
+            <div class="journey-card-phase"></div>
+            <div class="journey-card-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div class="journey-card-title">建立系統</div>
+            <div class="journey-card-keyword">賦能</div>
+            <div class="journey-card-desc">從單點努力進化到<br>槓桿思維</div>
+          </div>
+          <div class="journey-card">
+            <div class="journey-card-phase"></div>
+            <div class="journey-card-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg>
+            </div>
+            <div class="journey-card-title">產品化生存</div>
+            <div class="journey-card-keyword">變現</div>
+            <div class="journey-card-desc">讓專業可以被<br>複製和傳遞</div>
+          </div>
+          <div class="journey-card">
+            <div class="journey-card-phase"></div>
+            <div class="journey-card-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
+            </div>
+            <div class="journey-card-title">主動設計</div>
+            <div class="journey-card-keyword">整合</div>
+            <div class="journey-card-desc">自己創造價值<br>自己承擔命運</div>
+            </div>
           </div>
         </div>
       </div>
@@ -2094,79 +2880,79 @@
   <!-- ======================== -->
   <!-- SECTION 7: TESTIMONIALS  -->
   <!-- ======================== -->
-  <section class="testimonials bg-gray-light fade-up">
+  <section class="testimonials bg-yellow fade-up">
     <div style="max-width:var(--max-width);margin:0 auto;text-align:center;">
       <h2 class="section-heading">各界好評</h2>
       <div class="divider" style="max-width:120px;margin:1rem auto 0;"></div>
     </div>
     <div class="testimonial-grid">
-
+      
       <div class="testimonial-card">
         <div class="testimonial-quote">「我與雷蒙曾經多次合作直播、訪談，每次討論結束，最讓我驚豔的地方，是「雷蒙如何完成更有效率訪談合作」的工作流程。不是看他說了什麼，而是學他怎麼做，這一點在雷蒙身上得到印證。」</div>
         <div class="testimonial-author">
-          <div class="testimonial-avatar"></div>
+          <div class="testimonial-avatar"><img src="images/avatars/Esor.webp" alt="Esor"></div>
           <div>
             <div class="testimonial-author-name">Esor</div>
             <div class="testimonial-author-role">電腦玩物站長</div>
           </div>
         </div>
       </div>
-
+      
       <div class="testimonial-card">
         <div class="testimonial-quote">「一人公司是必然趨勢，超級個體是種社會運動，坊間夠資格開課的人不多，雷蒙是我心目中最好人選。我相信他能像五年前對我說的：未來有這個影響力和資源，能幫助到這個社會。」</div>
         <div class="testimonial-author">
-          <div class="testimonial-avatar"></div>
+          <div class="testimonial-avatar"><img src="images/avatars/于為暢.webp" alt="于為暢"></div>
           <div>
             <div class="testimonial-author-name">于為暢</div>
             <div class="testimonial-author-role">個人品牌教練</div>
           </div>
         </div>
       </div>
-
+      
       <div class="testimonial-card">
         <div class="testimonial-quote">「雷蒙一直在實踐一種不靠年資，不靠傳統途徑也能活得很好的工作模式。我最佩服的是他不只是個懂得寫作的人，還是個很扎實的實踐者，每個觀念都是他反覆練習成為習慣後才分享。」</div>
         <div class="testimonial-author">
-          <div class="testimonial-avatar"></div>
+          <div class="testimonial-avatar"><img src="images/avatars/游舒帆Gipi.webp" alt="游舒帆 Gipi"></div>
           <div>
             <div class="testimonial-author-name">游舒帆 Gipi</div>
             <div class="testimonial-author-role">商業思維學院院長</div>
           </div>
         </div>
       </div>
-
+      
       <div class="testimonial-card">
         <div class="testimonial-quote">「雷蒙的課程，我是安心的。每一個知識點，都是雷蒙用他創業的實戰經驗重新詮釋。若說這門課是他五年來一身武功集大成，我覺得並不為過！」</div>
         <div class="testimonial-author">
-          <div class="testimonial-avatar"></div>
+          <div class="testimonial-avatar"><img src="images/avatars/周加恩.webp" alt="周加恩"></div>
           <div>
             <div class="testimonial-author-name">周加恩</div>
             <div class="testimonial-author-role">文字創作者</div>
           </div>
         </div>
       </div>
-
+      
       <div class="testimonial-card">
         <div class="testimonial-quote">「這堂課，絕對是我看過最有誠意、最紮實的工作課程。課程裡不講理論，直接給工具。超過 26 種工作生產力模型，還有 20+ 種數位工具，雷蒙把他親自實驗的結果都告訴你！」</div>
         <div class="testimonial-author">
-          <div class="testimonial-avatar"></div>
+          <div class="testimonial-avatar"><img src="images/avatars/陳修平.webp" alt="陳修平"></div>
           <div>
             <div class="testimonial-author-name">陳修平</div>
             <div class="testimonial-author-role">師父創辦人</div>
           </div>
         </div>
       </div>
-
+      
       <div class="testimonial-card">
         <div class="testimonial-quote">「為何我創業這幾年，從他身上學到最多的是侯智薰！？他總是能透過不斷的反思和迭代，找到一套系統化的工作術，讓自己在環境快速變化時，依然可以聰明工作、好好生活。」</div>
         <div class="testimonial-author">
-          <div class="testimonial-avatar"></div>
+          <div class="testimonial-avatar"><img src="images/avatars/羊正鈺.webp" alt="羊正鈺"></div>
           <div>
             <div class="testimonial-author-name">羊正鈺</div>
             <div class="testimonial-author-role">學習家創辦人</div>
           </div>
         </div>
       </div>
-
+      
     </div>
   </section>
 
@@ -2186,47 +2972,37 @@
     <!-- 小聚下拉選單 -->
     <div class="meetup-select-wrap">
       <select class="meetup-select" onchange="switchMeetup(this.value)">
+        
         <option value="0">第一次小聚</option>
-        <option value="1">第二次小聚</option>
+        
       </select>
     </div>
 
-    <!-- 第一次小聚 -->
+    
     <div class="meetup-panel active" data-meetup="0">
       <div class="meetup-gallery">
-        <div class="meetup-thumb" onclick="openLightbox(0)"><img src="images/meetup/IMG_2220.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb" onclick="openLightbox(1)"><img src="images/meetup/IMG_2223.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb" onclick="openLightbox(2)"><img src="images/meetup/IMG_2224.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb" onclick="openLightbox(3)"><img src="images/meetup/IMG_2229.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb" onclick="openLightbox(4)"><img src="images/meetup/IMG_2231.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb" onclick="openLightbox(5)"><img src="images/meetup/IMG_2239.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(6)"><img src="images/meetup/IMG_2243.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(7)"><img src="images/meetup/IMG_2251.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(8)"><img src="images/meetup/IMG_2253.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(9)"><img src="images/meetup/IMG_2255.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(10)"><img src="images/meetup/IMG_2259.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(11)"><img src="images/meetup/IMG_2261.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(12)"><img src="images/meetup/IMG_2263.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(13)"><img src="images/meetup/IMG_2265.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(14)"><img src="images/meetup/IMG_2268.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(15)"><img src="images/meetup/IMG_2276.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(16)"><img src="images/meetup/IMG_2279.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(17)"><img src="images/meetup/IMG_2225.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(18)"><img src="images/meetup/IMG_2227.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(19)"><img src="images/meetup/IMG_2230.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(20)"><img src="images/meetup/IMG_2233.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(21)"><img src="images/meetup/IMG_2235.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(22)"><img src="images/meetup/IMG_2238.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(23)"><img src="images/meetup/IMG_2242.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(24)"><img src="images/meetup/IMG_2245.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(25)"><img src="images/meetup/IMG_2249.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(26)"><img src="images/meetup/IMG_2254.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(27)"><img src="images/meetup/IMG_2262.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(28)"><img src="images/meetup/IMG_2270.webp" alt="超級個體小聚" loading="lazy"></div>
-        <div class="meetup-thumb hidden" onclick="openLightbox(29)"><img src="images/meetup/IMG_2280.webp" alt="超級個體小聚" loading="lazy"></div>
+        
+        <div class="meetup-thumb" onclick="openLightbox(0)"><img src="images/meetup/meetup-01/IMG_2080.webp" alt="超級個體小聚" loading="lazy"></div>
+        
+        <div class="meetup-thumb" onclick="openLightbox(1)"><img src="images/meetup/meetup-01/IMG_2146.webp" alt="超級個體小聚" loading="lazy"></div>
+        
+        <div class="meetup-thumb" onclick="openLightbox(2)"><img src="images/meetup/meetup-01/IMG_2158.webp" alt="超級個體小聚" loading="lazy"></div>
+        
+        <div class="meetup-thumb" onclick="openLightbox(3)"><img src="images/meetup/meetup-01/IMG_2167.webp" alt="超級個體小聚" loading="lazy"></div>
+        
+        <div class="meetup-thumb" onclick="openLightbox(4)"><img src="images/meetup/meetup-01/IMG_2212.webp" alt="超級個體小聚" loading="lazy"></div>
+        
+        <div class="meetup-thumb" onclick="openLightbox(5)"><img src="images/meetup/meetup-01/IMG_2230.webp" alt="超級個體小聚" loading="lazy"></div>
+        
+        <div class="meetup-thumb" onclick="openLightbox(6)"><img src="images/meetup/meetup-01/IMG_2262.webp" alt="超級個體小聚" loading="lazy"></div>
+        
+        <div class="meetup-thumb" onclick="openLightbox(7)"><img src="images/meetup/meetup-01/IMG_2268.webp" alt="超級個體小聚" loading="lazy"></div>
+        
+        <div class="meetup-thumb" onclick="openLightbox(8)"><img src="images/meetup/meetup-01/IMG_2280.webp" alt="超級個體小聚" loading="lazy"></div>
+        
       </div>
-      <button class="meetup-show-more" onclick="showMorePhotos(this)">顯示更多照片（共 30 張）</button>
     </div>
+    
   </section>
 
   <!-- Lightbox -->
@@ -2248,9 +3024,11 @@
       <div class="divider-light"></div>
     </div>
     <div class="article-grid">
-
+      
       <a href="https://katisplaying.substack.com/p/solopreneur-1" target="_blank" class="article-card">
-        <img class="article-card-img" src="https://substack-post-media.s3.amazonaws.com/public/images/7fb9386d-5764-483c-a1d9-d2cf2dcc8dfc_2068x1044.png" alt="學員心得：站在樹上的鳥兒不害怕樹枝斷裂，牠相信的是自己的翅膀">
+        
+        <img class="article-card-img" src="https://substack-post-media.s3.amazonaws.com/public/images/7fb9386d-5764-483c-a1d9-d2cf2dcc8dfc_2068x1044.png" alt="站在樹上的鳥兒不害怕樹枝斷裂，牠相信的是自己的翅膀">
+        
         <div class="article-card-body">
           <div class="article-card-tag">學員心得</div>
           <div class="article-card-title">站在樹上的鳥兒不害怕樹枝斷裂，牠相信的是自己的翅膀</div>
@@ -2258,9 +3036,11 @@
           <div class="article-card-meta">katisplaying · 2025</div>
         </div>
       </a>
-
+      
       <a href="https://katisplaying.substack.com/p/solopreneur-2" target="_blank" class="article-card">
-        <img class="article-card-img" src="https://substack-post-media.s3.amazonaws.com/public/images/75436f25-0134-469b-8b81-74c766b803ba_2068x1042.png" alt="學員心得：轉換你對職場價值、生產力、數位工具的預設視角">
+        
+        <img class="article-card-img" src="https://substack-post-media.s3.amazonaws.com/public/images/75436f25-0134-469b-8b81-74c766b803ba_2068x1042.png" alt="轉換你對職場價值、生產力、數位工具的預設視角">
+        
         <div class="article-card-body">
           <div class="article-card-tag">學員心得</div>
           <div class="article-card-title">轉換你對職場價值、生產力、數位工具的預設視角</div>
@@ -2268,33 +3048,25 @@
           <div class="article-card-meta">katisplaying · 2025</div>
         </div>
       </a>
-
-      <!-- 第三篇學員心得：待補充真實內容後取消註解
-      <a href="#" class="article-card">
-        <div class="article-card-img-placeholder">文章封面圖</div>
+      
+      <a href="https://katisplaying.substack.com/p/solopreneur-3" target="_blank" class="article-card">
+        
+        <img class="article-card-img" src="https://substack-post-media.s3.amazonaws.com/public/images/e328c805-3f1b-4368-a975-227c4317d46f_2048x1024.png" alt="從寫作、閱讀、提問，重新校準你的學習系統">
+        
         <div class="article-card-body">
           <div class="article-card-tag">學員心得</div>
-          <div class="article-card-title">待補充</div>
-          <div class="article-card-excerpt">待補充</div>
-          <div class="article-card-meta">待補充</div>
+          <div class="article-card-title">從寫作、閱讀、提問，重新校準你的學習系統</div>
+          <div class="article-card-excerpt">《超級個體工作術》上課筆記 #3</div>
+          <div class="article-card-meta">katisplaying · 2026</div>
         </div>
       </a>
-      -->
-
+      
     </div>
 
-    <!-- Threads 嵌入 -->
-    <div class="threads-grid" id="threads-grid">
-      <blockquote class="text-post-media" data-text-post-permalink="https://www.threads.net/@xiaoyuhinata/post/DOBYwAgD9H1" data-text-post-version="0"></blockquote>
-      <blockquote class="text-post-media" data-text-post-permalink="https://www.threads.net/@learnchiang/post/DOLkbJTkymb" data-text-post-version="0"></blockquote>
-      <blockquote class="text-post-media" data-text-post-permalink="https://www.threads.net/@nujambo/post/DN7zkq0k9HP" data-text-post-version="0"></blockquote>
-      <blockquote class="text-post-media" data-text-post-permalink="https://www.threads.net/@deeppositivecl/post/DOtXKzUkkq8" data-text-post-version="0"></blockquote>
-      <blockquote class="text-post-media" data-text-post-permalink="https://www.threads.net/@lee_vent0414/post/DN8SFFcCUTP" data-text-post-version="0"></blockquote>
-      <blockquote class="text-post-media" data-text-post-permalink="https://www.threads.net/@newbie.course/post/DOw7OiQj6r0" data-text-post-version="0"></blockquote>
-      <blockquote class="text-post-media" data-text-post-permalink="https://www.threads.net/@solvebysmile/post/DPVv1lkEn3P" data-text-post-version="0"></blockquote>
-      <blockquote class="text-post-media" data-text-post-permalink="https://www.threads.net/@anton_0503/post/DOYefX7kwhU" data-text-post-version="0"></blockquote>
+    <!-- 學員見證牆 -->
+    <div style="margin-top:3rem;">
+      <iframe id="testimonial-wall" src="https://testimonials.lifehacker.tw/embed/wall?category=solopreneur&max=20&columns=3&theme=transparent" width="100%" frameborder="0" style="border:none;min-height:800px;background:transparent;" loading="lazy" title="學員見證" allowtransparency="true"></iframe>
     </div>
-    <script async src="https://www.threads.net/embed.js"></script>
   </section>
 
   <!-- ======================== -->
@@ -2306,37 +3078,34 @@
       <h2 class="section-heading" style="color:var(--cream);">超級個體直播對談</h2>
     </div>
     <div class="talks-articles">
+      
       <a href="https://raymondhouch.com/lifehacker/guide/waki-solo-business/" target="_blank" class="talks-article-card">
         <div class="talks-article-thumb"><img src="https://raymondhouch.com/wp-content/uploads/2025/10/solopreneur-waki.jpg" alt="超級個體訪談：瓦基——離開台積電百萬年薪，建立閱讀創作者的個人品牌事業"></div>
         <div class="talks-article-body sr-only">
           <div class="talks-article-title">瓦基是誰？從台積電到知識型超級個體，不追求爆紅，選擇能走 10 年的路</div>
         </div>
       </a>
+      
       <a href="https://raymondhouch.com/lifehacker/guide/chiukaun-ai-writing/" target="_blank" class="talks-article-card">
         <div class="talks-article-thumb"><img src="https://raymondhouch.com/wp-content/uploads/2025/12/solo-chiukaun.webp" alt="超級個體訪談：周加恩——失業兩年到打造一門 AI 寫作百萬課程"></div>
         <div class="talks-article-body sr-only">
           <div class="talks-article-title">周加恩是誰？從喜劇演員到 AI 寫作，堅持「遵從本心」，用真實體驗對抗 AI 平庸內容</div>
         </div>
       </a>
+      
       <a href="https://raymondhouch.com/lifehacker/guide/eleanor-interview/" target="_blank" class="talks-article-card">
         <div class="talks-article-thumb"><img src="https://raymondhouch.com/wp-content/uploads/2026/02/solo-eleanor-interview.webp" alt="超級個體訪談：藍諾——從接案到解散公司，一人公司微退休的超級個體生活"></div>
         <div class="talks-article-body sr-only">
           <div class="talks-article-title">藍諾是誰？從攝影接案到紐西蘭旅居，解散 10 人公司後「微退休」的身分轉型故事</div>
         </div>
       </a>
+      
     </div>
     <div style="text-align:center;margin-top:2rem;">
-      <a href="#" class="cta-orange">報名最新職人對談</a>
+      <a href="https://shifu.tw/Course/Details/db9a9cae-2bdf-43a8-b47b-f0b0ba20834e" class="cta-orange">報名最新職人對談</a>
     </div>
 
-    <!-- 國外超級個體案例：待補充內容後取消註解
-    <div style="max-width:var(--max-width);margin:4rem auto 1.25rem;">
-      <div class="section-label">國外超級個體案例</div>
-      <h2 class="section-heading" style="color:var(--cream);">他們怎麼做到的？</h2>
-    </div>
-    <div class="talks-articles">
-    </div>
-    -->
+
   </section>
 
   <!-- ================================ -->
@@ -2352,6 +3121,7 @@
       </div>
     </div>
     <div class="media-grid">
+      
       <a href="https://www.youtube.com/watch?v=g4r_NmU3fN8" target="_blank" class="media-card">
         <div class="media-card-thumb">
           <img src="https://img.youtube.com/vi/g4r_NmU3fN8/hqdefault.jpg" alt="AI 時代，超級個體會跑贏公司嗎？ft. 侯智昇（雷蒙）">
@@ -2363,6 +3133,19 @@
           <div class="media-card-title">AI 時代，超級個體會跑贏公司嗎？ft. 侯智昇（雷蒙）</div>
         </div>
       </a>
+      
+      <a href="https://raymondhouch.com/lifehacker/solopreneur-path/" target="_blank" class="media-card">
+        <div class="media-card-thumb">
+          <img src="https://raymondhouch.com/wp-content/uploads/2025/07/podcast-cover-2.webp" alt="超級個體是什麼？與電左 Jacky 暢聊三十歲後的工作和人生哲學">
+          
+        </div>
+        <div class="media-card-body">
+          <div class="media-card-type media-card-type--article">✎ 文章</div>
+          <div class="media-card-source">雷蒙訪談精華</div>
+          <div class="media-card-title">超級個體是什麼？與電左 Jacky 暢聊三十歲後的工作和人生哲學</div>
+        </div>
+      </a>
+      
       <a href="https://www.youtube.com/watch?v=uweGatM9FWc" target="_blank" class="media-card">
         <div class="media-card-thumb">
           <img src="https://img.youtube.com/vi/uweGatM9FWc/hqdefault.jpg" alt="一人公司達到千萬業績的過程與模式｜雷蒙三十">
@@ -2374,9 +3157,11 @@
           <div class="media-card-title">一人公司達到千萬業績的過程與模式｜雷蒙三十</div>
         </div>
       </a>
+      
       <a href="https://raymondhouch.com/life/raymond-creator-story/" target="_blank" class="media-card">
         <div class="media-card-thumb">
           <img src="https://raymondhouch.com/wp-content/uploads/2025/07/jack-podcast-raymond-2025.compressed.jpg" alt="侯智薰的創業之路：從大學講座到一人公司">
+          
         </div>
         <div class="media-card-body">
           <div class="media-card-type media-card-type--article">✎ 文章</div>
@@ -2384,23 +3169,14 @@
           <div class="media-card-title">侯智薰的創業之路：從大學講座到一人公司</div>
         </div>
       </a>
-      <a href="https://raymondhouch.com/lifehacker/solopreneur-path/" target="_blank" class="media-card">
-        <div class="media-card-thumb">
-          <img src="https://raymondhouch.com/wp-content/uploads/2025/07/podcast-cover-2.webp" alt="超級個體是什麼？與電左 Jacky 暢聊三十歲後的工作和人生哲學">
-        </div>
-        <div class="media-card-body">
-          <div class="media-card-type media-card-type--article">✎ 文章</div>
-          <div class="media-card-source">雷蒙訪談精華</div>
-          <div class="media-card-title">超級個體是什麼？與電左 Jacky 暢聊三十歲後的工作和人生哲學</div>
-        </div>
-      </a>
+      
     </div>
   </section>
 
   <!-- ======================== -->
   <!-- SECTION 11: PRICING      -->
   <!-- ======================== -->
-  <section class="pricing bg-gray-light fade-up" id="pricing">
+  <section class="pricing bg-yellow fade-up" id="pricing">
     <div style="max-width:var(--max-width);margin:0 auto;">
       <div class="section-label" style="text-align:center;">加入課程</div>
       <h2 class="section-heading" style="text-align:center;">一套完整的個體升級路徑<br>讓你更值錢、持續進化</h2>
@@ -2411,71 +3187,44 @@
 
     <div class="pricing-card">
       <div class="pricing-line">
-        <span class="pricing-line-label">55+ 堂高質感影片課（18 小時）</span>
-        <span class="pricing-line-value">—</span>
-      </div>
+        <span class="pricing-line-label">55+ 堂高質感影片課（18 小時）</span>      </div>
       <div class="pricing-line">
-        <span class="pricing-line-label">完整 Notion 互動講義</span>
-        <span class="pricing-line-value">—</span>
-      </div>
+        <span class="pricing-line-label">完整 Notion 互動講義</span>      </div>
       <div class="pricing-line">
-        <span class="pricing-line-label">6 種學習模式（影片＋音頻＋圖卡⋯）</span>
-        <span class="pricing-line-value">—</span>
-      </div>
+        <span class="pricing-line-label">6 種學習模式（影片＋音頻＋圖卡⋯）</span>      </div>
       <div class="pricing-line">
-        <span class="pricing-line-label">永久觀看權限</span>
-        <span class="pricing-line-value">—</span>
-      </div>
+        <span class="pricing-line-label">永久觀看權限</span>      </div>
       <div class="pricing-line">
-        <span class="pricing-line-label">專屬學員社群</span>
-        <span class="pricing-line-value">—</span>
-      </div>
+        <span class="pricing-line-label">專屬學員社群</span>      </div>
       <div class="pricing-line">
-        <span class="pricing-line-label">6 場超級個體直播對談</span>
-        <span class="pricing-line-value">—</span>
-      </div>
+        <span class="pricing-line-label">6 場超級個體直播對談</span>      </div>
       <div class="pricing-line">
-        <span class="pricing-line-label">課後作業 ＋ 網狀學習設計</span>
-        <span class="pricing-line-value">—</span>
-      </div>
-
-      <div class="pricing-your-price">
-        <div class="pricing-your-price-label">課程售價</div>
-        <div class="pricing-amount">NT$ ——</div>
-        <p style="font-size:14px;color:rgba(0,0,0,0.4);margin-bottom:1.5rem;">
-          <!-- 替換為實際價格與說明 -->
-          請洽官方了解最新優惠方案
-        </p>
-        <a href="#" class="cta-orange">立即加入課程</a>
+        <span class="pricing-line-label">課後作業 ＋ 網狀學習設計</span>      </div>
+      <div style="text-align:center;margin-top:1.5rem;">
+        <a href="https://shifu.tw/Course/Details/db9a9cae-2bdf-43a8-b47b-f0b0ba20834e" class="cta-orange">立即加入課程</a>
       </div>
     </div>
 
-    <!-- 學員短評 -->
-    <div class="mini-quotes" style="max-width:var(--max-width);margin:2.5rem auto 0;display:flex;flex-wrap:wrap;gap:1rem;justify-content:flex-start;">
-      <div class="mini-quote" style="background:rgba(0,0,0,0.04);">
-        <div class="mini-quote-avatar">M</div>
-        <div class="mini-quote-content">
-          <p class="mini-quote-text" style="color:rgba(0,0,0,0.6);">「雷蒙擅長的是透過不同的服務，整合出自己的一套工作管理流程，再用淺顯易懂的方式與我們分享。」</p>
-          <div class="mini-quote-author" style="color:rgba(0,0,0,0.35);">Muki · 網站前端工程師</div>
-        </div>
-      </div>
-      <div class="mini-quote" style="background:rgba(0,0,0,0.04);">
-        <div class="mini-quote-avatar">T</div>
-        <div class="mini-quote-content">
-          <p class="mini-quote-text" style="color:rgba(0,0,0,0.6);">「這堂課是把文稿直接放在 Notion 裡，邊學邊搜尋、隨時交流，對懶人超友善！」</p>
-          <div class="mini-quote-author" style="color:rgba(0,0,0,0.35);">Tobie 偷偷 · 文字創作者</div>
-        </div>
-      </div>
-      <div class="mini-quote" style="background:rgba(0,0,0,0.04);">
-        <div class="mini-quote-avatar">思</div>
-        <div class="mini-quote-content">
-          <p class="mini-quote-text" style="color:rgba(0,0,0,0.6);">「我曾經在 QA 回答我最喜歡的課程是什麼？不是我的職能治療專業，而是雷蒙的課。」</p>
-          <div class="mini-quote-author" style="color:rgba(0,0,0,0.35);">思誼 · 職能治療師</div>
+  </section>
+
+  <!-- ======================== -->
+  <!-- BIG QUOTE                -->
+  <!-- ======================== -->
+  <section class="fade-up" style="padding:5rem 1.5rem;background:var(--cream);">
+    <div style="max-width:680px;margin:0 auto;text-align:center;position:relative;">
+      <div style="font-size:120px;line-height:0.6;color:var(--orange);opacity:0.12;font-family:serif;margin-bottom:-1rem;">"</div>
+      <p style="font-family:var(--font-serif);font-size:clamp(22px,3vw,32px);font-weight:700;color:var(--black);line-height:1.6;margin-bottom:1.5rem;">
+        把自己從職場新人到一人公司的驗證路徑，<br>整理成你能直接用的方法。
+      </p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:0.75rem;">
+        <img src="https://raymondhouch.com/wp-content/uploads/2025/09/137-vertical-1472x2048.webp" alt="雷蒙" style="width:40px;height:40px;border-radius:50%;object-fit:cover;">
+        <div style="text-align:left;">
+          <div style="font-size:14px;font-weight:600;color:var(--black);">侯智薰（雷蒙）</div>
+          <div style="font-size:14px;color:rgba(0,0,0,0.4);">雷蒙三十創辦人</div>
         </div>
       </div>
     </div>
   </section>
-
 
   <!-- ======================== -->
   <!-- SECTION 13: FAQ          -->
@@ -2487,7 +3236,7 @@
     <div class="faq-list">
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        <button class="faq-question" onclick="toggleFaq(this)">
           <span class="faq-question-text">「超級個體」是什麼？</span>
           <span class="faq-toggle">+</span>
         </button>
@@ -2499,7 +3248,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        <button class="faq-question" onclick="toggleFaq(this)">
           <span class="faq-question-text">「生活黑客」是什麼？</span>
           <span class="faq-toggle">+</span>
         </button>
@@ -2511,7 +3260,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        <button class="faq-question" onclick="toggleFaq(this)">
           <span class="faq-question-text">個人品牌等於超級個體嗎？</span>
           <span class="faq-toggle">+</span>
         </button>
@@ -2523,7 +3272,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        <button class="faq-question" onclick="toggleFaq(this)">
           <span class="faq-question-text">為什麼雷蒙要製作這門課？</span>
           <span class="faq-toggle">+</span>
         </button>
@@ -2535,7 +3284,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        <button class="faq-question" onclick="toggleFaq(this)">
           <span class="faq-question-text">課程可以無限回看嗎？</span>
           <span class="faq-toggle">+</span>
         </button>
@@ -2553,12 +3302,11 @@
       <p>© 2026 雷蒙三十｜超級個體工作術. All Rights Reserved.</p>
       <p style="margin-top:0.5rem;">
         <a href="https://raymondhouch.com" target="_blank">雷蒙三十官網</a> ·
-        <a href="#" target="_blank">電子報</a> ·
-        <a href="#" target="_blank">關於雷蒙</a>
+        <a href="https://lifehacker.ck.page/subscribe" target="_blank">訂閱電子報</a> ·
+        <a href="https://raymondhouch.com/about/" target="_blank">關於雷蒙</a>
       </p>
     </footer>
   </section>
-  </main>
 
   <!-- ======================== -->
   <!-- SCRIPTS                  -->
@@ -2575,20 +3323,99 @@
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-    // 翻牌卡：點擊切換（觸控裝置用）
-    document.querySelectorAll('.for-you-card').forEach(card => {
-      card.addEventListener('click', () => card.classList.toggle('flipped'));
-    });
-
     // FAQ Accordion
+    // Typewriter effect (loops every 15s)
+    (function() {
+      const text = '人生升級系統';
+      const el = document.getElementById('typewriter-text');
+      if (!el) return;
+      function typeOut() {
+        let i = 0;
+        el.textContent = '';
+        const timer = setInterval(function() {
+          el.textContent = text.substring(0, i + 1);
+          i++;
+          if (i >= text.length) {
+            clearInterval(timer);
+            setTimeout(eraseOut, 12000);
+          }
+        }, 120);
+      }
+      function eraseOut() {
+        let i = text.length;
+        const timer = setInterval(function() {
+          i--;
+          el.textContent = text.substring(0, i);
+          if (i <= 0) {
+            clearInterval(timer);
+            setTimeout(typeOut, 500);
+          }
+        }, 60);
+      }
+      const observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting) {
+          typeOut();
+          observer.disconnect();
+        }
+      }, { threshold: 0.5 });
+      observer.observe(el.closest('.mid-cta'));
+    })();
+
+    // Hero tab switching
+    function switchHeroTab(idx) {
+      document.querySelectorAll('.hero-tab').forEach((t, i) => t.classList.toggle('active', i === idx));
+      document.querySelectorAll('.hero-screen').forEach((s, i) => s.classList.toggle('active', i === idx));
+    }
+
+    // Hero scroll tilt
+    (function() {
+      const mockup = document.getElementById('hero-mockup');
+      if (!mockup) return;
+      window.addEventListener('scroll', function() {
+        const scrollY = window.scrollY;
+        const progress = Math.min(scrollY / 500, 1);
+        const rotate = 12 * (1 - progress);
+        const scale = 0.95 + 0.05 * progress;
+        const opacity = 0.9 + 0.1 * progress;
+        mockup.style.transform = `rotateX(${rotate}deg) scale(${scale})`;
+        mockup.style.opacity = opacity;
+      }, { passive: true });
+    })();
+
+    // Counter animation
+    (function() {
+      const counters = document.querySelectorAll('[data-count]');
+      if (!counters.length) return;
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.dataset.count);
+            const duration = 1500;
+            const start = Date.now();
+            function tick() {
+              const progress = Math.min((Date.now() - start) / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              el.textContent = Math.floor(eased * target).toLocaleString();
+              if (progress < 1) requestAnimationFrame(tick);
+            }
+            tick();
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.5 });
+      counters.forEach(function(el) { observer.observe(el); });
+    })();
+
     function setLearningMode(n) {
-      document.querySelectorAll('.learning-mode').forEach(el => {
-        el.classList.remove('active');
-        el.setAttribute('aria-selected', 'false');
+      document.querySelectorAll('.learning-mode').forEach(el => el.classList.remove('active'));
+      document.querySelector(`.learning-mode[data-mode="${n}"]`).classList.add('active');
+      // Stop all playing videos
+      document.querySelectorAll('.learning-preview-placeholder iframe, .learning-preview-img iframe').forEach(function(iframe) {
+        iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        var src = iframe.src;
+        iframe.src = src;
       });
-      const active = document.querySelector(`.learning-mode[data-mode="${n}"]`);
-      active.classList.add('active');
-      active.setAttribute('aria-selected', 'true');
       document.querySelectorAll('.learning-preview-placeholder, .learning-preview-img').forEach(el => el.classList.remove('active'));
       const target = document.querySelector(`[data-preview="${n}"]`);
       if (target) target.classList.add('active');
@@ -2598,15 +3425,9 @@
       const item = btn.closest('.faq-item');
       const wasOpen = item.classList.contains('open');
       // Close all
-      document.querySelectorAll('.faq-item').forEach(i => {
-        i.classList.remove('open');
-        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-      });
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
       // Toggle clicked
-      if (!wasOpen) {
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-      }
+      if (!wasOpen) item.classList.add('open');
     }
 
     // Meetup dropdown switching
