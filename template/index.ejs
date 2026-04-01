@@ -237,7 +237,7 @@
     /* ===================== */
     .hero {
       background: var(--cream);
-      padding: 6rem 1.5rem 4rem;
+      padding: 8rem 1.5rem 4rem;
       text-align: center;
       overflow: hidden;
     }
@@ -265,17 +265,17 @@
     }
     .hero-text h2 {
       font-family: var(--font-serif);
-      font-size: clamp(22px, 2.8vw, 30px);
+      font-size: clamp(22px, 2.8vw, 52px);
       font-weight: 700;
       line-height: 1.3;
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
     }
     .hero-text h2 strong { color: var(--orange); }
     .hero-text .hero-desc {
       font-size: 16px;
       color: rgba(0,0,0,0.65);
       line-height: 1.75;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
     }
     .hero-cta-row {
       display: flex;
@@ -350,29 +350,30 @@
     }
     .hero-stat-card {
       flex: 1;
-      min-width: 160px;
-      max-width: 220px;
-      background: var(--white);
-      border: 1px solid rgba(0,0,0,0.08);
+      min-width: 140px;
+      background: linear-gradient(135deg, #E77E47 0%, #d4a574 100%);
       border-radius: 12px;
       padding: 1.25rem 1rem;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
-    .hero-stat-icon { font-size: 18px; margin-bottom: 0.4rem; }
+    .hero-stat-icon {
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: center;
+    }
+    .hero-stat-icon svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 1.5; }
     .hero-stat-label {
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: rgba(0,0,0,0.4);
-      margin-bottom: 0.25rem;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 0.35rem;
     }
     .hero-stat-num {
-      font-family: var(--font-display);
-      font-size: 32px;
-      font-weight: 800;
-      color: var(--black);
+      font-family: var(--font-sans);
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
       line-height: 1;
     }
     .hero-screen-placeholder {
@@ -520,6 +521,245 @@
     /* SECTION 4: CURRICULUM   */
     /* ======================= */
     .curriculum { padding: 5rem 1.5rem; }
+
+    /* Journey Cards (for book section) */
+    .journey-cards {
+      max-width: var(--max-width);
+      margin: 3rem auto 1rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .journey-card {
+      background: rgba(0,0,0,0.03);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
+    .journey-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(231,126,71,0.25);
+      box-shadow: 0 8px 30px rgba(231,126,71,0.08);
+    }
+    .journey-card-phase {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--orange);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    .journey-card-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: rgba(231,126,71,0.08);
+      color: var(--orange);
+    }
+    .journey-card-icon svg { width: 28px; height: 28px; }
+    .journey-card-title {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 0.5rem;
+    }
+    .journey-card-keyword {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--orange);
+      margin-bottom: 0.4rem;
+    }
+    .journey-card-desc {
+      font-size: 14px;
+      color: rgba(0,0,0,0.4);
+      line-height: 1.5;
+    }
+    @media (max-width: 768px) {
+      .journey-cards { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* Journey Flow Diagram */
+    .journey-flow {
+      max-width: var(--max-width);
+      margin: 3rem auto;
+      position: relative;
+    }
+    .journey-flow-track {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+    }
+    .journey-flow-line {
+      position: absolute;
+      top: 28px;
+      left: 60px;
+      right: 60px;
+      height: 2px;
+      background: linear-gradient(to right, var(--black), var(--orange));
+      z-index: 0;
+    }
+    .journey-flow-node {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .journey-flow-dot {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--cream);
+      border: 2px solid rgba(0,0,0,0.1);
+      color: var(--black);
+      transition: all 0.3s;
+    }
+    .journey-flow-dot svg { width: 24px; height: 24px; }
+    .journey-flow-node:first-child .journey-flow-dot {
+      background: var(--black);
+      border-color: var(--black);
+      color: #fff;
+    }
+    .journey-flow-node:last-child .journey-flow-dot {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: #fff;
+      animation: breathe 3s ease-in-out infinite, dotGlow 4s ease infinite;
+    }
+    @keyframes breathe {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    @keyframes dotGlow {
+      0% { background: var(--orange); border-color: var(--orange); box-shadow: 0 0 12px rgba(231,126,71,0.3); }
+      33% { background: var(--teal); border-color: var(--teal); box-shadow: 0 0 16px rgba(33,164,177,0.3); }
+      66% { background: #8B5CBA; border-color: #8B5CBA; box-shadow: 0 0 16px rgba(139,92,186,0.3); }
+      100% { background: var(--orange); border-color: var(--orange); box-shadow: 0 0 12px rgba(231,126,71,0.3); }
+    }
+    .journey-flow-node:not(:first-child):not(:last-child) .journey-flow-dot {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+    .journey-flow-node:hover .journey-flow-dot {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(231,126,71,0.2);
+    }
+    .journey-flow-title {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--black);
+      margin-top: 0.75rem;
+    }
+    .journey-flow-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      margin-top: 0.5rem;
+    }
+    .journey-flow-arrow {
+      width: 14px;
+      height: 14px;
+      position: relative;
+      animation: arrowPulse 2s ease-in-out infinite;
+    }
+    .journey-flow-arrow svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: rgba(0,0,0,0.15);
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      animation: arrowPulseStroke 2s ease-in-out infinite;
+    }
+    @keyframes arrowPulseStroke {
+      0%, 100% { stroke: rgba(0,0,0,0.15); }
+      50% { stroke: var(--orange); }
+    }
+    .journey-flow-node:nth-child(3) .journey-flow-arrow svg { animation-delay: 0.3s; }
+    .journey-flow-node:nth-child(4) .journey-flow-arrow svg { animation-delay: 0.6s; }
+    .journey-flow-node:nth-child(5) .journey-flow-arrow svg { animation-delay: 0.9s; }
+    .journey-flow-sub {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--orange);
+    }
+    .journey-flow-desc {
+      font-size: 14px;
+      color: rgba(0,0,0,0.4);
+    }
+    @media (max-width: 768px) {
+      .journey-flow-track { flex-direction: column; gap: 0.5rem; align-items: stretch; }
+      .journey-flow-line { display: none; }
+      .journey-flow-node { display: flex; align-items: center; gap: 1rem; text-align: left; }
+      .journey-flow-dot { margin: 0; flex-shrink: 0; width: 44px; height: 44px; }
+      .journey-flow-dot svg { width: 20px; height: 20px; }
+      .journey-flow-col { flex-direction: row; gap: 0.5rem; margin-top: 0; }
+      .journey-flow-arrow { display: none; }
+    }
+
+    /* Journey Detail Cards */
+    .journey-details {
+      max-width: var(--max-width);
+      margin: 2rem auto 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .journey-detail-card {
+      background: #f9fafb;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      display: grid;
+      grid-template-columns: 60px 1px 1fr;
+      gap: 1.25rem;
+      align-items: center;
+    }
+    .journey-detail-step {
+      text-align: center;
+    }
+    .journey-detail-num {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--orange);
+    }
+    .journey-detail-title {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--black);
+      line-height: 1;
+    }
+    .journey-detail-divider {
+      width: 1px;
+      align-self: stretch;
+      background: rgba(0,0,0,0.1);
+    }
+    .journey-detail-body {}
+    .journey-detail-desc {
+      font-size: 15px;
+      color: var(--black);
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+    .journey-detail-action {
+      font-size: 14px;
+      color: rgba(0,0,0,0.4);
+    }
 
     /* Venn Diagram — SVG-based */
     .venn-wrap {
@@ -806,15 +1046,31 @@
       gap: 0;
     }
     .learning-mode {
-      padding: 1rem 1.25rem;
+      padding: 1rem 1.25rem 1rem 1.25rem;
+      padding-right: 2.5rem;
       border-left: 3px solid rgba(255,255,255,0.1);
       cursor: pointer;
       transition: all 0.3s;
+      position: relative;
     }
     .learning-mode:hover,
     .learning-mode.active {
       border-left-color: var(--orange);
       background: rgba(255,255,255,0.05);
+    }
+    .learning-mode::after {
+      content: '▶';
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      color: var(--orange);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .learning-mode:hover::after {
+      opacity: 1;
     }
     .learning-mode-num {
       font-family: var(--font-display);
@@ -900,8 +1156,6 @@
       width: 100%;
       border-radius: 16px;
       object-fit: cover;
-      aspect-ratio: 4/3;
-      margin-bottom: 0.75rem;
     }
     .instructor-sub-photos {
       display: grid;
@@ -922,7 +1176,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 12px;
+      font-size: 14px;
       color: rgba(0,0,0,0.2);
     }
     .instructor-name {
@@ -953,23 +1207,35 @@
       margin-top: 1rem;
     }
     .instructor-stats {
-      display: flex;
-      gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
       margin-top: 1.5rem;
-      flex-wrap: wrap;
     }
     .instructor-stat {
-      text-align: center;
+      background: #f9fafb;
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 12px;
+      padding: 1.25rem;
     }
-    .instructor-stat-num {
-      font-family: var(--font-display);
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--teal);
+    .instructor-stat:first-child {
+      background: linear-gradient(135deg, var(--orange), #c4632e);
+      border: none;
     }
+    .instructor-stat:first-child .instructor-stat-label,
+    .instructor-stat:first-child .instructor-stat-num { color: #fff; }
     .instructor-stat-label {
       font-size: 14px;
+      font-weight: 500;
       color: rgba(0,0,0,0.5);
+      margin-bottom: 0.5rem;
+    }
+    .instructor-stat-num {
+      font-family: var(--font-sans);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--black);
+      line-height: 1;
     }
 
     @media (min-width: 768px) {
@@ -988,17 +1254,17 @@
       gap: 3rem;
       align-items: center;
       background:
-        linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px),
-        var(--white);
-      background-size: 40px 40px;
-      border: 1px solid rgba(0,0,0,0.08);
+        radial-gradient(ellipse at 30% 20%, rgba(231,126,71,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(33,164,177,0.06) 0%, transparent 50%),
+        linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px),
+        #f9fafb;
+      background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px, 100% 100%;
       border-radius: 20px;
       padding: 3rem;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.04);
     }
     @media (min-width: 768px) {
-      .book-layout { grid-template-columns: 1fr 1fr; }
+      .book-layout { grid-template-columns: auto 1fr; }
     }
     .book-mockup {
       perspective: 800px;
@@ -1007,14 +1273,14 @@
     }
     .book-3d {
       position: relative;
-      width: 240px;
+      width: 180px;
       transform-style: preserve-3d;
     }
     .book-cover {
       width: 100%;
       border-radius: 4px 8px 8px 4px;
       overflow: hidden;
-      background: #f5f2ed;
+      background: linear-gradient(145deg, #21a4b1 0%, #1a8a95 60%, #167a85 100%);
       aspect-ratio: 2.8/4;
       display: flex;
       align-items: center;
@@ -1031,10 +1297,10 @@
       left: 0;
       top: 0;
       bottom: 0;
-      width: 24px;
-      background: linear-gradient(to right, #d4cfc8, #e8e3dc, #f0ece6);
+      width: 8px;
+      background: linear-gradient(to right, #1a8a95, #21a4b1);
       border-radius: 4px 0 0 4px;
-      box-shadow: inset -2px 0 4px rgba(0,0,0,0.06);
+      box-shadow: inset -1px 0 3px rgba(0,0,0,0.1);
     }
     /* Page edges right */
     .book-cover::after {
@@ -1045,7 +1311,7 @@
       bottom: 4px;
       width: 6px;
       background: linear-gradient(to right,
-        #e8e3dc, #f0ece6, #e8e3dc
+        #e8eeef, #f0f5f5, #e8eeef
       );
       border-radius: 0 2px 2px 0;
       box-shadow: 1px 0 2px rgba(0,0,0,0.05);
@@ -1111,7 +1377,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 12px;
+      font-size: 14px;
       color: rgba(0,0,0,0.2);
     }
     .book-form {
@@ -1123,41 +1389,86 @@
       color: var(--black);
       margin-bottom: 0.75rem;
     }
-    .book-form-row {
-      display: flex;
-      gap: 0.5rem;
-    }
-    .book-form-input {
-      flex: 1;
-      height: 48px;
-      padding: 0 1.25rem;
-      border: 1px solid rgba(0,0,0,0.12);
-      border-radius: 999px;
-      background: var(--white);
-      color: var(--black);
-      font-size: 14px;
-      font-family: var(--font-sans);
-    }
-    .book-form-input::placeholder { color: rgba(0,0,0,0.3); }
-    .book-form-input:focus { outline: none; border-color: var(--orange); }
-    .book-form-btn {
-      height: 48px;
-      padding: 0 2rem;
-      background: var(--orange);
-      color: #fff;
-      border: none;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: background 0.2s;
-    }
-    .book-form-btn:hover { background: #d06a3a; }
     .book-form-note {
-      font-size: 12px;
+      font-size: 14px;
       color: rgba(0,0,0,0.3);
       margin-top: 0.5rem;
+    }
+    /* Kit form overrides */
+    .book-form .formkit-form { max-width: 100% !important; }
+    .book-form .formkit-form [data-style="clean"] { padding: 0 !important; }
+    .book-form .formkit-form[data-uid] .formkit-fields,
+    .book-form .formkit-fields {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      gap: 0.5rem !important;
+      align-items: center !important;
+    }
+    .book-form .formkit-form[data-uid] .formkit-field,
+    .book-form .formkit-field {
+      flex: 1 1 auto !important;
+      margin: 0 !important;
+    }
+    .book-form .formkit-form[data-uid] .formkit-submit,
+    .book-form .formkit-submit {
+      flex: 0 0 auto !important;
+    }
+    .book-form .formkit-input {
+      height: 48px !important;
+      padding: 0 1.25rem !important;
+      border: 1px solid rgba(0,0,0,0.08) !important;
+      border-radius: 10px !important;
+      background: var(--white) !important;
+      color: var(--black) !important;
+      font-size: 15px !important;
+      font-family: var(--font-sans) !important;
+      line-height: 48px !important;
+      margin: 0 !important;
+      box-shadow: none !important;
+    }
+    .book-form .formkit-input:focus {
+      border-color: var(--orange) !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+    .book-form .formkit-submit,
+    .book-form .formkit-submit[data-element="submit"] {
+      margin: 0 !important;
+      flex-shrink: 0 !important;
+      background: rgb(246,184,90) !important;
+      border: none !important;
+      border-radius: 10px !important;
+      overflow: hidden !important;
+      cursor: pointer !important;
+      box-shadow: none !important;
+    }
+    .book-form .formkit-submit > span {
+      padding: 13px 24px !important;
+      background: rgb(246,184,90) !important;
+      color: var(--black) !important;
+      border-radius: 10px !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      font-family: var(--font-sans) !important;
+    }
+    .book-form .formkit-submit:hover,
+    .book-form .formkit-submit:hover > span {
+      background: rgb(236,170,70) !important;
+    }
+    .book-form .formkit-alert-success {
+      background: #d3fbeb !important;
+      border-color: #10bf7a !important;
+      color: #0c905c !important;
+      border-radius: 10px !important;
+    }
+    @media (max-width: 640px) {
+      .book-form .formkit-fields {
+        flex-wrap: wrap !important;
+      }
+      .book-form .formkit-field,
+      .book-form .formkit-submit {
+        flex: 1 0 100% !important;
+      }
     }
 
     /* ======================== */
@@ -1447,10 +1758,11 @@
     /* THREADS EMBEDS (inside student)  */
     /* ================================ */
     .threads-grid {
-      margin: 3rem 0 0;
+      margin: 3rem auto 0;
       columns: 4;
       column-gap: 8px;
-      padding: 0;
+      padding: 0 1.5rem;
+      max-width: 1600px;
     }
     .threads-grid .text-post-media {
       margin: 0 0 8px 0 !important;
@@ -1517,7 +1829,7 @@
       margin-bottom: 0.5rem;
     }
     .mini-quote-author {
-      font-size: 13px;
+      font-size: 14px;
       color: rgba(255,255,255,0.35);
     }
     @media (min-width: 768px) {
@@ -1946,10 +2258,8 @@
   <!-- ======================== -->
   <section class="hero">
     <div class="hero-sub-label">Solopreneur</div>
-    <h1>超級個體工作術</h1>
-    <div class="divider" style="max-width:200px;margin:1.5rem auto;"></div>
 
-    <div class="hero-text">
+    <div class="hero-text" style="margin-top:1rem;">
       <h2>一堂能改變你工作、職場困境<br><strong>讓你更值錢、持續升級的 55 堂課</strong></h2>
       <p class="hero-desc">
         沒有空泛的理論，只有一套可操作的個體升級路徑。<br>
@@ -2003,22 +2313,22 @@
     <!-- Stats bar below mockup -->
     <div style="max-width:900px;margin:3rem auto 0;display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;">
       <div class="hero-stat-card">
-        <div class="hero-stat-icon">🎬</div>
+        <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"/></svg></div>
         <div class="hero-stat-label">小時實戰內容</div>
         <div class="hero-stat-num">18+</div>
       </div>
       <div class="hero-stat-card">
-        <div class="hero-stat-icon">📚</div>
+        <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg></div>
         <div class="hero-stat-label">課程單元</div>
         <div class="hero-stat-num">55+</div>
       </div>
       <div class="hero-stat-card">
-        <div class="hero-stat-icon">♾️</div>
+        <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182M21.015 4.356v4.992"/></svg></div>
         <div class="hero-stat-label">無限回看</div>
         <div class="hero-stat-num">∞</div>
       </div>
       <div class="hero-stat-card">
-        <div class="hero-stat-icon">🎙</div>
+        <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"/></svg></div>
         <div class="hero-stat-label">加贈直播</div>
         <div class="hero-stat-num">6</div>
       </div>
@@ -2104,6 +2414,80 @@
       </p>
     </div>
 
+    <!-- Journey Flow Diagram -->
+    <div class="journey-flow">
+      <div class="journey-flow-track">
+        <div class="journey-flow-line"></div>
+
+        <div class="journey-flow-node">
+          <div class="journey-flow-dot">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0"/></svg>
+          </div>
+          <div class="journey-flow-title">普通人</div>
+        </div>
+
+        <div class="journey-flow-node">
+          <div class="journey-flow-dot">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div class="journey-flow-title">超越評價</div>
+          <div class="journey-flow-col">
+            <div class="journey-flow-arrow"><svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
+            <div class="journey-flow-sub">除魅</div>
+            <div class="journey-flow-arrow"><svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
+            <div class="journey-flow-desc">打破舊的</div>
+          </div>
+        </div>
+
+        <div class="journey-flow-node">
+          <div class="journey-flow-dot">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div class="journey-flow-title">建立系統</div>
+          <div class="journey-flow-col">
+            <div class="journey-flow-arrow"><svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
+            <div class="journey-flow-sub">賦能</div>
+            <div class="journey-flow-arrow"><svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
+            <div class="journey-flow-desc">建立新的</div>
+          </div>
+        </div>
+
+        <div class="journey-flow-node">
+          <div class="journey-flow-dot">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg>
+          </div>
+          <div class="journey-flow-title">產品化生存</div>
+          <div class="journey-flow-col">
+            <div class="journey-flow-arrow"><svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
+            <div class="journey-flow-sub">變現</div>
+            <div class="journey-flow-arrow"><svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
+            <div class="journey-flow-desc">創造價值</div>
+          </div>
+        </div>
+
+        <div class="journey-flow-node">
+          <div class="journey-flow-dot">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/></svg>
+          </div>
+          <div class="journey-flow-title">主動設計</div>
+          <div class="journey-flow-col">
+            <div class="journey-flow-arrow"><svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
+            <div class="journey-flow-sub">整合</div>
+            <div class="journey-flow-arrow"><svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
+            <div class="journey-flow-desc">熱愛生活</div>
+          </div>
+        </div>
+
+        <div class="journey-flow-node">
+          <div class="journey-flow-dot">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
+          </div>
+          <div class="journey-flow-title">超級個體</div>
+        </div>
+
+      </div>
+    </div>
+
     <!-- Venn Diagram (SVG) -->
     <div class="venn-wrap">
       <svg viewBox="0 0 560 500" xmlns="http://www.w3.org/2000/svg">
@@ -2183,96 +2567,53 @@
   </section>
 
   <!-- ======================== -->
-  <!-- SECTION 5: LEARNING      -->
+  <!-- ======================== -->
+  <!-- COURSE PREVIEW (Learning layout style) -->
   <!-- ======================== -->
   <section class="learning bg-dark fade-up">
     <div style="max-width:var(--max-width);margin:0 auto;">
-      <div class="section-label">6 種學習模式</div>
-      <h2 class="section-heading" style="color:var(--cream);">打破傳統線上課的學習方式</h2>
+      <div class="section-label">免費試看</div>
+      <h2 class="section-heading" style="color:var(--cream);">課程內容試看</h2>
       <div class="divider-light"></div>
-      <p class="body-text-light" style="">
-        為了讓每個人的學習成效更好，在《超級個體工作術》這堂課裡，準備了 6 種不同的學習模式，讓你可以依照自己的步調、學習偏好情境，自由切換、有效吸收。
-      </p>
     </div>
     <div class="learning-layout">
       <div class="learning-modes">
-        <div class="learning-mode active" data-mode="1" onmouseenter="setLearningMode(1)">
-          <div class="learning-mode-num">Mode 01</div>
-          <div class="learning-mode-title">完整文稿 ＆ 互動式講義</div>
-          <div class="learning-mode-desc">每堂課加贈雷蒙精編的 Notion 講義，可線上互動註記，獲得更多補充資源；幫助你高效學習、反覆複習。</div>
+        <!-- 思維升級 -->
+        <div style="padding:0.5rem 1.25rem;margin-bottom:0.25rem;">
+          <div style="font-size:13px;font-weight:600;color:var(--orange);letter-spacing:0.05em;">思維升級 — 為什麼做</div>
         </div>
-        <div class="learning-mode" data-mode="2" onmouseenter="setLearningMode(2)">
-          <div class="learning-mode-num">Mode 02</div>
-          <div class="learning-mode-title">雙機位高質感影片課</div>
-          <div class="learning-mode-desc">採用雙機位拍攝＋精緻剪輯，畫面流暢有層次，就像你熟悉的專業精品課。</div>
+        <% coursePreview.filter(function(c) { return c.category === 'mindset'; }).forEach(function(c, i) { %>
+        <a class="learning-mode<%= i === 0 ? ' active' : '' %>" data-mode="m<%= i %>" href="<%= c.videoUrl %>" target="_blank" style="text-decoration:none;color:inherit;" onclick="event.preventDefault();setLearningMode('m<%= i %>')">
+          <div class="learning-mode-title"><%= c.title %></div>
+        </a>
+        <% }); %>
+
+        <!-- 實戰技能 -->
+        <div style="padding:0.75rem 1.25rem 0.25rem;margin-top:0.5rem;">
+          <div style="font-size:13px;font-weight:600;color:var(--orange);letter-spacing:0.05em;">實戰技能 — 怎麼做</div>
         </div>
-        <div class="learning-mode" data-mode="3" onmouseenter="setLearningMode(3)">
-          <div class="learning-mode-num">Mode 03</div>
-          <div class="learning-mode-title">全程實作教學</div>
-          <div class="learning-mode-desc">教學工具類操作，全程螢幕錄影，清楚呈現每個步驟，就像我在你身旁帶著你一起。</div>
-        </div>
-        <div class="learning-mode" data-mode="4" onmouseenter="setLearningMode(4)">
-          <div class="learning-mode-num">Mode 04</div>
-          <div class="learning-mode-title">高效音頻課</div>
-          <div class="learning-mode-desc">釋放你的雙手和設備，通勤或運動時也能輕鬆學習，善用碎片時間。</div>
-        </div>
-        <div class="learning-mode" data-mode="5" onmouseenter="setLearningMode(5)">
-          <div class="learning-mode-num">Mode 05</div>
-          <div class="learning-mode-title">視覺化知識圖卡</div>
-          <div class="learning-mode-desc">複雜觀念一圖搞懂，幫助記憶與內化。</div>
-        </div>
-        <div class="learning-mode" data-mode="6" onmouseenter="setLearningMode(6)">
-          <div class="learning-mode-num">Mode 06</div>
-          <div class="learning-mode-title">課後作業 ＋ 學員社群</div>
-          <div class="learning-mode-desc">每堂課設有作業練習、網狀學習的設計；不只寫自己的筆記，還能參考其他同學的觀點。</div>
-        </div>
+        <% coursePreview.filter(function(c) { return c.category === 'skill'; }).forEach(function(c, i) { %>
+        <a class="learning-mode" data-mode="s<%= i %>" href="<%= c.videoUrl %>" target="_blank" style="text-decoration:none;color:inherit;" onclick="event.preventDefault();setLearningMode('s<%= i %>')">
+          <div class="learning-mode-title"><%= c.title %></div>
+        </a>
+        <% }); %>
       </div>
       <div class="learning-preview">
-        <div class="learning-preview-placeholder active" data-preview="1">Notion 互動式講義示意圖</div>
-        <div class="learning-preview-placeholder" data-preview="2">雙機位影片課示意圖</div>
-        <div class="learning-preview-placeholder" data-preview="3">螢幕錄影實作示意圖</div>
-        <div class="learning-preview-placeholder" data-preview="4">音頻課示意圖</div>
-        <div class="learning-preview-placeholder" data-preview="5">知識圖卡示意圖</div>
-        <div class="learning-preview-placeholder" data-preview="6">課後作業社群示意圖</div>
+        <% coursePreview.filter(function(c) { return c.category === 'mindset'; }).forEach(function(c, i) { %>
+        <div class="learning-preview-placeholder<%= i === 0 ? ' active' : '' %>" data-preview="m<%= i %>" style="padding:0;overflow:hidden;border-radius:12px;">
+          <iframe src="https://www.youtube.com/embed/<%= c.videoUrl.split('v=')[1] %>?enablejsapi=1" style="width:100%;height:100%;border:none;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <% }); %>
+        <% coursePreview.filter(function(c) { return c.category === 'skill'; }).forEach(function(c, i) { %>
+        <div class="learning-preview-placeholder" data-preview="s<%= i %>" style="padding:0;overflow:hidden;border-radius:12px;">
+          <iframe src="https://www.youtube.com/embed/<%= c.videoUrl.split('v=')[1] %>?enablejsapi=1" style="width:100%;height:100%;border:none;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <% }); %>
       </div>
     </div>
 
     <div style="text-align:center;margin-top:3rem;">
       <a href="<%= ctaLinks.joinCourse.url %>" class="cta-orange"><%= ctaLinks.joinCourse.label %></a>
-    </div>
-  </section>
-
-  <!-- ======================== -->
-  <!-- FEATURES + COURSE PREVIEW -->
-  <!-- ======================== -->
-  <section class="bg-dark fade-up" style="padding:3rem 1.5rem 4rem;">
-    <div class="course-preview">
-      <div style="max-width:var(--max-width);margin:0 auto 1.5rem;">
-        <div class="section-label">免費試看</div>
-        <h2 class="section-heading" style="color:var(--cream);">課程內容試看</h2>
-      </div>
-      <div class="course-preview-grid">
-        <% coursePreview.filter(function(c) { return c.displayType === 'card'; }).forEach(function(c) { %>
-        <a class="course-preview-card" href="<%= c.videoUrl %>">
-          <div class="course-preview-thumb">
-            <img src="<%= c.thumbnail %>" alt="">
-            <div class="course-preview-play"><div class="course-preview-play-btn"></div></div>
-          </div>
-          <div class="course-preview-info">
-            <div class="course-preview-num"><%= c.unit %></div>
-            <div class="course-preview-title"><%= c.title %></div>
-          </div>
-        </a>
-        <% }); %>
-      </div>
-      <div class="course-preview-list">
-        <% coursePreview.filter(function(c) { return c.displayType === 'list'; }).forEach(function(c) { %>
-        <a class="course-preview-list-item" href="<%= c.videoUrl %>">
-          <span class="course-preview-list-num"><%= c.unit %></span>
-          <span class="course-preview-list-title"><%= c.title %></span>
-        </a>
-        <% }); %>
-      </div>
     </div>
   </section>
 
@@ -2288,37 +2629,31 @@
     <div class="instructor-inner">
       <div class="instructor-photos">
         <img class="main-photo" src="https://raymondhouch.com/wp-content/uploads/2025/09/137-vertical-1472x2048.webp" alt="雷蒙——超級個體工作術講師">
-        <div class="instructor-sub-photos">
-          <div class="sub-placeholder">TEDx 演講</div>
-          <div class="sub-placeholder">Podcast 訪談</div>
-          <div class="sub-placeholder">知識春晚</div>
-        </div>
       </div>
       <div>
         <div class="instructor-name">侯智薰（雷蒙）</div>
-        <div class="instructor-title-text">「雷蒙三十」創辦人 · 一人公司實踐者</div>
-        <p class="instructor-bio">幫助忙碌的現代人聰明工作、好好生活。開創線上學習 3.0 模式的「Notion 線上訓練營」；為台灣線上課程「首例」—— 募資期過後 2 年內，長銷破萬人的課程產品。</p>
+        <div class="instructor-title-text"><a href="https://raymondhouch.com/" target="_blank" style="color:inherit;text-decoration:underline;text-decoration-color:var(--orange);text-underline-offset:3px;">「雷蒙三十」創辦人</a> · 一人公司實踐者</div>
+        <p class="instructor-bio">幫助忙碌的現代人聰明工作、好好生活。開創線上學習 3.0 模式的「<a href="https://raymondhouch.com/notionhacker/" target="_blank" style="color:var(--orange);text-decoration:underline;text-decoration-color:rgba(231,126,71,0.3);text-underline-offset:3px;">Notion 線上訓練營</a>」；為台灣線上課程「首例」—— 募資期過後 2 年內，<a href="https://hahow.in/cr/notion-hahow" target="_blank" style="color:var(--orange);text-decoration:underline;text-decoration-color:rgba(231,126,71,0.3);text-underline-offset:3px;">長銷破萬人的課程產品</a>。</p>
         <p class="instructor-bio">
           2017 年｜在外商 SaaS 全遠距、接案工作<br>
-          2019-2021 年｜職場闘蕩期，拿下全部門第一績效<br>
+          2019-2021 年｜職場闖蕩期，拿下全部門第一績效<br>
           2021 年｜白手起家＆借貸 100 萬創業<br>
           2024 年｜年營收破 1,000 萬
         </p>
-        <p class="instructor-bio">除了經營線上教學產品，寫電子報，也協助許多企業做數位轉型，導入 Notion 專案和工作管理系統。累積超過 500 場的演講，包含受邀至 TEDx 舞台，或到得到 APP 知識春晚面對萬人演講。</p>
-        <p class="instructor-tagline">「把自己從職場新人到一人公司的驗證路徑，整理成你能直接用的方法。」</p>
+        <p class="instructor-bio">除了經營<a href="http://academy.lifehacker.tw/" target="_blank" style="color:var(--orange);text-decoration:underline;text-decoration-color:rgba(231,126,71,0.3);text-underline-offset:3px;">線上教學產品</a>，<a href="https://raymondhouch.com/newsletter/" target="_blank" style="color:var(--orange);text-decoration:underline;text-decoration-color:rgba(231,126,71,0.3);text-underline-offset:3px;">寫電子報</a>，也協助許多企業做數位轉型，導入 Notion 專案和工作管理系統。累積超過 500 場的演講，包含受邀至 <a href="https://raymondhouch.com/life/the-power-of-sharing/" target="_blank" style="color:var(--orange);text-decoration:underline;text-decoration-color:rgba(231,126,71,0.3);text-underline-offset:3px;">TEDx 舞台</a>，或到得到 APP 知識春晚面對萬人演講。</p>
 
         <div class="instructor-stats">
           <div class="instructor-stat">
-            <div class="instructor-stat-num">1,000萬+</div>
             <div class="instructor-stat-label">年營收 (2024)</div>
+            <div class="instructor-stat-num"><span data-count="1000">0</span>萬+</div>
           </div>
           <div class="instructor-stat">
-            <div class="instructor-stat-num">10,000+</div>
             <div class="instructor-stat-label">課程學員</div>
+            <div class="instructor-stat-num"><span data-count="10000">0</span>+</div>
           </div>
           <div class="instructor-stat">
-            <div class="instructor-stat-num">500+</div>
             <div class="instructor-stat-label">場演講</div>
+            <div class="instructor-stat-num"><span data-count="500">0</span>+</div>
           </div>
         </div>
       </div>
@@ -2332,32 +2667,71 @@
     <div class="book-layout">
       <div class="book-mockup">
         <div class="book-3d">
-          <div class="book-cover">
-            <div class="book-question">?</div>
-          </div>
-          <div class="book-bottom-pages"></div>
+          <div class="book-cover"></div>
         </div>
       </div>
       <div>
-        <div class="section-label" style="color:var(--orange);">即將出版</div>
+        <span style="display:inline-block;padding:0.4rem 1rem;background:var(--orange);color:#fff;font-family:var(--font-sans);font-size:15px;font-weight:600;border-radius:999px;letter-spacing:0.05em;margin-bottom:1rem;">即將出版</span>
         <div class="book-info-desc">
           我們正在將課程中最核心的方法論，濃縮成一本可以隨時翻閱的實體書。書中會收錄課程未公開的案例分析、工具模板，以及更多雷蒙親身實踐的心得。
         </div>
 
-        <div class="book-previews">
-          <div class="book-preview-img"><div class="book-preview-placeholder">書籍內頁 1</div></div>
-          <div class="book-preview-img"><div class="book-preview-placeholder">書籍內頁 2</div></div>
-          <div class="book-preview-img"><div class="book-preview-placeholder">書籍內頁 3</div></div>
-        </div>
-
         <div class="book-form">
           <div class="book-form-label">新書上市時第一時間通知你</div>
-          <!-- 替換為 Kit (ConvertKit) 嵌入表單 -->
-          <div class="book-form-row">
-            <input type="email" class="book-form-input" placeholder="輸入你的 Email">
-            <button class="book-form-btn">訂閱通知</button>
-          </div>
+          <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+          <form action="https://app.kit.com/forms/9273912/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9273912" data-uid="787381f033" data-format="inline" data-version="5" data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"訂閱成功！有任何新書的訊息，會第一時間通知你 ✌️","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://partners.convertkit.com/zqgjwotc7j4m?utm_campaign=poweredby&utm_content=form"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}'>
+            <div data-style="clean">
+              <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+              <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+                <div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email" placeholder="輸入你的 Email" required="" type="email"></div>
+                <button data-element="submit" class="formkit-submit formkit-submit"><div class="formkit-spinner"><div></div><div></div><div></div></div><span>免費訂閱</span></button>
+              </div>
+            </div>
+          </form>
           <div class="book-form-note">我們不會發送垃圾郵件，僅在新書上市時通知你。</div>
+        </div>
+      </div>
+
+      <!-- Book chapters -->
+      <div style="grid-column:1/-1;margin-top:1rem;">
+        <div class="journey-cards" style="max-width:none;margin:0;">
+          <div class="journey-card">
+            <div class="journey-card-phase"></div>
+            <div class="journey-card-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div class="journey-card-title">超越評價</div>
+            <div class="journey-card-keyword">除魅</div>
+            <div class="journey-card-desc">打破舊的職場濾鏡<br>回到個人定位</div>
+          </div>
+          <div class="journey-card">
+            <div class="journey-card-phase"></div>
+            <div class="journey-card-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div class="journey-card-title">建立系統</div>
+            <div class="journey-card-keyword">賦能</div>
+            <div class="journey-card-desc">從單點努力進化到<br>槓桿思維</div>
+          </div>
+          <div class="journey-card">
+            <div class="journey-card-phase"></div>
+            <div class="journey-card-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg>
+            </div>
+            <div class="journey-card-title">產品化生存</div>
+            <div class="journey-card-keyword">變現</div>
+            <div class="journey-card-desc">讓專業可以被<br>複製和傳遞</div>
+          </div>
+          <div class="journey-card">
+            <div class="journey-card-phase"></div>
+            <div class="journey-card-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
+            </div>
+            <div class="journey-card-title">主動設計</div>
+            <div class="journey-card-keyword">整合</div>
+            <div class="journey-card-desc">自己創造價值<br>自己承擔命運</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -2567,20 +2941,26 @@
       </div>
     </div>
 
-    <!-- 學員短評 -->
-    <div class="mini-quotes" style="max-width:var(--max-width);margin:2.5rem auto 0;display:flex;flex-wrap:wrap;gap:1rem;justify-content:flex-start;">
-      <% miniQuotes.forEach(function(q) { %>
-      <div class="mini-quote" style="background:rgba(0,0,0,0.04);">
-        <div class="mini-quote-avatar"><% if (q.avatar) { %><img src="<%= q.avatar %>" alt="<%= q.author %>" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"><% } else { %><%= q.avatarInitial %><% } %></div>
-        <div class="mini-quote-content">
-          <p class="mini-quote-text" style="color:rgba(0,0,0,0.6);">「<%= q.quote %>」</p>
-          <div class="mini-quote-author" style="color:rgba(0,0,0,0.35);"><%= q.author %> · <%= q.role %></div>
-        </div>
-      </div>
-      <% }); %>
-    </div>
   </section>
 
+  <!-- ======================== -->
+  <!-- BIG QUOTE                -->
+  <!-- ======================== -->
+  <section class="fade-up" style="padding:5rem 1.5rem;background:var(--cream);">
+    <div style="max-width:680px;margin:0 auto;text-align:center;position:relative;">
+      <div style="font-size:120px;line-height:0.6;color:var(--orange);opacity:0.12;font-family:serif;margin-bottom:-1rem;">"</div>
+      <p style="font-family:var(--font-serif);font-size:clamp(22px,3vw,32px);font-weight:700;color:var(--black);line-height:1.6;margin-bottom:1.5rem;">
+        把自己從職場新人到一人公司的驗證路徑，整理成你能直接用的方法。
+      </p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:0.75rem;">
+        <img src="https://raymondhouch.com/wp-content/uploads/2025/09/137-vertical-1472x2048.webp" alt="雷蒙" style="width:40px;height:40px;border-radius:50%;object-fit:cover;">
+        <div style="text-align:left;">
+          <div style="font-size:14px;font-weight:600;color:var(--black);">侯智薰（雷蒙）</div>
+          <div style="font-size:14px;color:rgba(0,0,0,0.4);">雷蒙三十創辦人</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ======================== -->
   <!-- SECTION 13: FAQ          -->
@@ -2738,9 +3118,40 @@
       }, { passive: true });
     })();
 
+    // Counter animation
+    (function() {
+      const counters = document.querySelectorAll('[data-count]');
+      if (!counters.length) return;
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.dataset.count);
+            const duration = 1500;
+            const start = Date.now();
+            function tick() {
+              const progress = Math.min((Date.now() - start) / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              el.textContent = Math.floor(eased * target).toLocaleString();
+              if (progress < 1) requestAnimationFrame(tick);
+            }
+            tick();
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.5 });
+      counters.forEach(function(el) { observer.observe(el); });
+    })();
+
     function setLearningMode(n) {
       document.querySelectorAll('.learning-mode').forEach(el => el.classList.remove('active'));
       document.querySelector(`.learning-mode[data-mode="${n}"]`).classList.add('active');
+      // Stop all playing videos
+      document.querySelectorAll('.learning-preview-placeholder iframe, .learning-preview-img iframe').forEach(function(iframe) {
+        iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        var src = iframe.src;
+        iframe.src = src;
+      });
       document.querySelectorAll('.learning-preview-placeholder, .learning-preview-img').forEach(el => el.classList.remove('active'));
       const target = document.querySelector(`[data-preview="${n}"]`);
       if (target) target.classList.add('active');

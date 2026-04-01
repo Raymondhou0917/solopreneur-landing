@@ -176,12 +176,12 @@
     },
     {
       "id": "article-3",
-      "link": "#",
-      "image": "",
+      "link": "https://katisplaying.substack.com/p/solopreneur-3",
+      "image": "https://substack-post-media.s3.amazonaws.com/public/images/e328c805-3f1b-4368-a975-227c4317d46f_2048x1024.png",
       "tag": "學員心得",
-      "title": "替換為學員見證文章標題 3",
-      "excerpt": "替換為文章摘要⋯⋯展示學員運用課程方法後，在工作和生活上產生的具體變化。",
-      "meta": "學員姓名 · 2025"
+      "title": "從寫作、閱讀、提問，重新校準你的學習系統",
+      "excerpt": "《超級個體工作術》上課筆記 #3",
+      "meta": "katisplaying · 2026"
     }
   ],
   "meetupPhotos": [
@@ -207,73 +207,90 @@
       "displayType": "card",
       "unit": "單元 01",
       "title": "怎麼跳脫普通人賽道，成為掌控生活的現代人？",
-      "videoUrl": "https://shifu.tw/learning/solopreneur/ed9c0306-5f3b-4048-94c2-efc538c05dbd",
-      "thumbnail": "https://img.youtube.com/vi/placeholder01/hqdefault.jpg"
+      "videoUrl": "https://www.youtube.com/watch?v=bQ1he3d-3V8",
+      "thumbnail": "https://img.youtube.com/vi/bQ1he3d-3V8/hqdefault.jpg",
+      "category": "mindset"
     },
     {
       "id": "preview-2",
-      "displayType": "list",
+      "displayType": "card",
       "unit": "單元 11",
       "title": "超級個體，並不是叫你離職創業？",
-      "videoUrl": "https://shifu.tw/learning/solopreneur/7ec2337a-ae8c-419b-a27f-1d7784f4e97a",
-      "thumbnail": "https://img.youtube.com/vi/placeholder11/hqdefault.jpg"
+      "videoUrl": "https://www.youtube.com/watch?v=yN65kKcrsa0",
+      "thumbnail": "https://img.youtube.com/vi/yN65kKcrsa0/hqdefault.jpg",
+      "category": "mindset"
     },
     {
       "id": "preview-3",
       "displayType": "card",
       "unit": "單元 13",
       "title": "三階段閱讀法：如何有效閱讀？",
-      "videoUrl": "https://shifu.tw/learning/solopreneur/cbfd6af2-0287-45ff-825b-d482a7a47024",
-      "thumbnail": "https://img.youtube.com/vi/placeholder13/hqdefault.jpg"
+      "videoUrl": "https://www.youtube.com/watch?v=Moeb83udM2s",
+      "thumbnail": "https://img.youtube.com/vi/Moeb83udM2s/hqdefault.jpg",
+      "category": "skill"
     },
     {
       "id": "preview-4",
       "displayType": "list",
       "unit": "單元 17",
       "title": "我的年度數位工具地圖（每年更新）",
-      "videoUrl": "https://shifu.tw/learning/solopreneur/ef40cca0-943b-474a-8a79-9dd3e1ffdb2f"
+      "videoUrl": "https://www.youtube.com/watch?v=jU06MiNSa4s",
+      "category": "skill",
+      "thumbnail": "https://img.youtube.com/vi/jU06MiNSa4s/hqdefault.jpg"
     },
     {
       "id": "preview-5",
       "displayType": "list",
       "unit": "單元 24",
       "title": "為什麼寫作是平凡人最好的投資？",
-      "videoUrl": "https://shifu.tw/learning/solopreneur/d6dbc123-f110-4c31-8521-e11119311fd3"
+      "videoUrl": "https://www.youtube.com/watch?v=QNYG65rqlp8",
+      "category": "skill",
+      "thumbnail": "https://img.youtube.com/vi/QNYG65rqlp8/hqdefault.jpg"
     },
     {
       "id": "preview-6",
       "displayType": "list",
       "unit": "單元 27",
       "title": "怎麼寫出有用的個人使用說明書？",
-      "videoUrl": "https://shifu.tw/learning/solopreneur/de935296-852d-4fbc-9b16-cf23cbc3b443"
+      "videoUrl": "https://www.youtube.com/watch?v=nFJbuoB_Dz8",
+      "category": "skill",
+      "thumbnail": "https://img.youtube.com/vi/nFJbuoB_Dz8/hqdefault.jpg"
     },
     {
       "id": "preview-7",
       "displayType": "list",
       "unit": "單元 31",
       "title": "怎麼減少會議，還能推動專案？非同步溝通",
-      "videoUrl": "https://shifu.tw/learning/solopreneur/d8e42439-5db8-4e4a-a8a0-d5e831e32063"
+      "videoUrl": "https://www.youtube.com/watch?v=eaaiGJy6kSc",
+      "category": "skill",
+      "thumbnail": "https://img.youtube.com/vi/eaaiGJy6kSc/hqdefault.jpg"
     },
     {
       "id": "preview-8",
       "displayType": "list",
       "unit": "單元 38",
       "title": "怎麼正確使用行事曆和待辦清單？",
-      "videoUrl": "https://shifu.tw/learning/solopreneur/404abf23-5fe0-4086-978e-e56d37fe4016"
+      "videoUrl": "https://www.youtube.com/watch?v=bJKKlZhJFVg",
+      "category": "skill",
+      "thumbnail": "https://img.youtube.com/vi/bJKKlZhJFVg/hqdefault.jpg"
     },
     {
       "id": "preview-9",
       "displayType": "list",
       "unit": "單元 42",
       "title": "超級個體，是當今普通人最有效的賺錢方式嗎？",
-      "videoUrl": "https://shifu.tw/learning/solopreneur/5f14c40e-6af0-4e2c-9f41-d4a45593e935"
+      "videoUrl": "https://www.youtube.com/watch?v=7RBCTMKn7UQ",
+      "category": "mindset",
+      "thumbnail": "https://img.youtube.com/vi/7RBCTMKn7UQ/hqdefault.jpg"
     },
     {
       "id": "preview-10",
       "displayType": "list",
       "unit": "單元 52",
       "title": "別被「擅長」困住：找到熱愛才是長期勝出的關鍵",
-      "videoUrl": "https://shifu.tw/learning/solopreneur/8f022500-8425-47b6-8565-4cfdf54be8a5"
+      "videoUrl": "https://www.youtube.com/watch?v=lklbTTVU3tA",
+      "category": "mindset",
+      "thumbnail": "https://img.youtube.com/vi/lklbTTVU3tA/hqdefault.jpg"
     }
   ],
   "ctaLinks": {
