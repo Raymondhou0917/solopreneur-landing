@@ -97,42 +97,42 @@
       "quote": "我與雷蒙曾經多次合作直播、訪談，每次討論結束，最讓我驚豔的地方，是「雷蒙如何完成更有效率訪談合作」的工作流程。不是看他說了什麼，而是學他怎麼做，這一點在雷蒙身上得到印證。",
       "author": "Esor",
       "role": "電腦玩物站長",
-      "avatar": "https://raymondhouch.com/wp-content/uploads/2025/10/SCR-20251003-npzb.webp"
+      "avatar": "images/avatars/Esor.webp"
     },
     {
       "id": "testimonial-2",
       "quote": "一人公司是必然趨勢，超級個體是種社會運動，坊間夠資格開課的人不多，雷蒙是我心目中最好人選。我相信他能像五年前對我說的：未來有這個影響力和資源，能幫助到這個社會。",
       "author": "于為暢",
       "role": "個人品牌教練",
-      "avatar": "https://raymondhouch.com/wp-content/uploads/2025/10/SCR-20251003-nnzn.webp"
+      "avatar": "images/avatars/于為暢.webp"
     },
     {
       "id": "testimonial-3",
       "quote": "雷蒙一直在實踐一種不靠年資，不靠傳統途徑也能活得很好的工作模式。我最佩服的是他不只是個懂得寫作的人，還是個很扎實的實踐者，每個觀念都是他反覆練習成為習慣後才分享。",
       "author": "游舒帆 Gipi",
       "role": "商業思維學院院長",
-      "avatar": "https://raymondhouch.com/wp-content/uploads/2025/10/SCR-20251003-npci.webp"
+      "avatar": "images/avatars/游舒帆Gipi.webp"
     },
     {
       "id": "testimonial-4",
       "quote": "雷蒙的課程，我是安心的。每一個知識點，都是雷蒙用他創業的實戰經驗重新詮釋。若說這門課是他五年來一身武功集大成，我覺得並不為過！",
       "author": "周加恩",
       "role": "文字創作者",
-      "avatar": "https://raymondhouch.com/wp-content/uploads/2025/10/image-6.webp"
+      "avatar": "images/avatars/周加恩.webp"
     },
     {
       "id": "testimonial-5",
       "quote": "這堂課，絕對是我看過最有誠意、最紮實的工作課程。課程裡不講理論，直接給工具。超過 26 種工作生產力模型，還有 20+ 種數位工具，雷蒙把他親自實驗的結果都告訴你！",
       "author": "陳修平",
       "role": "師父創辦人",
-      "avatar": "https://raymondhouch.com/wp-content/uploads/2025/10/SCR-20251003-nnop.webp"
+      "avatar": "images/avatars/陳修平.webp"
     },
     {
       "id": "testimonial-6",
       "quote": "為何我創業這幾年，從他身上學到最多的是侯智薰！？他總是能透過不斷的反思和迭代，找到一套系統化的工作術，讓自己在環境快速變化時，依然可以聰明工作、好好生活。",
       "author": "羊正鈺",
       "role": "學習家創辦人",
-      "avatar": "https://raymondhouch.com/wp-content/uploads/2025/10/SCR-20251003-nozm.webp"
+      "avatar": "images/avatars/羊正鈺.webp"
     }
   ],
   "miniQuotes": [
@@ -142,7 +142,7 @@
       "quote": "雷蒙擅長的是透過不同的服務，整合出自己的一套工作管理流程，再用淺顯易懂的方式與我們分享。",
       "author": "Muki",
       "role": "網站前端工程師",
-      "avatar": "images/meetup/1773934572614-muki__1_.webp"
+      "avatar": "images/avatars/muki.webp"
     },
     {
       "id": "miniquote-3",
@@ -150,7 +150,7 @@
       "quote": "我曾經在 QA 回答我最喜歡的課程是什麼？不是我的職能治療專業，而是雷蒙的課。",
       "author": "思誼",
       "role": "職能治療師",
-      "avatar": "images/meetup/1773934562688-shihi__1_.webp"
+      "avatar": "images/avatars/shihi.webp"
     },
     {
       "id": "miniquote-2",
@@ -158,7 +158,7 @@
       "quote": "這堂課是把文稿直接放在 Notion 裡，邊學邊搜尋、隨時交流，對懶人超友善！",
       "author": "Tobie 偷偷",
       "role": "文字創作者",
-      "avatar": "images/meetup/1773934182624-tobie__1_.webp"
+      "avatar": "images/avatars/tobie.webp"
     }
   ],
   "studentArticles": [
@@ -195,15 +195,15 @@
       "id": "meetup1",
       "label": "第一次小聚",
       "photos": [
-        "images/meetup/IMG_2220.webp",
-        "images/meetup/IMG_2223.webp",
-        "images/meetup/IMG_2224.webp",
-        "images/meetup/IMG_2229.webp",
-        "images/meetup/IMG_2231.webp",
-        "images/meetup/IMG_2239.webp",
-        "images/meetup/IMG_2243.webp",
-        "images/meetup/IMG_2251.webp",
-        "images/meetup/IMG_2255.webp"
+        "images/meetup/meetup-01/IMG_2080.webp",
+        "images/meetup/meetup-01/IMG_2146.webp",
+        "images/meetup/meetup-01/IMG_2158.webp",
+        "images/meetup/meetup-01/IMG_2167.webp",
+        "images/meetup/meetup-01/IMG_2212.webp",
+        "images/meetup/meetup-01/IMG_2230.webp",
+        "images/meetup/meetup-01/IMG_2262.webp",
+        "images/meetup/meetup-01/IMG_2268.webp",
+        "images/meetup/meetup-01/IMG_2280.webp"
       ]
     }
   ],
@@ -302,11 +302,11 @@
   "ctaLinks": {
     "talkSignup": {
       "label": "報名最新職人對談",
-      "url": "#"
+      "url": "https://shifu.tw/Course/Details/db9a9cae-2bdf-43a8-b47b-f0b0ba20834e"
     },
     "joinCourse": {
       "label": "立即加入課程",
-      "url": "#"
+      "url": "https://shifu.tw/Course/Details/db9a9cae-2bdf-43a8-b47b-f0b0ba20834e"
     }
   }
 }
