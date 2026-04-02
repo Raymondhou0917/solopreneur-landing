@@ -331,11 +331,15 @@
       border-radius: 999px;
       padding: 6px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04);
+      overflow-x: auto;
+      max-width: 100%;
+      scrollbar-width: none;
     }
+    .hero-tabs::-webkit-scrollbar { display: none; }
     .hero-tab {
-      padding: 0.5rem 1.25rem;
+      padding: 0.4rem 0.75rem;
       font-family: var(--font-sans);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 500;
       color: rgba(0,0,0,0.5);
       background: transparent;
@@ -355,6 +359,38 @@
       box-shadow: 0 2px 8px rgba(33,164,177,0.3);
     }
     .hero-tab:hover:not(.active) { color: var(--black); background: rgba(0,0,0,0.04); }
+    .hero-mini-quotes {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding: 0 0.5rem;
+    }
+    .hero-mini-quotes::-webkit-scrollbar { display: none; }
+    .hero-mini-quote {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      flex: 0 0 240px;
+      scroll-snap-align: start;
+    }
+    @media (min-width: 768px) {
+      .hero-mini-quotes {
+        justify-content: center;
+        overflow-x: visible;
+        scroll-snap-type: none;
+        padding: 0;
+      }
+      .hero-mini-quote { flex: 1; }
+    }
+    .hero-tab svg { display: none; }
+    @media (min-width: 768px) {
+      .hero-tab { padding: 0.5rem 1.25rem; font-size: 14px; }
+      .hero-tab svg { display: inline; }
+    }
     .hero-screen {
       display: none;
       width: 100%;
@@ -608,7 +644,37 @@
       line-height: 1.5;
     }
     @media (max-width: 768px) {
-      .journey-cards { grid-template-columns: repeat(2, 1fr); }
+      .journey-cards {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin: 2rem auto 1rem;
+      }
+      .journey-card {
+        background: none;
+        border: none;
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+        border-radius: 0;
+        padding: 1rem 0;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .journey-card:last-child { border-bottom: none; }
+      .journey-card:hover { transform: none; box-shadow: none; border-color: rgba(0,0,0,0.08); }
+      .journey-card-phase { display: none; }
+      .journey-card-icon {
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        flex-shrink: 0;
+        border-radius: 10px;
+      }
+      .journey-card-icon svg { width: 20px; height: 20px; }
+      .journey-card-title { font-size: 15px; margin-bottom: 0.2rem; }
+      .journey-card-keyword { display: inline; font-size: 13px; margin-bottom: 0; }
+      .journey-card-desc { display: inline; font-size: 13px; }
+      .journey-card-keyword::after { content: '·'; margin: 0 0.35rem; color: rgba(0,0,0,0.2); }
     }
 
     /* Journey Flow Diagram */
@@ -727,11 +793,43 @@
       color: rgba(0,0,0,0.4);
     }
     @media (max-width: 768px) {
-      .journey-flow-track { flex-direction: column; gap: 0.5rem; align-items: stretch; }
-      .journey-flow-line { display: none; }
-      .journey-flow-node { display: flex; align-items: center; gap: 1rem; text-align: left; }
-      .journey-flow-dot { margin: 0; flex-shrink: 0; width: 44px; height: 44px; }
-      .journey-flow-dot svg { width: 20px; height: 20px; }
+      .journey-flow { margin: 2rem auto; display: flex; justify-content: center; }
+      .journey-flow-track {
+        flex-direction: column;
+        gap: 0;
+        align-items: stretch;
+        position: relative;
+        padding-left: 60px;
+        display: inline-flex;
+      }
+      .journey-flow-line {
+        display: block;
+        top: 24px;
+        bottom: 24px;
+        left: 19px;
+        right: auto;
+        width: 2px;
+        height: auto;
+        background: var(--orange);
+      }
+      .journey-flow-node {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-align: left;
+        padding: 1rem 0;
+        position: relative;
+      }
+      .journey-flow-dot {
+        position: absolute;
+        left: -60px;
+        margin: 0;
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+      }
+      .journey-flow-dot svg { width: 18px; height: 18px; }
+      .journey-flow-title { margin-top: 0; font-size: 15px; }
       .journey-flow-col { flex-direction: row; gap: 0.5rem; margin-top: 0; }
       .journey-flow-arrow { display: none; }
     }
@@ -1425,9 +1523,15 @@
     .book-form .formkit-form[data-uid] .formkit-fields,
     .book-form .formkit-fields {
       display: flex !important;
-      flex-wrap: nowrap !important;
+      flex-wrap: wrap !important;
       gap: 0.5rem !important;
       align-items: center !important;
+    }
+    @media (min-width: 768px) {
+      .book-form .formkit-form[data-uid] .formkit-fields,
+      .book-form .formkit-fields {
+        flex-wrap: nowrap !important;
+      }
     }
     .book-form .formkit-form[data-uid] .formkit-field,
     .book-form .formkit-field {
@@ -1488,10 +1592,7 @@
       color: #0c905c !important;
       border-radius: 10px !important;
     }
-    @media (max-width: 640px) {
-      .book-form .formkit-fields {
-        flex-wrap: wrap !important;
-      }
+    @media (max-width: 767px) {
       .book-form .formkit-field,
       .book-form .formkit-submit {
         flex: 1 0 100% !important;
@@ -1788,47 +1889,123 @@
     }
 
     /* ================================ */
-    /* THREADS EMBEDS (inside student)  */
+    /* TESTIMONIAL WALL (native cards)  */
     /* ================================ */
-    .threads-grid {
-      margin: 3rem auto 0;
-      columns: 4;
-      column-gap: 8px;
-      padding: 0 1.5rem;
-      max-width: 1600px;
+    .tw-wall-grid {
+      columns: 1;
+      column-gap: 12px;
     }
-    .threads-grid .text-post-media {
-      margin: 0 0 8px 0 !important;
-      min-width: 0 !important;
-      break-inside: avoid;
-      display: inline-block;
-      width: 100% !important;
-      border-radius: 12px !important;
-      overflow: hidden !important;
-      max-height: 480px;
+    @media (min-width: 640px) { .tw-wall-grid { columns: 2; } }
+    @media (min-width: 1024px) { .tw-wall-grid { columns: 3; } }
+    .tw-wall {
+      position: relative;
     }
-    .threads-grid .text-post-media iframe,
-    .threads-grid .text-post-media > div {
-      border-radius: 12px !important;
-      max-width: 100% !important;
-      width: 100% !important;
+    .tw-wall-inner {
+      max-height: 800px;
+      overflow: hidden;
+      transition: max-height 0.6s ease;
     }
-    .threads-hidden { display: none !important; }
-    .threads-load-more {
-      background: transparent;
-      color: rgba(255,255,255,0.6);
+    .tw-wall-inner.expanded {
+      max-height: none;
+    }
+    .tw-wall-fade {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 280px;
+      background: linear-gradient(to bottom, transparent, var(--dark) 85%);
+      pointer-events: none;
+      z-index: 1;
+      transition: opacity 0.4s;
+    }
+    .tw-wall-fade.hidden { opacity: 0; pointer-events: none; }
+    .tw-wall-more {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      background: #fff;
+      color: var(--dark);
       font-family: var(--font-sans);
       font-size: 14px;
       font-weight: 600;
       padding: 0.75rem 2rem;
-      border: 1.5px solid rgba(255,255,255,0.2);
+      border: none;
       border-radius: 0.5rem;
       cursor: pointer;
-      transition: color 0.2s, border-color 0.2s;
+      transition: opacity 0.2s;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
     }
-    .threads-load-more:hover {
-      color: var(--cream);
-      border-color: rgba(255,255,255,0.5);
+    .tw-wall-more:hover { opacity: 0.9; }
+    .tw-wall-more.hidden { display: none; }
+    .tw-card {
+      display: inline-flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 12px;
+      break-inside: avoid;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 12px;
+      padding: 1.25rem;
+      text-decoration: none;
+      color: #1a1a1a;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .tw-card:hover {
+      border-color: rgba(0,0,0,0.2);
+      background: #fff;
+    }
+    .tw-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.6rem;
+    }
+    .tw-card-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.08);
+      flex-shrink: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+    .tw-card-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .tw-card-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+    .tw-card-platform {
+      margin-left: auto;
+      flex-shrink: 0;
+      color: rgba(0,0,0,0.3);
+    }
+    .tw-card-stars {
+      font-size: 14px;
+      color: #f5c542;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+    .tw-card-quote {
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(0,0,0,0.75);
+      flex: 1;
+    }
+    .tw-card-link {
+      font-size: 13px;
+      color: var(--orange);
+      margin-top: 0.75rem;
+      font-weight: 500;
     }
     .mini-quote {
       display: flex;
@@ -2332,9 +2509,9 @@
       </div>
 
       <!-- Mini quotes in hero -->
-      <div style="display:flex;justify-content:center;gap:1.5rem;margin-bottom:2.5rem;">
+      <div class="hero-mini-quotes">
         <% miniQuotes.forEach(function(q) { %>
-        <div style="display:flex;align-items:flex-start;gap:0.6rem;flex:1;">
+        <div class="hero-mini-quote">
           <div style="width:32px;height:32px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0;overflow:hidden;margin-top:2px;"><% if (q.avatar) { %><img src="<%= q.avatar %>" alt="<%= q.author %>" style="width:100%;height:100%;object-fit:cover;"><% } else { %><%= q.avatarInitial %><% } %></div>
           <div>
             <div style="font-size:13px;color:rgba(0,0,0,0.55);line-height:1.5;">「<%= q.quote %>」</div>
@@ -2644,7 +2821,7 @@
           <div style="font-size:13px;font-weight:600;color:var(--orange);letter-spacing:0.05em;">思維升級 — 為什麼做</div>
         </div>
         <% coursePreview.filter(function(c) { return c.category === 'mindset'; }).forEach(function(c, i) { %>
-        <a class="learning-mode<%= i === 0 ? ' active' : '' %>" data-mode="m<%= i %>" href="<%= c.videoUrl %>" target="_blank" style="text-decoration:none;color:inherit;" onclick="event.preventDefault();setLearningMode('m<%= i %>')">
+        <a class="learning-mode<%= i === 0 ? ' active' : '' %>" data-mode="m<%= i %>" href="<%= c.videoUrl %>" target="_blank" style="text-decoration:none;color:inherit;" onclick="if(window.innerWidth<768){return}event.preventDefault();setLearningMode('m<%= i %>')">
           <div class="learning-mode-title"><%= c.title %></div>
         </a>
         <% }); %>
@@ -2654,7 +2831,7 @@
           <div style="font-size:13px;font-weight:600;color:var(--orange);letter-spacing:0.05em;">實戰技能 — 怎麼做</div>
         </div>
         <% coursePreview.filter(function(c) { return c.category === 'skill'; }).forEach(function(c, i) { %>
-        <a class="learning-mode" data-mode="s<%= i %>" href="<%= c.videoUrl %>" target="_blank" style="text-decoration:none;color:inherit;" onclick="event.preventDefault();setLearningMode('s<%= i %>')">
+        <a class="learning-mode" data-mode="s<%= i %>" href="<%= c.videoUrl %>" target="_blank" style="text-decoration:none;color:inherit;" onclick="if(window.innerWidth<768){return}event.preventDefault();setLearningMode('s<%= i %>')">
           <div class="learning-mode-title"><%= c.title %></div>
         </a>
         <% }); %>
@@ -2749,7 +2926,7 @@
               </div>
             </div>
           </form>
-          <div class="book-form-note">我們不會發送垃圾郵件，僅在新書上市時通知你。</div>
+          <div class="book-form-note">隨時可以取消，我們將不會再發信給你！</div>
         </div>
       </div>
 
@@ -2892,8 +3069,27 @@
     </div>
 
     <!-- 學員見證牆 -->
-    <div style="margin-top:3rem;">
-      <iframe id="testimonial-wall" src="https://testimonials.lifehacker.tw/embed/wall?category=solopreneur&max=20&columns=3&theme=transparent" width="100%" frameborder="0" style="border:none;min-height:800px;background:transparent;" loading="lazy" title="學員見證" allowtransparency="true"></iframe>
+    <div class="tw-wall" id="tw-wall" style="margin-top:3rem;max-width:var(--max-width);margin-left:auto;margin-right:auto;">
+      <div class="tw-wall-inner" id="tw-wall-inner">
+        <div class="tw-wall-grid" id="tw-wall-grid">
+          <% testimonialWall.forEach(function(t, i) { %>
+          <a href="<%= t.url %>" target="_blank" class="tw-card">
+            <div class="tw-card-header">
+              <div class="tw-card-avatar"><% if (t.avatar) { %><img src="<%= t.avatar %>" alt="<%= t.author %>" loading="lazy"><% } else { %><span><%= t.author.charAt(0) %></span><% } %></div>
+              <div class="tw-card-info">
+                <div class="tw-card-name"><%= t.author %><% if (t.role) { %>（<%= t.role %>）<% } %></div>
+              </div>
+              <div class="tw-card-platform"><% if (t.platform === 'threads') { %><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.96-.065-1.187.408-2.281 1.332-3.078.856-.74 2.062-1.155 3.59-1.236 1.107-.058 2.133.037 3.08.272-.107-1.24-.683-1.876-1.373-2.225-.825-.418-1.96-.464-3.074-.282l-.313-2.082c1.46-.238 2.986-.196 4.226.43 1.076.544 1.834 1.456 2.253 2.74.395-.158.822-.28 1.284-.356l.387 2.06c-.36.07-.7.168-1.017.29.088.453.14.928.154 1.42.009.394-.008.794-.059 1.2.744.588 1.328 1.348 1.723 2.252.786 1.798.818 4.577-1.26 6.61C18.04 23.1 15.627 23.98 12.186 24zm.287-9.737c-1.32.069-2.267.453-2.655.94-.265.332-.312.734-.284 1.244.038.696.384 1.164.97 1.544.66.428 1.42.597 2.18.559 1.07-.058 1.876-.436 2.442-1.14.498-.618.852-1.504 1.014-2.637-.88-.32-1.92-.536-3.114-.536-.188 0-.371.007-.553.026z"/></svg><% } else { %><svg width="18" height="18" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg><% } %></div>
+            </div>
+            <div class="tw-card-stars">★★★★★</div>
+            <div class="tw-card-quote"><%= t.quote %></div>
+            <div class="tw-card-link">查看原文 →</div>
+          </a>
+          <% }); %>
+        </div>
+      </div>
+      <div class="tw-wall-fade" id="tw-wall-fade"></div>
+      <button class="tw-wall-more" id="tw-wall-more" onclick="showMoreTestimonials()">顯示更多好評</button>
     </div>
   </section>
 
@@ -3213,6 +3409,12 @@
       document.querySelectorAll('.learning-preview-placeholder, .learning-preview-img').forEach(el => el.classList.remove('active'));
       const target = document.querySelector(`[data-preview="${n}"]`);
       if (target) target.classList.add('active');
+    }
+
+    function showMoreTestimonials() {
+      document.getElementById('tw-wall-inner').classList.add('expanded');
+      document.getElementById('tw-wall-fade').classList.add('hidden');
+      document.getElementById('tw-wall-more').classList.add('hidden');
     }
 
     function toggleFaq(btn) {

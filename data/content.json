@@ -57,38 +57,162 @@
       "link": "https://raymondhouch.com/life/raymond-creator-story/"
     }
   ],
-  "threads": [
+  "testimonialWall": [
     {
-      "id": "thread-1",
-      "permalink": "https://www.threads.net/@xiaoyuhinata/post/DOBYwAgD9H1"
+      "id": "tw-1",
+      "author": "_wilson_hsieh",
+      "platform": "threads",
+      "avatar": "https://image.lifehacker.tw/testimonials/avatars/ea8a97c986eb.jpg",
+      "quote": "正在學習課程，我也因為雷蒙的啟發，開始練習寫下學習心得，至今也寫了好幾堂課，文筆一定比一開始還流暢，而且這樣學習也比較有印象，就像老師所說學了就要有行動，不要再花時間當知識的園丁，要實際拿著這些知識去解決實際上的問題，許多成為超級個體的觀念背完整的整理成一個地圖，每一堂課都是一個重要觀念，越上到後面越會發現很多觀念都相通，互相連結成一條線，就如Steve Jobs所說:Connecting the dots，非常感謝雷蒙製作高品質課程，值得好好學習，以及實踐",
+      "url": "https://www.threads.com/@_wilson_hsieh/post/DRwO0MKkwfs"
     },
     {
-      "id": "thread-2",
-      "permalink": "https://www.threads.net/@learnchiang/post/DOLkbJTkymb"
+      "id": "tw-2",
+      "author": "zx0193",
+      "platform": "threads",
+      "quote": "身為一個不愛照順序觀看的學習者，看了人生設計章節後也再慢慢重新釐清自己要走的方向🤯",
+      "url": "https://www.threads.com/@zx0193/post/DQjIlNjElKL"
     },
     {
-      "id": "thread-3",
-      "permalink": "https://www.threads.net/@nujambo/post/DN7zkq0k9HP"
+      "id": "tw-3",
+      "author": "kat.is.playing",
+      "platform": "threads",
+      "quote": "很久沒遇到覺得超值又有動力 100% 完課的線上課程！雖然現在只上了快一半，但我已經有不少思維和行動上的改變，而且不只是內容值得學習（有滿滿實戰案例和落地技巧），整個課程體驗設計也讓我大受啟發 1. 每個單元都有影片、音訊、Notion 文件三種形式（超用心！雷蒙完全是身體力行課程中提到的「個人化學習」概念） 2. 特地準備「怎麼上好這門課」的單元，鼓勵學員按自己步調和需求學習、著重真實的改變，很人性化 3. 不隨便鼓吹創業或裸辭，而是引導學員在正職工作中，逐步建構屬於自己的學習系統、找尋自己的賽道、在市場創造價值 我打算每個單元都會寫一篇總結筆記，先奉上熱騰騰的第一篇：open.substack.com/pub/k… 再次感謝雷蒙和團隊創造這門含金量超標的課程🙏🏻",
+      "url": "https://www.threads.com/@kat.is.playing/post/DRwtzsOiYKL"
     },
     {
-      "id": "thread-4",
-      "permalink": "https://www.threads.net/@deeppositivecl/post/DOtXKzUkkq8"
+      "id": "tw-4",
+      "author": "dadnara_loudin",
+      "platform": "threads",
+      "quote": "正在課程學習！只能說真的很厲害，但老實說對於不熟悉使用生產力工具、對自己的目標設定還不夠明確的人，要打造自己的系統確實會是不小的工程。（當然這是自己的課題啦！）雷蒙真的太厲害了！",
+      "url": "https://www.threads.com/@dadnara_loudin/post/DQi_0cPEtbj"
     },
     {
-      "id": "thread-5",
-      "permalink": "https://www.threads.net/@lee_vent0414/post/DN8SFFcCUTP"
+      "id": "tw-5",
+      "author": "ruolinweng",
+      "platform": "threads",
+      "quote": "以前我常被各種角色跟瑣事淹沒，直到上了《超級個體工作術》，我才明白——「整理自己」比「努力做事」更重要。老師用實例帶我們看到一個人也能打造自己的系統與節奏，這不只是一門課，更像是一場「內在升級」💫 謝謝侯老師讓我在混亂中找到秩序，在秩序裡重新找到自己💖 #超級個體工作術 #侯智薰 #個體也能閃閃發光",
+      "url": "https://www.threads.com/@ruolinweng/post/DQo0KKLkZrw"
     },
     {
-      "id": "thread-6",
-      "permalink": "https://www.threads.net/@newbie.course/post/DOw7OiQj6r0"
+      "id": "tw-6",
+      "author": "Tobie 偷偷",
+      "platform": "threads",
+      "avatar": "https://image.lifehacker.tw/testimonials/avatars/334bbc739e79.jpg",
+      "quote": "這堂課看起來會把文稿整套放在 Notion 裡共同交流，不是純影片，這點我覺得超讚欸！",
+      "url": "https://www.threads.com/@tobie_talks/post/DLhvIcZTIAu"
     },
     {
-      "id": "thread-7",
-      "permalink": "https://www.threads.net/@solvebysmile/post/DPVv1lkEn3P"
+      "id": "tw-7",
+      "author": "Sunny",
+      "role": "金蘋果語言中心創辦人",
+      "platform": "facebook",
+      "avatar": "https://image.lifehacker.tw/testimonials/avatars/fb_brush2.jpg",
+      "quote": "參加雷蒙課程後，我們全公司的行政整合、班級管理，到員工協作，甚至連學員的學習進度，都在 Notion 頁面中一目瞭然。",
+      "url": "https://www.facebook.com/share/p/1GJM7AzSr4/"
     },
     {
-      "id": "thread-8",
-      "permalink": "https://www.threads.net/@anton_0503/post/DOYefX7kwhU"
+      "id": "tw-8",
+      "author": "思誼 Shihi",
+      "role": "職能治療師",
+      "platform": "threads",
+      "avatar": "https://image.lifehacker.tw/testimonials/avatars/7d7e5f020be8.jpg",
+      "quote": "我曾經在 QA 回答我最喜歡的課程是什麼？不是我的職能治療專業，而是雷蒙的課。",
+      "url": "https://www.threads.com/@ot.workflow/post/DLkbtuWzdWx"
+    },
+    {
+      "id": "tw-9",
+      "author": "比利陳",
+      "platform": "threads",
+      "avatar": "https://image.lifehacker.tw/testimonials/avatars/320a0c5ebd86.jpg",
+      "quote": "從我開始想經營自媒體以來，他一直是我觀察、學習、參考的對象之一。",
+      "url": "https://www.threads.com/@billy4select/post/DLTwe8NStOn"
+    },
+    {
+      "id": "tw-10",
+      "author": "憲毅 Ryan",
+      "platform": "threads",
+      "avatar": "https://image.lifehacker.tw/testimonials/avatars/394d1d34b1c3.jpg",
+      "quote": "很佩服他，一直堅持這條路走到這，從心法到工具操作都有一套自己玩法，最終成為年收千萬的創作者，非常扎實。",
+      "url": "https://www.threads.com/@ryan_ryan_lin/post/DLpYmW-zd04"
+    },
+    {
+      "id": "tw-11",
+      "author": "小羊",
+      "role": "創業家",
+      "platform": "facebook",
+      "avatar": "https://image.lifehacker.tw/testimonials/avatars/fb_jswlm55.jpg",
+      "quote": "為何我創業這幾年，最佩服、從他身上學到最多的是侯智薰！？",
+      "url": "https://www.facebook.com/share/p/1Jw6xvvD7u/"
+    },
+    {
+      "id": "tw-12",
+      "author": "周加恩",
+      "role": "行銷專家",
+      "platform": "facebook",
+      "avatar": "https://image.lifehacker.tw/testimonials/avatars/fb_chiukaun.jpg",
+      "quote": "我看完了雷蒙的課程內容，只能說，佩服。是他五年來一身武功集大成。",
+      "url": "https://www.facebook.com/share/p/1BWHXcr9vZ/"
+    },
+    {
+      "id": "tw-13",
+      "author": "多米",
+      "role": "AI 創作者",
+      "platform": "facebook",
+      "quote": "雷蒙是我看過少數，有持續研究 AI，並融入自己工作流，達到知行合一的創作者。",
+      "url": "https://www.facebook.com/share/p/1HCdfcp1he/"
+    },
+    {
+      "id": "tw-14",
+      "author": "Muki",
+      "role": "資深設計師",
+      "platform": "facebook",
+      "avatar": "https://image.lifehacker.tw/testimonials/avatars/fb_mukispace.jpg",
+      "quote": "雷蒙擅長的是透過不同的服務，整合出自己的工作管理流程，再用淺顯易懂的方式與我們分享。",
+      "url": "https://www.facebook.com/share/p/1FrUzvB5uC/"
+    },
+    {
+      "id": "tw-15",
+      "author": "曾荃鈺",
+      "role": "運動員生涯規劃發展協會理事長",
+      "platform": "facebook",
+      "avatar": "https://image.lifehacker.tw/testimonials/avatars/fb_joeytseng777.jpg",
+      "quote": "這堂課好像是他雷蒙三十的延伸，也是他給自己跟這個世界的禮物。",
+      "url": "https://www.facebook.com/share/p/17xwmjY1kS/"
+    },
+    {
+      "id": "tw-16",
+      "author": "廖洧杰",
+      "role": "六角學院校長",
+      "platform": "facebook",
+      "avatar": "https://image.lifehacker.tw/testimonials/avatars/fb_sfismy.jpg",
+      "quote": "我的結論和雷蒙一樣：「比別人多做一點」",
+      "url": "https://www.facebook.com/share/p/1CsZiuQs61/"
+    },
+    {
+      "id": "tw-17",
+      "author": "陳修平",
+      "role": "師父創辦人",
+      "platform": "facebook",
+      "quote": "這堂課，絕對是我看過最有誠意、最紮實的工作課程。",
+      "url": "https://www.facebook.com/share/p/17HgKdR6C1/"
+    },
+    {
+      "id": "tw-18",
+      "author": "電腦玩物站長 Esor",
+      "platform": "facebook",
+      "avatar": "https://image.lifehacker.tw/testimonials/avatars/fb_playpc.jpg",
+      "quote": "不是看他說了什麼，而是學他怎麼做，這一點在雷蒙身上得到印證。",
+      "url": "https://www.facebook.com/share/p/17Z5XW9evn/"
+    },
+    {
+      "id": "tw-19",
+      "author": "于為暢",
+      "role": "一人公司推動者",
+      "platform": "facebook",
+      "avatar": "https://image.lifehacker.tw/testimonials/avatars/wendellyu_v2.jpg",
+      "quote": "2020 年，兩位年輕人從基隆到沙鹿請我吃中飯，男生名為雷蒙。臨走前，雷蒙給我看他用 Notion 做的筆記，我從未見過如此精細又專業、運用得出神入化的 Notion，我為之驚艷，隨口說了一句：你應該開課來教的。五年後，他不僅開了課，還建立了一整套超級個體的方法論和社群。一人公司是必然趨勢，超級個體是種社會運動，坊間夠資格開課的人不多，雷蒙是我心目中最好人選。能見證一位年輕人從零到今天的成就，我深感欣慰。",
+      "url": "https://www.facebook.com/wendellyu/posts/pfbid0nBh9FrzbyFhHW9FHXFYtLX6yhf8KhHqxAmPYfRjYVBh4jRPnAyLgvhujneanUmYel"
     }
   ],
   "testimonials": [
@@ -165,7 +289,7 @@
     {
       "id": "article-1",
       "link": "https://katisplaying.substack.com/p/solopreneur-1",
-      "image": "https://substack-post-media.s3.amazonaws.com/public/images/7fb9386d-5764-483c-a1d9-d2cf2dcc8dfc_2068x1044.png",
+      "image": "images/article-1.webp",
       "tag": "學員心得",
       "title": "站在樹上的鳥兒不害怕樹枝斷裂，牠相信的是自己的翅膀",
       "excerpt": "《超級個體工作術》上課筆記 #1",
@@ -174,7 +298,7 @@
     {
       "id": "article-2",
       "link": "https://katisplaying.substack.com/p/solopreneur-2",
-      "image": "https://substack-post-media.s3.amazonaws.com/public/images/75436f25-0134-469b-8b81-74c766b803ba_2068x1042.png",
+      "image": "images/article-2.webp",
       "tag": "學員心得",
       "title": "轉換你對職場價值、生產力、數位工具的預設視角",
       "excerpt": "《超級個體工作術》上課筆記 #2",
@@ -183,7 +307,7 @@
     {
       "id": "article-3",
       "link": "https://katisplaying.substack.com/p/solopreneur-3",
-      "image": "https://substack-post-media.s3.amazonaws.com/public/images/e328c805-3f1b-4368-a975-227c4317d46f_2048x1024.png",
+      "image": "images/article-3.webp",
       "tag": "學員心得",
       "title": "從寫作、閱讀、提問，重新校準你的學習系統",
       "excerpt": "《超級個體工作術》上課筆記 #3",
