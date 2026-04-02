@@ -2,6 +2,9 @@
 
 《超級個體工作術》課程銷售頁，含後台管理系統。
 
+- 正式網址：https://solopreneur.lifehacker.tw/
+- 後台：https://solopreneur.lifehacker.tw/admin
+
 ## Tech Stack
 
 - **Template Engine** — EJS（`template/index.ejs` → `public/index.html`）
@@ -25,24 +28,6 @@
 ├── server.js         # Express server + API
 └── .env              # ADMIN_PASSWORD、SESSION_SECRET
 ```
-
-## 開發
-
-```bash
-npm install
-cp .env.example .env   # 設定 ADMIN_PASSWORD
-npm start              # http://localhost:3000
-```
-
-後台：`http://localhost:3000/admin`
-
-## 建置
-
-```bash
-npm run build          # 產出 public/index.html
-```
-
-後台儲存時會自動觸發 build，不需手動執行。
 
 ## 後台可管理區塊
 
