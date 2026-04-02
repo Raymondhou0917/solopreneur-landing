@@ -24,7 +24,8 @@
   <meta name="twitter:image" content="https://image.lifehacker.tw/solopreneur/og-cover.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&family=Noto+Sans+TC:wght@400;500;600;700;800;900&family=Noto+Serif+TC:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet"></noscript>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -2688,7 +2689,7 @@
     </div>
     <div class="instructor-inner">
       <div class="instructor-photos">
-        <img class="main-photo" src="https://raymondhouch.com/wp-content/uploads/2025/09/137-vertical-1472x2048.webp" alt="雷蒙——超級個體工作術講師">
+        <img class="main-photo" src="https://raymondhouch.com/wp-content/uploads/2025/09/137-vertical-1472x2048.webp" alt="雷蒙——超級個體工作術講師" loading="lazy">
       </div>
       <div>
         <div class="instructor-name">侯智薰（雷蒙）</div>
@@ -2738,7 +2739,7 @@
 
         <div class="book-form">
           <div class="book-form-label">新書上市時第一時間通知你</div>
-          <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+          <script src="https://f.convertkit.com/ckjs/ck.5.js" async></script>
           <form action="https://app.kit.com/forms/9273912/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9273912" data-uid="787381f033" data-format="inline" data-version="5" data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"訂閱成功！有任何新書的訊息，會第一時間通知你 ✌️","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://partners.convertkit.com/zqgjwotc7j4m?utm_campaign=poweredby&utm_content=form"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}'>
             <div data-style="clean">
               <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
@@ -2810,7 +2811,7 @@
       <div class="testimonial-card">
         <div class="testimonial-quote">「<%= t.quote %>」</div>
         <div class="testimonial-author">
-          <div class="testimonial-avatar"><% if (t.avatar) { %><img src="<%= t.avatar %>" alt="<%= t.author %>"><% } %></div>
+          <div class="testimonial-avatar"><% if (t.avatar) { %><img src="<%= t.avatar %>" alt="<%= t.author %>" loading="lazy"><% } %></div>
           <div>
             <div class="testimonial-author-name"><%= t.author %></div>
             <div class="testimonial-author-role"><%= t.role %></div>
@@ -2876,7 +2877,7 @@
       <% studentArticles.forEach(function(a) { %>
       <a href="<%= a.link %>" target="_blank" class="article-card">
         <% if (a.image) { %>
-        <img class="article-card-img" src="<%= a.image %>" alt="<%= a.title %>">
+        <img class="article-card-img" src="<%= a.image %>" alt="<%= a.title %>" loading="lazy">
         <% } else { %>
         <div class="article-card-img-placeholder">文章封面圖</div>
         <% } %>
@@ -2907,7 +2908,7 @@
     <div class="talks-articles">
       <% talks.forEach(function(talk) { %>
       <a href="<%= talk.link %>" target="_blank" class="talks-article-card">
-        <div class="talks-article-thumb"><img src="<%= talk.image %>" alt="<%= talk.alt %>"></div>
+        <div class="talks-article-thumb"><img src="<%= talk.image %>" alt="<%= talk.alt %>" loading="lazy"></div>
         <div class="talks-article-body sr-only">
           <div class="talks-article-title"><%= talk.title %></div>
         </div>
@@ -2927,7 +2928,7 @@
     <div class="talks-articles">
       <% internationalCases.forEach(function(c) { %>
       <a href="<%= c.link %>" target="_blank" class="talks-article-card">
-        <div class="talks-article-thumb"><img src="<%= c.image %>" alt="<%= c.alt %>"></div>
+        <div class="talks-article-thumb"><img src="<%= c.image %>" alt="<%= c.alt %>" loading="lazy"></div>
         <div class="talks-article-body sr-only">
           <div class="talks-article-title"><%= c.title %></div>
         </div>
@@ -2953,7 +2954,7 @@
       <% media.forEach(function(m) { %>
       <a href="<%= m.link %>" target="_blank" class="media-card">
         <div class="media-card-thumb">
-          <img src="<%= m.image %>" alt="<%= m.title %>">
+          <img src="<%= m.image %>" alt="<%= m.title %>" loading="lazy">
           <% if (m.type === 'video') { %><div class="media-card-play"></div><% } %>
         </div>
         <div class="media-card-body">
