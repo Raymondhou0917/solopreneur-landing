@@ -426,11 +426,11 @@
   "ctaLinks": {
     "talkSignup": {
       "label": "報名最新職人對談",
-      "url": "https://shifu.tw/Course/Details/db9a9cae-2bdf-43a8-b47b-f0b0ba20834e"
+      "url": "https://shifu.tw/Cart/CheckOut?planId=94f7c628-00b8-4c1c-81f9-f6b63ea74a95"
     },
     "joinCourse": {
       "label": "立即加入課程",
-      "url": "https://shifu.tw/Course/Details/db9a9cae-2bdf-43a8-b47b-f0b0ba20834e"
+      "url": "https://shifu.tw/Cart/CheckOut?planId=94f7c628-00b8-4c1c-81f9-f6b63ea74a95"
     }
   }
 }
